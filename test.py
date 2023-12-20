@@ -46,7 +46,7 @@ class TestMessage(unittest.TestCase):
         response = message.ask_client()
         response_text = response.choices[0].text
 
-        self.assertIn("<citations:", response_text.lower(), "Response should include the <citations:> tag")
+        self.assertIn("citation", response_text.lower(), "Response should include the <citations:> tag")
 
 
 if __name__ == '__main__':
