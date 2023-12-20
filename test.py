@@ -34,12 +34,29 @@ class TestMessage(unittest.TestCase):
             f"{self.message.pre_prompt()} {self.prompt} {self.message.cite_sources_prompt()}"
         )
 
-class TestMessageResponse(unittest.TestCase):
+class TestMessageDavinciResponse(unittest.TestCase):
     def setUp(self):
         sample_prompt = "Explain the theory of relativity"
         message = Message(sample_prompt)
         response = message.ask_client(Client.MODEL_TEXT_DAVINCI)
         self.response_text = response.choices[0].text
+
+    def test_response_includes_citation(self):
+        self.assertIn(
+            "citation", self.response_text.lower(), "Response should include the <citations:> tag"
+        )
+
+    def test_response_includes_pre_prompt(self):
+        self.assertIn("my dedicated student",
+                      self.response_text.lower(),
+                      "Response should comply with pre_prompt instructions")
+
+class TestMessageGPT35Response(unittest.TestCase):
+    def setUp(self):
+        sample_prompt = "Explain the theory of relativity"
+        message = Message(sample_prompt)
+        response = message.ask_client(Client.MODEL_GPT_35)
+        self.response_text = response.choices[0].message.content
 
     def test_response_includes_citation(self):
         self.assertIn(
