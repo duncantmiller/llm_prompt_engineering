@@ -40,5 +40,14 @@ class TestMessage(unittest.TestCase):
 
         self.assertEqual(full_prompt, f"{prompt} {message.cite_sources_prompt()}")
 
+    def test_response_includes_citation(self):
+        sample_prompt = "Explain the theory of relativity"
+        message = Message(sample_prompt)
+        response = message.ask_client()
+        response_text = response.choices[0].text
+
+        self.assertIn("<citations:", response_text.lower(), "Response should include the <citations:> tag")
+
+
 if __name__ == '__main__':
     unittest.main()
