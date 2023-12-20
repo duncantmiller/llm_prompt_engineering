@@ -23,9 +23,19 @@ class Message():
 
     def cite_sources_prompt(self):
         """
-        Returns the cite sources prompt
+        Returns the cite sources prompt text string
         """
         return (
             "after each statement of your response please cite your sources. Use the following "
             "format <citations:>"
+        )
+
+    def pre_prompt(self):
+        """
+        Returns the pre-prompt text string
+        """
+        return (
+            "You are an expert research scientist with 20 years of experience teaching as a "
+            "college professor. I am a freshman college student interested in your research "
+            "please teach me starting with simple concepts and building more complexity as you go"
         )
