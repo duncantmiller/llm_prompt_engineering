@@ -5,7 +5,7 @@ class TestClient(unittest.TestCase):
     def test_api_connection(self):
         prompt = "hello"
         client = Client().openai_client
-        response = client.completions.create(model="text-davinci-003",
+        response = client.completions.create(model=Client.MODEL_TEXT_DAVINCI,
                                              prompt=prompt,
                                              max_tokens=1000)
 
@@ -17,7 +17,7 @@ class TestMessage(unittest.TestCase):
         self.message = Message(self.prompt)
 
     def test_ask_client(self):
-        response = self.message.ask_client()
+        response = self.message.ask_client(Client.MODEL_TEXT_DAVINCI)
 
         self.assertTrue(response)
 
@@ -33,7 +33,7 @@ class TestMessageResponse(unittest.TestCase):
     def setUp(self):
         sample_prompt = "Explain the theory of relativity"
         message = Message(sample_prompt)
-        response = message.ask_client()
+        response = message.ask_client(Client.MODEL_TEXT_DAVINCI)
         self.response_text = response.choices[0].text
 
     def test_response_includes_citation(self):
@@ -50,7 +50,7 @@ class TestDefaultResponse(unittest.TestCase):
     def setUp(self):
         sample_prompt = "Explain the theory of relativity"
         client = Client().openai_client
-        response = client.completions.create(model="text-davinci-003",
+        response = client.completions.create(model=Client.MODEL_TEXT_DAVINCI,
                                              prompt=sample_prompt,
                                              max_tokens=1000)
         self.response_text = response.choices[0].text

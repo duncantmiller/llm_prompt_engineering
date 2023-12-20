@@ -6,13 +6,14 @@ class Message():
         self.client = client.openai_client
         self.prompt = prompt
 
-    def ask_client(self):
+    def ask_client(self, model):
         """
         Sends the prompt to the LLM client and returns the response
         """
-        response = self.client.completions.create(model="text-davinci-003",
-                                                prompt=self.full_prompt(),
-                                                max_tokens=100)
+        response = self.client.completions.create(model=model,
+                                                  prompt=self.full_prompt(),
+                                                  max_tokens=1000)
+
         return response
 
     def full_prompt(self):
