@@ -52,6 +52,15 @@ class TestMessage(unittest.TestCase):
             "citation", response_text.lower(), "Response should include the <citations:> tag"
         )
 
+    def test_response_includes_pre_prompt(self):
+        sample_prompt = "Explain the theory of relativity"
+        message = Message(sample_prompt)
+        response = message.ask_client()
+        response_text = response.choices[0].text
+
+        self.assertIn("my dedicated student",
+                      response_text.lower(),
+                      "Response should comply with pre_prompt instructions")
 
 if __name__ == '__main__':
     unittest.main()
