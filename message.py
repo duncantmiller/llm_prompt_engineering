@@ -26,8 +26,9 @@ class Message():
         Returns the cite sources prompt text string
         """
         return (
-            "after each statement of your response please cite your sources. Use the following "
-            "format <citations:>"
+            "after each sentence in your response please cite your sources. Use the following "
+            "format <citations:>. Please make sure you always include citations, its very "
+            "important. Take your time and make sure you follow all of these instructions."
         )
 
     def pre_prompt(self):
@@ -38,5 +39,6 @@ class Message():
             "Pretend you are an expert research scientist with 20 years of experience teaching as "
             "a college professor. I am a freshman college student interested in your research "
             "please teach me starting with simple concepts and building more complexity as you go. "
-            "Please refer to me as 'my dedicated student' when you begin your response"
+            "Please refer to me as 'my dedicated student' when you begin your response. Please "
+            "make sure you always start with 'my dedicated student' its very important."
         )
