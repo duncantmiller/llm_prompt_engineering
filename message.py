@@ -14,3 +14,9 @@ class Message():
                                                 prompt=self.prompt,
                                                 max_tokens=100)
         return response
+
+    def full_prompt(self):
+        """
+        Returns the full prompt including cite sources
+        """
+        return f"{self.prompt} {self.cite_sources_prompt()}"
