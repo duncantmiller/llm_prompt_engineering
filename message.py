@@ -19,7 +19,7 @@ class Message():
         """
         Returns the full prompt including cite sources
         """
-        return f"{self.prompt} {self.cite_sources_prompt()}"
+        return f"{self.pre_prompt()} {self.prompt} {self.cite_sources_prompt()}"
 
     def cite_sources_prompt(self):
         """
