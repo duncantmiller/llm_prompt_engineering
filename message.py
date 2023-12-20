@@ -24,6 +24,9 @@ class Message():
                 ],
                 model=Client.MODEL_GPT_35,
             )
+        else:
+            raise Exception(f"{model} not implemented")
+
         return response
 
     def full_prompt(self):
@@ -38,7 +41,8 @@ class Message():
         """
         return (
             "after each sentence in your response please cite your sources. Use the following "
-            "format <citations:>. Please make sure you always include citations, its very "
+            "format delineated by the three ticks ```citation: <source>``` where <source> is your "
+            "source for the information. Please make sure you always include citations, its very "
             "important. Take your time and make sure you follow all of these instructions."
         )
 

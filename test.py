@@ -43,7 +43,7 @@ class TestMessageDavinciResponse(unittest.TestCase):
 
     def test_response_includes_citation(self):
         self.assertIn(
-            "citation", self.response_text.lower(), "Response should include the <citations:> tag"
+            "citation", self.response_text.lower(), "Response should include the <citation:> tag"
         )
 
     def test_response_includes_pre_prompt(self):
@@ -60,7 +60,7 @@ class TestMessageGPT35Response(unittest.TestCase):
 
     def test_response_includes_citation(self):
         self.assertIn(
-            "citation", self.response_text.lower(), "Response should include the <citations:> tag"
+            "citation", self.response_text.lower(), "Response should include the <citation:> tag"
         )
 
     def test_response_includes_pre_prompt(self):
@@ -79,7 +79,7 @@ class TestDefaultResponseDavinci(unittest.TestCase):
 
     def test_does_not_include_citation(self):
         self.assertNotIn(
-            "citation", self.response_text.lower(), "Response should not include the <citations:> tag"
+            "citation", self.response_text.lower(), "Response should not include the <citation:> tag"
         )
 
     def test_does_not_include_pre_prompt(self):
@@ -104,7 +104,7 @@ class TestDefaultResponseGPT35(unittest.TestCase):
 
     def test_does_not_include_citation(self):
         self.assertNotIn(
-            "citation", self.response_text.lower(), "Response should not include the <citations:> tag"
+            "citation", self.response_text.lower(), "Response should not include the <citation:> tag"
         )
 
     def test_does_not_include_pre_prompt(self):
