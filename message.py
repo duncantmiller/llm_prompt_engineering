@@ -7,6 +7,9 @@ class Message():
         self.prompt = prompt
 
     def ask_client(self):
+        """
+        Sends the prompt to the LLM client and returns the response
+        """
         response = self.client.completions.create(model="text-davinci-003",
                                                 prompt=self.prompt,
                                                 max_tokens=100)
