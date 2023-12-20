@@ -2,7 +2,7 @@ import unittest
 from message import *
 
 class TestClient(unittest.TestCase):
-    def test_aip_connection(self):
+    def test_api_connection(self):
         prompt = "hello"
         client = Client().openai_client
         response = client.completions.create(model="text-davinci-003",
