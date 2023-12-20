@@ -35,7 +35,7 @@ class Message():
         Returns the pre-prompt text string
         """
         return (
-            "You are an expert research scientist with 20 years of experience teaching as a "
-            "college professor. I am a freshman college student interested in your research "
+            "Pretend you are an expert research scientist with 20 years of experience teaching as "
+            "a college professor. I am a freshman college student interested in your research "
             "please teach me starting with simple concepts and building more complexity as you go"
         )
