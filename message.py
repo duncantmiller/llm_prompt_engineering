@@ -14,6 +14,16 @@ class Message():
             response = self.client.completions.create(model=model,
                                                       prompt=self.full_prompt(),
                                                       max_tokens=1000)
+        elif model == Client.MODEL_GPT_35:
+            response = self.client.chat.completions.create(
+                messages=[
+                    {
+                        "role": "user",
+                        "content": self.full_prompt(),
+                    }
+                ],
+                model=Client.MODEL_GPT_35,
+            )
         return response
 
     def full_prompt(self):

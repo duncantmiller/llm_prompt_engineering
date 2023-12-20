@@ -21,7 +21,7 @@ class TestMessage(unittest.TestCase):
 
         self.assertTrue(response)
 
-    def test_ask_client_davinci(self):
+    def test_ask_client_gpt_35(self):
         response = self.message.ask_client(Client.MODEL_GPT_35)
 
         self.assertTrue(response)
