@@ -10,10 +10,10 @@ class Message():
         """
         Sends the prompt to the LLM client and returns the response
         """
-        response = self.client.completions.create(model=model,
-                                                  prompt=self.full_prompt(),
-                                                  max_tokens=1000)
-
+        if model == Client.MODEL_TEXT_DAVINCI:
+            response = self.client.completions.create(model=model,
+                                                      prompt=self.full_prompt(),
+                                                      max_tokens=1000)
         return response
 
     def full_prompt(self):

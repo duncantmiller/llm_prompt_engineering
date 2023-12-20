@@ -16,8 +16,13 @@ class TestMessage(unittest.TestCase):
         self.prompt = "hello"
         self.message = Message(self.prompt)
 
-    def test_ask_client(self):
+    def test_ask_client_davinci(self):
         response = self.message.ask_client(Client.MODEL_TEXT_DAVINCI)
+
+        self.assertTrue(response)
+
+    def test_ask_client_davinci(self):
+        response = self.message.ask_client(Client.MODEL_GPT_35)
 
         self.assertTrue(response)
 
