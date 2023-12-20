@@ -68,7 +68,7 @@ class TestMessageGPT35Response(unittest.TestCase):
                       self.response_text.lower(),
                       "Response should comply with pre_prompt instructions")
 
-class TestDefaultResponse(unittest.TestCase):
+class TestDefaultResponseDavinci(unittest.TestCase):
     def setUp(self):
         sample_prompt = "Explain the theory of relativity"
         client = Client().openai_client
@@ -76,6 +76,31 @@ class TestDefaultResponse(unittest.TestCase):
                                              prompt=sample_prompt,
                                              max_tokens=1000)
         self.response_text = response.choices[0].text
+
+    def test_does_not_include_citation(self):
+        self.assertNotIn(
+            "citation", self.response_text.lower(), "Response should not include the <citations:> tag"
+        )
+
+    def test_does_not_include_pre_prompt(self):
+        self.assertNotIn("my dedicated student",
+                self.response_text.lower(),
+                "Response should not include pre_prompt instructions")
+
+class TestDefaultResponseGPT35(unittest.TestCase):
+    def setUp(self):
+        sample_prompt = "Explain the theory of relativity"
+        client = Client().openai_client
+        response = client.chat.completions.create(
+                messages=[
+                    {
+                        "role": "user",
+                        "content": sample_prompt,
+                    }
+                ],
+                model=Client.MODEL_GPT_35,
+            )
+        self.response_text = response.choices[0].message.content
 
     def test_does_not_include_citation(self):
         self.assertNotIn(
