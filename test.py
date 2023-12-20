@@ -44,6 +44,18 @@ class TestMessage(unittest.TestCase):
             "citation", response_text.lower(), "Response should include the <citations:> tag"
         )
 
+    def test_default_does_not_include_citation(self):
+        sample_prompt = "Explain the theory of relativity"
+        client = Client().openai_client
+        response = client.completions.create(model="text-davinci-003",
+                                             prompt=sample_prompt,
+                                             max_tokens=1000)
+        response_text = response.choices[0].text
+
+        self.assertNotIn(
+            "citation", response_text.lower(), "Response should not include the <citations:> tag"
+        )
+
     def test_response_includes_pre_prompt(self):
         sample_prompt = "Explain the theory of relativity"
         message = Message(sample_prompt)
@@ -53,6 +65,18 @@ class TestMessage(unittest.TestCase):
         self.assertIn("my dedicated student",
                       response_text.lower(),
                       "Response should comply with pre_prompt instructions")
+
+    def test_default_does_not_include_pre_prompt(self):
+        sample_prompt = "Explain the theory of relativity"
+        client = Client().openai_client
+        response = client.completions.create(model="text-davinci-003",
+                                             prompt=sample_prompt,
+                                             max_tokens=1000)
+        response_text = response.choices[0].text
+
+        self.assertNotIn("my dedicated student",
+                response_text.lower(),
+                "Response should not include pre_prompt instructions")
 
 if __name__ == '__main__':
     unittest.main()
