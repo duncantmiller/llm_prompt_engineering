@@ -21,8 +21,8 @@ class TestOpenAIResponse(unittest.TestCase):
 
 class TestMessage(unittest.TestCase):
     def test_ask_client(self):
-        message = Message()
-        response = message.ask_client("hello")
+        message = Message("hello")
+        response = message.ask_client()
 
         self.assertTrue(response)
 
