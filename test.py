@@ -38,7 +38,9 @@ class TestMessage(unittest.TestCase):
         message = Message(prompt)
         full_prompt = message.full_prompt()
 
-        self.assertEqual(full_prompt, f"{prompt} {message.cite_sources_prompt()}")
+        self.assertEqual(
+            full_prompt, f"{message.pre_prompt()} {prompt} {message.cite_sources_prompt()}"
+        )
 
     def test_response_includes_citation(self):
         sample_prompt = "Explain the theory of relativity"
@@ -46,7 +48,9 @@ class TestMessage(unittest.TestCase):
         response = message.ask_client()
         response_text = response.choices[0].text
 
-        self.assertIn("citation", response_text.lower(), "Response should include the <citations:> tag")
+        self.assertIn(
+            "citation", response_text.lower(), "Response should include the <citations:> tag"
+        )
 
 
 if __name__ == '__main__':
