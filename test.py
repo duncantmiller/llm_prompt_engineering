@@ -15,7 +15,7 @@ class TestOpenAIResponse(unittest.TestCase):
 
         response = client.completions.create(model="text-davinci-003",
                                              prompt=prompt,
-                                             max_tokens=100)
+                                             max_tokens=1000)
 
         self.assertTrue(response)
 
@@ -25,6 +25,13 @@ class TestMessage(unittest.TestCase):
         response = message.ask_client()
 
         self.assertTrue(response)
+
+    def test_full_prompt(self):
+        prompt = "hello"
+        message = Message(prompt)
+        full_prompt = message.full_prompt()
+
+        self.assertEqual(full_prompt, f"{prompt} {message.cite_sources_prompt()}")
 
     def test_full_prompt(self):
         prompt = "hello"

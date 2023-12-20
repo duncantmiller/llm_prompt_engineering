@@ -20,3 +20,12 @@ class Message():
         Returns the full prompt including cite sources
         """
         return f"{self.prompt} {self.cite_sources_prompt()}"
+
+    def cite_sources_prompt(self):
+        """
+        Returns the cite sources prompt
+        """
+        return (
+            "after each statement of your response please cite your sources. Use the following "
+            "format <citations:>"
+        )
