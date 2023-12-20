@@ -26,5 +26,12 @@ class TestMessage(unittest.TestCase):
 
         self.assertTrue(response)
 
+    def test_full_prompt(self):
+        prompt = "hello"
+        message = Message(prompt)
+        full_prompt = message.full_prompt()
+
+        self.assertEqual(full_prompt, f"{prompt} {message.cite_sources_prompt()}")
+
 if __name__ == '__main__':
     unittest.main()
