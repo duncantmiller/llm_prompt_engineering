@@ -11,7 +11,7 @@ class Message():
         Sends the prompt to the LLM client and returns the response
         """
         response = self.client.completions.create(model="text-davinci-003",
-                                                prompt=self.prompt,
+                                                prompt=self.full_prompt(),
                                                 max_tokens=100)
         return response
 
