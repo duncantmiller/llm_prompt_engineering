@@ -26,6 +26,10 @@ class TestMessage(unittest.TestCase):
 
         self.assertTrue(response)
 
+    def test_ask_client_not_implemented(self):
+        with self.assertRaises(NotImplementedError):
+            self.message.ask_client("Foo")
+
     def test_full_prompt(self):
         full_prompt = self.message.full_prompt()
 

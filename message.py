@@ -15,7 +15,7 @@ class Message():
         elif model == Client.MODEL_GPT_35:
             response = self.chat_completion(model)
         else:
-            raise Exception(f"{model} not implemented")
+            raise NotImplementedError(f"{model} not implemented")
 
         return response
 
