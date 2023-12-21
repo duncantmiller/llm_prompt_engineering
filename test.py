@@ -1,13 +1,18 @@
 import unittest
 from message import *
 
-class TestClient(unittest.TestCase):
-    def test_api_connection(self):
-        prompt = "hello"
+class BaseTestCase(unittest.TestCase):
+    def default_response_davinci(self, prompt):
         client = Client().openai_client
         response = client.completions.create(model=Client.MODEL_TEXT_DAVINCI,
                                              prompt=prompt,
                                              max_tokens=1000)
+        return response
+
+class TestClient(BaseTestCase):
+    def test_api_connection(self):
+        prompt = "hello"
+        response = self.default_response_davinci(prompt)
 
         self.assertTrue(response)
 
@@ -78,9 +83,8 @@ class TestDefaultResponseDavinci(unittest.TestCase):
     def setUp(self):
         sample_prompt = "Explain the theory of relativity"
         client = Client().openai_client
-        response = client.completions.create(model=Client.MODEL_TEXT_DAVINCI,
-                                             prompt=sample_prompt,
-                                             max_tokens=1000)
+        response = self.default_response_davinci(prompt)
+
         self.response_text = response.choices[0].text
 
     def test_does_not_include_citation(self):
