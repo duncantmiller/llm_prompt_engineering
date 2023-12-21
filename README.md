@@ -24,5 +24,5 @@ If you change the code in your prompts or API calls, you will want to refresh th
 
 ````
 with vcr.use_cassette('cassette_name.yaml', re_record_interval=7*24*60*60):
-
+    # API call goes here
 ````
