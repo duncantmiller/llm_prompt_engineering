@@ -96,14 +96,14 @@ class TestDefaultResponseGPT35(unittest.TestCase):
         sample_prompt = "Explain the theory of relativity"
         client = Client().openai_client
         response = client.chat.completions.create(
-                messages=[
-                    {
-                        "role": "user",
-                        "content": sample_prompt,
-                    }
-                ],
-                model=Client.MODEL_GPT_35,
-            )
+            messages=[
+                {
+                    "role": "user",
+                    "content": sample_prompt,
+                }
+            ],
+            model=Client.MODEL_GPT_35,
+        )
         self.response_text = response.choices[0].message.content
 
     def test_does_not_include_citation(self):
