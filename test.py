@@ -19,14 +19,15 @@ class TestMessage(unittest.TestCase):
     def test_ask_client_davinci(self):
         response = self.message.ask_client(Client.MODEL_TEXT_DAVINCI)
 
-        self.assertTrue(response)
+        self.assertTrue(response, "Client should return a response for Davinci")
 
     def test_ask_client_gpt_35(self):
         response = self.message.ask_client(Client.MODEL_GPT_35)
 
-        self.assertTrue(response)
+        self.assertTrue(response, "Client should return a response for GPT-35")
 
     def test_ask_client_not_implemented(self):
+        """NotImplementedError should be raised if not one of the accepted models"""
         with self.assertRaises(NotImplementedError):
             self.message.ask_client("Foo")
 
@@ -35,7 +36,8 @@ class TestMessage(unittest.TestCase):
 
         self.assertEqual(
             full_prompt,
-            f"{self.message.pre_prompt()} {self.prompt} {self.message.cite_sources_prompt()}"
+            f"{self.message.pre_prompt()} {self.prompt} {self.message.cite_sources_prompt()}",
+            "Full prompt should include pre_prompt, prompt, and cite_sources_prompt"
         )
 
 class TestMessageDavinciResponse(unittest.TestCase):
