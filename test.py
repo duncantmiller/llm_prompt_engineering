@@ -1,5 +1,6 @@
 import unittest
 from message import *
+import vcr
 
 class BaseTestCase(unittest.TestCase):
     def default_response_davinci(self, prompt):
