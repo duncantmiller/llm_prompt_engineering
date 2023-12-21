@@ -11,21 +11,36 @@ class Message():
         Sends the prompt to the LLM client and returns the response
         """
         if model == Client.MODEL_TEXT_DAVINCI:
-            response = self.client.completions.create(model=model,
-                                                      prompt=self.full_prompt(),
-                                                      max_tokens=1000)
+            response = self.legacy_chat_completion(model)
         elif model == Client.MODEL_GPT_35:
-            response = self.client.chat.completions.create(
-                messages=[
-                    {
-                        "role": "user",
-                        "content": self.full_prompt(),
-                    }
-                ],
-                model=Client.MODEL_GPT_35,
-            )
+            response = self.chat_completion(model)
         else:
             raise Exception(f"{model} not implemented")
+
+        return response
+
+    def chat_completion(self, model):
+        """
+        Sends the prompt using the new openAI format and returns the response.
+        """
+        response = self.client.chat.completions.create(
+            messages=[
+                {
+                    "role": "user",
+                    "content": self.full_prompt()
+                }
+            ],
+            model=model
+        )
+        return response
+
+    def legacy_chat_completion(self, model):
+        """
+        Sends the prompt to using the legacy openAI format returns the response
+        """
+        response = self.client.completions.create(model=model,
+                                                  prompt=self.full_prompt(),
+                                                  max_tokens=1000)
 
         return response
 
