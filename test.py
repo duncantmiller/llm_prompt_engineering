@@ -27,17 +27,25 @@ class BaseTestCase(unittest.TestCase):
 
     def default_response(self, prompt, cassette):
         client = Client().openai_client
-        with vcr.use_cassette(cassette):
-            response = client.chat.completions.create(
-                messages=[
-                    {
-                        "role": "user",
-                        "content": prompt,
-                    }
-                ],
-                model=Client.MODEL_GPT_35,
-            )
+        if self.live_test:
+            response = self.default_api_call(prompt=prompt, client=client)
+        else:
+            with vcr.use_cassette(cassette):
+                response = self.default_api_call(prompt=prompt, client=client)
         return response
+
+    def default_api_call(self, prompt, client):
+        response = client.chat.completions.create(
+            messages=[
+                {
+                    "role": "user",
+                    "content": prompt,
+                }
+            ],
+            model=Client.MODEL_GPT_35,
+        )
+        return response
+
 
     def custom_response(self, model, message, cassette):
         if self.live_test:
