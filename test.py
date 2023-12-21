@@ -2,13 +2,21 @@ import unittest
 from message import *
 import vcr
 import argparse
+import sys
 
-# Parse command-line arguments
-parser = argparse.ArgumentParser()
-parser.add_argument('--live-test', action='store_true', help='Run live API calls')
-args, _ = parser.parse_known_args()
+def parse_custom_args():
+    """
+    Parse custom arguments and remove them from sys.argv
+    """
+    parser = argparse.ArgumentParser(add_help=False)
+    parser.add_argument('--live-test', action='store_true', help='Run live API calls')
+    args, remaining_argv = parser.parse_known_args()
+    sys.argv[1:] = remaining_argv
+    return args.live_test
 
 class BaseTestCase(unittest.TestCase):
+    live_test = parse_custom_args()
+
     def default_response_davinci(self, prompt, cassette):
         client = Client().openai_client
         with vcr.use_cassette(cassette):
@@ -32,8 +40,11 @@ class BaseTestCase(unittest.TestCase):
         return response
 
     def custom_response(self, model, message, cassette):
-        with vcr.use_cassette(cassette):
+        if self.live_test:
             response = message.ask_client(model)
+        else:
+            with vcr.use_cassette(cassette):
+                response = message.ask_client(model)
         return response
 
 class TestClient(BaseTestCase):
