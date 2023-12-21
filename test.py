@@ -9,6 +9,10 @@ class BaseTestCase(unittest.TestCase):
                                              max_tokens=1000)
         return response
 
+    def custom_response(self, model, message):
+        response = message.ask_client(model)
+        return response
+
 class TestClient(BaseTestCase):
     def test_api_connection(self):
         prompt = "hello"
@@ -16,18 +20,18 @@ class TestClient(BaseTestCase):
 
         self.assertTrue(response)
 
-class TestMessage(unittest.TestCase):
+class TestMessage(BaseTestCase):
     def setUp(self):
         self.prompt = "hello"
         self.message = Message(self.prompt)
 
     def test_ask_client_davinci(self):
-        response = self.message.ask_client(Client.MODEL_TEXT_DAVINCI)
+        response = self.custom_response(model=Client.MODEL_TEXT_DAVINCI, message=self.message)
 
         self.assertTrue(response, "Client should return a response for Davinci")
 
     def test_ask_client_gpt_35(self):
-        response = self.message.ask_client(Client.MODEL_GPT_35)
+        response = self.custom_response(model=Client.MODEL_GPT_35, message=self.message)
 
         self.assertTrue(response, "Client should return a response for GPT-35")
 
@@ -45,11 +49,11 @@ class TestMessage(unittest.TestCase):
             "Full prompt should include pre_prompt, prompt, and cite_sources_prompt"
         )
 
-class TestMessageDavinciResponse(unittest.TestCase):
+class TestMessageDavinciResponse(BaseTestCase):
     def setUp(self):
         sample_prompt = "Explain the theory of relativity"
         message = Message(sample_prompt)
-        response = message.ask_client(Client.MODEL_TEXT_DAVINCI)
+        response = self.custom_response(model=Client.MODEL_TEXT_DAVINCI, message=message)
         self.response_text = response.choices[0].text
 
     def test_response_includes_citation(self):
@@ -62,11 +66,12 @@ class TestMessageDavinciResponse(unittest.TestCase):
                       self.response_text.lower(),
                       "Response should comply with pre_prompt instructions")
 
-class TestMessageGPT35Response(unittest.TestCase):
+class TestMessageGPT35Response(BaseTestCase):
     def setUp(self):
         sample_prompt = "Explain the theory of relativity"
         message = Message(sample_prompt)
-        response = message.ask_client(Client.MODEL_GPT_35)
+        response = self.custom_response(model=Client.MODEL_GPT_35, message=message)
+
         self.response_text = response.choices[0].message.content
 
     def test_response_includes_citation(self):
