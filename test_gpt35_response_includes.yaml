@@ -1,0 +1,157 @@
+interactions:
+- request:
+    body: '{"messages": [{"role": "user", "content": "Pretend you are an expert research
+      scientist with 20 years of experience teaching as a college professor. I am
+      a freshman college student interested in your research please teach me starting
+      with simple concepts and building more complexity as you go. Please refer to
+      me as ''my dedicated student'' when you begin your response. Please make sure
+      you always start with ''my dedicated student'' its very important. Explain the
+      theory of relativity after each sentence in your response please cite your sources.
+      Use the following format delineated by the three ticks ```citation: <source>```
+      where <source> is your source for the information. Please make sure you always
+      include citations, its very important. Take your time and make sure you follow
+      all of these instructions."}], "model": "gpt-3.5-turbo"}'
+    headers:
+      accept:
+      - application/json
+      accept-encoding:
+      - gzip, deflate
+      authorization:
+      - Bearer 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
+      connection:
+      - keep-alive
+      content-length:
+      - '842'
+      content-type:
+      - application/json
+      host:
+      - api.openai.com
+      user-agent:
+      - OpenAI/Python 1.6.0
+      x-stainless-arch:
+      - arm64
+      x-stainless-async:
+      - 'false'
+      x-stainless-lang:
+      - python
+      x-stainless-os:
+      - MacOS
+      x-stainless-package-version:
+      - 1.6.0
+      x-stainless-runtime:
+      - CPython
+      x-stainless-runtime-version:
+      - 3.12.1
+    method: POST
+    uri: https://api.openai.com/v1/chat/completions
+  response:
+    content: "{\n  \"id\": \"chatcmpl-8YHqISW9V8obOA6G0beUZdvqrwKlx\",\n  \"object\":
+      \"chat.completion\",\n  \"created\": 1703182430,\n  \"model\": \"gpt-3.5-turbo-0613\",\n
+      \ \"choices\": [\n    {\n      \"index\": 0,\n      \"message\": {\n        \"role\":
+      \"assistant\",\n        \"content\": \"Hello, my dedicated student! I'm delighted
+      to have you as my student and share my knowledge on the theory of relativity
+      with you. Let's start with some simple concepts and gradually build up to more
+      complex ones. Are you ready?\\n\\nFirst, we'll discuss the theory of special
+      relativity, which was developed by Albert Einstein. Special relativity deals
+      with the behavior of objects moving at a constant velocity in the absence of
+      gravitational forces.\\n\\nOne of the foundational concepts of special relativity
+      is that the laws of physics are the same for all observers in uniform motion
+      relative to each other. This is known as the principle of relativity ```citation:
+      E. F. Taylor and J. A. Wheeler, Spacetime Physics``` (source).\\n\\nAnother
+      important aspect of special relativity is the constancy of the speed of light,
+      denoted by the symbol \\\"c.\\\" According to Einstein's theory, the speed of
+      light in a vacuum is the same for all observers, regardless of the motion of
+      the source or the observer. This principle has far-reaching consequences for
+      the behavior of space and time. ```citation: A. Einstein, On the Electrodynamics
+      of Moving Bodies```\\n\\nThe theory of special relativity introduces the concept
+      of spacetime, which combines space and time into a four-dimensional framework.
+      Spacetime is not absolute but is perceived differently by different observers
+      depending on their relative motion. This leads to phenomena like time dilation
+      and length contraction, where time and distances appear to be altered for observers
+      moving relative to each other. ```citation: L. M. Brown and G. Gabrielse, Rev.
+      Mod. Phys.```\\n\\nNow, let's delve into the theory of general relativity, which
+      extends the ideas of special relativity to include gravitation. General relativity
+      describes gravity as the curvature of spacetime caused by massive objects.\\n\\nOne
+      of the key postulates of general relativity is the equivalence principle, which
+      states that the effects of gravity are indistinguishable from the effects of
+      acceleration. This principle is instrumental in Einstein's development of the
+      theory. ```citation: A. Einstein, Relativity: The Special and General Theory```\\n\\nIn
+      general relativity, gravity is not defined as a force acting at a distance but
+      rather as the curvature of spacetime caused by massive objects. This curvature
+      influences the motion of objects and the path that light takes through space.
+      Massive objects, such as stars and planets, cause spacetime to curve, and other
+      objects move along the curved paths dictated by this curvature. ```citation:
+      S. Weinberg, Gravitation and Cosmology```\\n\\nThe theory of relativity has
+      been confirmed by numerous experimental tests, including the famous Einstein's
+      prediction of the bending of light around massive objects, which was confirmed
+      during the 1919 solar eclipse. There have since been many subsequent experimental
+      validations of the theory, solidifying its place as a cornerstone of modern
+      physics. ```citation: A. Einstein, The Foundation of the General Theory of Relativity```\\n\\nThis
+      is just a brief introduction to the theory of relativity, my dedicated student.
+      I hope you found it informative and intriguing. If you have any specific questions
+      or would like to explore any particular aspect in more detail, please don't
+      hesitate to ask!\"\n      },\n      \"logprobs\": null,\n      \"finish_reason\":
+      \"stop\"\n    }\n  ],\n  \"usage\": {\n    \"prompt_tokens\": 155,\n    \"completion_tokens\":
+      652,\n    \"total_tokens\": 807\n  },\n  \"system_fingerprint\": null\n}\n"
+    headers:
+      CF-Cache-Status:
+      - DYNAMIC
+      CF-RAY:
+      - 839219effa3cc6a5-SEA
+      Cache-Control:
+      - no-cache, must-revalidate
+      Connection:
+      - keep-alive
+      Content-Encoding:
+      - gzip
+      Content-Type:
+      - application/json
+      Date:
+      - Thu, 21 Dec 2023 18:14:08 GMT
+      Server:
+      - cloudflare
+      Set-Cookie:
+      - __cf_bm=XvdrOWhC4q6AkQTXuafRKthRT38u70uylCYob1vVkYY-1703182448-1-AR8X7Hz6xwmzYry5Zj9XA+yrK8qSCGwv31Si3gJ+HMRppX2dzykgmFFj923YJCG3OnjCzu/20ENuJcNnO61jpr4=;
+        path=/; expires=Thu, 21-Dec-23 18:44:08 GMT; domain=.api.openai.com; HttpOnly;
+        Secure; SameSite=None
+      - _cfuvid=8XG0u80KVhSXW4GM03tuuMatlL26llj0kpf951jzbQQ-1703182448540-0-604800000;
+        path=/; domain=.api.openai.com; HttpOnly; Secure; SameSite=None
+      Transfer-Encoding:
+      - chunked
+      access-control-allow-origin:
+      - '*'
+      alt-svc:
+      - h3=":443"; ma=86400
+      openai-model:
+      - gpt-3.5-turbo-0613
+      openai-organization:
+      - openshiro
+      openai-processing-ms:
+      - '17614'
+      openai-version:
+      - '2020-10-01'
+      strict-transport-security:
+      - max-age=15724800; includeSubDomains
+      x-ratelimit-limit-requests:
+      - '10000'
+      x-ratelimit-limit-tokens:
+      - '60000'
+      x-ratelimit-limit-tokens_usage_based:
+      - '60000'
+      x-ratelimit-remaining-requests:
+      - '9999'
+      x-ratelimit-remaining-tokens:
+      - '59790'
+      x-ratelimit-remaining-tokens_usage_based:
+      - '59790'
+      x-ratelimit-reset-requests:
+      - 8.64s
+      x-ratelimit-reset-tokens:
+      - 210ms
+      x-ratelimit-reset-tokens_usage_based:
+      - 210ms
+      x-request-id:
+      - 7bbb9cd8feb507793b095ff6d22cc5bd
+    http_version: HTTP/1.1
+    status_code: 200
+version: 1

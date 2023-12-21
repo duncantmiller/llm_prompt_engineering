@@ -1,0 +1,133 @@
+interactions:
+- request:
+    body: '{"model": "text-davinci-003", "prompt": "Pretend you are an expert research
+      scientist with 20 years of experience teaching as a college professor. I am
+      a freshman college student interested in your research please teach me starting
+      with simple concepts and building more complexity as you go. Please refer to
+      me as ''my dedicated student'' when you begin your response. Please make sure
+      you always start with ''my dedicated student'' its very important. Explain the
+      theory of relativity after each sentence in your response please cite your sources.
+      Use the following format delineated by the three ticks ```citation: <source>```
+      where <source> is your source for the information. Please make sure you always
+      include citations, its very important. Take your time and make sure you follow
+      all of these instructions.", "max_tokens": 1000}'
+    headers:
+      accept:
+      - application/json
+      accept-encoding:
+      - gzip, deflate
+      authorization:
+      - Bearer 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
+      connection:
+      - keep-alive
+      content-length:
+      - '832'
+      content-type:
+      - application/json
+      host:
+      - api.openai.com
+      user-agent:
+      - OpenAI/Python 1.6.0
+      x-stainless-arch:
+      - arm64
+      x-stainless-async:
+      - 'false'
+      x-stainless-lang:
+      - python
+      x-stainless-os:
+      - MacOS
+      x-stainless-package-version:
+      - 1.6.0
+      x-stainless-runtime:
+      - CPython
+      x-stainless-runtime-version:
+      - 3.12.1
+    method: POST
+    uri: https://api.openai.com/v1/completions
+  response:
+    content: "{\n  \"warning\": \"This model version is deprecated. Migrate before
+      January 4, 2024 to avoid disruption of service. Learn more https://platform.openai.com/docs/deprecations\",\n
+      \ \"id\": \"cmpl-8YHqDZYFwEp0NwqvelVaub0QttBU6\",\n  \"object\": \"text_completion\",\n
+      \ \"created\": 1703182425,\n  \"model\": \"text-davinci-003\",\n  \"choices\":
+      [\n    {\n      \"text\": \"\\n\\nMy dedicated student, the Theory of Relativity,
+      originally formulated by Albert Einstein in 1905, is the idea that all motion
+      must be defined relative to a chosen frame of reference. This means that no
+      matter how fast something is moving, if there is no absolute reference point,
+      it cannot be determined whether it is moving or not. In other words, all motion
+      is relative to the observer. \\n\\nThe Theory of Relativity states that the
+      laws of physics are the same for all observers in all inertial frames of reference.
+      This can further be broken down into two main principles: the Principle of Relativity,
+      which states that all the laws of physics are the same in all inertial frames,
+      and the Principle of Invariance, which states that the laws of physics do not
+      change when going from one frame of reference to another.\\n\\nAnother important
+      concept in the Theory of Relativity is the idea of space-time. Space-time is
+      a 4-dimensional construct that combines three dimensions of space and one dimension
+      of time. According to the Theory of Relativity, space-time is curved and this
+      has an effect on the way objects move through it. \\n\\nThe Theory of Relativity
+      is an incredibly complex and powerful theory that is still being explored and
+      studied today.\\n\\nCitation: <https://en.wikipedia.org/wiki/Theory_of_relativity>\",\n
+      \     \"index\": 0,\n      \"logprobs\": null,\n      \"finish_reason\": \"stop\"\n
+      \   }\n  ],\n  \"usage\": {\n    \"prompt_tokens\": 149,\n    \"completion_tokens\":
+      283,\n    \"total_tokens\": 432\n  }\n}\n"
+    headers:
+      CF-Cache-Status:
+      - DYNAMIC
+      CF-RAY:
+      - 839219ceebf0c3dc-SEA
+      Cache-Control:
+      - no-cache, must-revalidate
+      Connection:
+      - keep-alive
+      Content-Encoding:
+      - gzip
+      Content-Type:
+      - application/json
+      Date:
+      - Thu, 21 Dec 2023 18:13:50 GMT
+      Server:
+      - cloudflare
+      Set-Cookie:
+      - __cf_bm=D9K2oT.j_Hc7SirpqeDWg2.OdWUTqjG8AQ1I86Njp7A-1703182430-1-AU2zTjr1wrLsU1/WfV6U4ed4VgV2ohh7C5NjK+zu78PQTV5A7P6nkDZhF3uIFtH8h8qxTZuQpKf0MvDH+GCill4=;
+        path=/; expires=Thu, 21-Dec-23 18:43:50 GMT; domain=.api.openai.com; HttpOnly;
+        Secure; SameSite=None
+      - _cfuvid=KFI0H_CKaqECWtSaiPtVE5x_xpppq1Sz6Ko.XzXCoDI-1703182430557-0-604800000;
+        path=/; domain=.api.openai.com; HttpOnly; Secure; SameSite=None
+      Transfer-Encoding:
+      - chunked
+      access-control-allow-origin:
+      - '*'
+      alt-svc:
+      - h3=":443"; ma=86400
+      openai-model:
+      - text-davinci-003
+      openai-organization:
+      - openshiro
+      openai-processing-ms:
+      - '5036'
+      openai-version:
+      - '2020-10-01'
+      strict-transport-security:
+      - max-age=15724800; includeSubDomains
+      x-ratelimit-limit-requests:
+      - '3000'
+      x-ratelimit-limit-tokens:
+      - '250000'
+      x-ratelimit-limit-tokens_usage_based:
+      - '250000'
+      x-ratelimit-remaining-requests:
+      - '2999'
+      x-ratelimit-remaining-tokens:
+      - '249000'
+      x-ratelimit-remaining-tokens_usage_based:
+      - '249000'
+      x-ratelimit-reset-requests:
+      - 20ms
+      x-ratelimit-reset-tokens:
+      - 240ms
+      x-ratelimit-reset-tokens_usage_based:
+      - 240ms
+      x-request-id:
+      - 104102fd01f62af171c48a203bf218f5
+    http_version: HTTP/1.1
+    status_code: 200
+version: 1

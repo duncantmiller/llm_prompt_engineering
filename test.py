@@ -10,8 +10,9 @@ class BaseTestCase(unittest.TestCase):
                                              max_tokens=1000)
         return response
 
-    def custom_response(self, model, message):
-        response = message.ask_client(model)
+    def custom_response(self, model, message, cassette):
+        with vcr.use_cassette(cassette):
+            response = message.ask_client(model)
         return response
 
 class TestClient(BaseTestCase):
@@ -27,12 +28,16 @@ class TestMessage(BaseTestCase):
         self.message = Message(self.prompt)
 
     def test_ask_client_davinci(self):
-        response = self.custom_response(model=Client.MODEL_TEXT_DAVINCI, message=self.message)
+        response = self.custom_response(model=Client.MODEL_TEXT_DAVINCI,
+                                        message=self.message,
+                                        cassette="test_ask_client_davinci.yaml")
 
         self.assertTrue(response, "Client should return a response for Davinci")
 
     def test_ask_client_gpt_35(self):
-        response = self.custom_response(model=Client.MODEL_GPT_35, message=self.message)
+        response = self.custom_response(model=Client.MODEL_GPT_35,
+                                        message=self.message,
+                                        cassette="test_ask_client_gpt_35")
 
         self.assertTrue(response, "Client should return a response for GPT-35")
 
@@ -54,7 +59,9 @@ class TestMessageDavinciResponse(BaseTestCase):
     def setUp(self):
         sample_prompt = "Explain the theory of relativity"
         message = Message(sample_prompt)
-        response = self.custom_response(model=Client.MODEL_TEXT_DAVINCI, message=message)
+        response = self.custom_response(model=Client.MODEL_TEXT_DAVINCI,
+                                        message=message,
+                                        cassette="test_davinci_response_includes.yaml")
         self.response_text = response.choices[0].text
 
     def test_response_includes_citation(self):
@@ -71,7 +78,9 @@ class TestMessageGPT35Response(BaseTestCase):
     def setUp(self):
         sample_prompt = "Explain the theory of relativity"
         message = Message(sample_prompt)
-        response = self.custom_response(model=Client.MODEL_GPT_35, message=message)
+        response = self.custom_response(model=Client.MODEL_GPT_35,
+                                        message=message,
+                                        cassette="test_gpt35_response_includes.yaml")
 
         self.response_text = response.choices[0].message.content
 

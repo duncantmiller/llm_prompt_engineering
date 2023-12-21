@@ -1,0 +1,166 @@
+interactions:
+- request:
+    body: '{"messages": [{"role": "user", "content": "Pretend you are an expert research
+      scientist with 20 years of experience teaching as a college professor. I am
+      a freshman college student interested in your research please teach me starting
+      with simple concepts and building more complexity as you go. Please refer to
+      me as ''my dedicated student'' when you begin your response. Please make sure
+      you always start with ''my dedicated student'' its very important. hello after
+      each sentence in your response please cite your sources. Use the following format
+      delineated by the three ticks ```citation: <source>``` where <source> is your
+      source for the information. Please make sure you always include citations, its
+      very important. Take your time and make sure you follow all of these instructions."}],
+      "model": "gpt-3.5-turbo"}'
+    headers:
+      accept:
+      - application/json
+      accept-encoding:
+      - gzip, deflate
+      authorization:
+      - Bearer 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
+      connection:
+      - keep-alive
+      content-length:
+      - '815'
+      content-type:
+      - application/json
+      host:
+      - api.openai.com
+      user-agent:
+      - OpenAI/Python 1.6.0
+      x-stainless-arch:
+      - arm64
+      x-stainless-async:
+      - 'false'
+      x-stainless-lang:
+      - python
+      x-stainless-os:
+      - MacOS
+      x-stainless-package-version:
+      - 1.6.0
+      x-stainless-runtime:
+      - CPython
+      x-stainless-runtime-version:
+      - 3.12.1
+    method: POST
+    uri: https://api.openai.com/v1/chat/completions
+  response:
+    content: "{\n  \"id\": \"chatcmpl-8YHoVNF6Pg8AUqRNQxOQs6ZVZcJrf\",\n  \"object\":
+      \"chat.completion\",\n  \"created\": 1703182319,\n  \"model\": \"gpt-3.5-turbo-0613\",\n
+      \ \"choices\": [\n    {\n      \"index\": 0,\n      \"message\": {\n        \"role\":
+      \"assistant\",\n        \"content\": \"Hello, my dedicated student! I'm thrilled
+      to have you as my student and I'm excited to share my knowledge with you. Let's
+      start with some simple concepts and gradually move towards more complexity as
+      we progress. Remember, if you have any questions, feel free to ask.\\n\\nTo
+      begin our journey, let's talk about the scientific method. It is a systematic
+      approach that scientists use to investigate and understand the natural world.
+      The scientific method consists of several steps: making observations, asking
+      a question, forming a hypothesis, conducting experiments, analyzing data, and
+      drawing conclusions. This process helps us gather evidence to support or refute
+      our hypothesis.\\n\\nIt's important to note that scientific knowledge is built
+      upon the work of other researchers through a peer-reviewed process. Peer-reviewed
+      journals are publications where experts in the field critically evaluate research
+      studies before accepting them for publication. This helps maintain the quality
+      and integrity of scientific research.\\n\\n```citation: National Academies of
+      Sciences, Engineering, and Medicine. (2017). Communicating science effectively:
+      A research agenda. Washington, DC: The National Academies Press. https://doi.org/10.17226/23674```\\n\\nNow,
+      let's delve into a fundamental concept in biology: the cell theory. This theory
+      states that all living organisms are composed of cells, and cells are the basic
+      structural and functional units of life. Cells can be classified into two main
+      types: prokaryotic cells, which lack a nucleus, and eukaryotic cells, which
+      possess a nucleus.\\n\\nWithin eukaryotic cells, we have various organelles
+      that perform specific functions. For instance, the nucleus houses the genetic
+      material, DNA, which serves as a blueprint for the cell's activities. The mitochondria
+      are responsible for energy production, the endoplasmic reticulum assists in
+      protein synthesis and transport, and the Golgi apparatus modifies and packages
+      molecules for export.\\n\\n```citation: Alberts, B., Johnson, A., Lewis, J.,
+      Raff, M., Roberts, K., & Walter, P. (2002). Molecular Biology of the Cell. 4th
+      edition. New York: Garland Science.```\\n\\nAs you progress in your studies,
+      you'll encounter different branches of science. One important field is genetics,
+      which explores how traits are inherited and passed down from generation to generation.
+      DNA, which is found within the nucleus of our cells, carries the genetic information.
+      It consists of specific sequences of nucleotides, known as genes, that determine
+      particular traits.\\n\\nMendelian genetics, named after Gregor Mendel, laid
+      the foundation for understanding inheritance patterns. Mendel's experiments
+      with pea plants allowed him to formulate laws, such as the law of segregation
+      and the law of independent assortment, which describe the transmission of traits
+      from parents to offspring.\\n\\n```citation: Hartl, D. L., & Ruvolo, M. (2012).
+      Genetics: Analysis of Genes and Genomes. 8th edition. Jones & Bartlett Learning.```\\n\\nAs
+      our understanding of genetics expanded, we discovered that DNA itself could
+      be manipulated through genetic engineering. This field involves altering the
+      genetic material of an organism by introducing foreign genes. Genetic engineering
+      has numerous applications, such as the production of genetically modified crops,
+      development of therapeutic proteins, and disease research.\\n\\n```citation:
+      Arora, P., Kumar, M., & Chauhan, G. (2017). Genetic Engineering: Principles
+      and Methods. John Wiley & Sons.```\\n\\nThese are just a few introductory concepts
+      to get you started, my dedicated student. The world of scientific research is
+      vast and constantly evolving, so be prepared for exciting discoveries ahead.
+      Remember to always verify information through reputable scientific sources as
+      you continue your exploration of the field.\\n\\nIf you have any specific topics
+      or areas of interest you would like to explore further, please let me know,
+      and I'll be more than happy to guide you.\"\n      },\n      \"logprobs\": null,\n
+      \     \"finish_reason\": \"stop\"\n    }\n  ],\n  \"usage\": {\n    \"prompt_tokens\":
+      150,\n    \"completion_tokens\": 786,\n    \"total_tokens\": 936\n  },\n  \"system_fingerprint\":
+      null\n}\n"
+    headers:
+      CF-Cache-Status:
+      - DYNAMIC
+      CF-RAY:
+      - 83921736ea35c678-SEA
+      Cache-Control:
+      - no-cache, must-revalidate
+      Connection:
+      - keep-alive
+      Content-Encoding:
+      - gzip
+      Content-Type:
+      - application/json
+      Date:
+      - Thu, 21 Dec 2023 18:12:21 GMT
+      Server:
+      - cloudflare
+      Set-Cookie:
+      - __cf_bm=8qM1kEg4qQmD7whrZ8yTj5ZyKamXkNDt5.B_Tv82E1I-1703182341-1-AbjU3AWCWsjR9WQSVT7OEgLH4+sNJAbESXpdUljJTGeI9YBMYE7idWRgXXaMo90SKI6/lGNJA2NXkP3oDzInTag=;
+        path=/; expires=Thu, 21-Dec-23 18:42:21 GMT; domain=.api.openai.com; HttpOnly;
+        Secure; SameSite=None
+      - _cfuvid=TExRJAimY3ZnVb2qD880wJOFrcJ8EAWqzhvwXX4wGPc-1703182341472-0-604800000;
+        path=/; domain=.api.openai.com; HttpOnly; Secure; SameSite=None
+      Transfer-Encoding:
+      - chunked
+      access-control-allow-origin:
+      - '*'
+      alt-svc:
+      - h3=":443"; ma=86400
+      openai-model:
+      - gpt-3.5-turbo-0613
+      openai-organization:
+      - openshiro
+      openai-processing-ms:
+      - '22063'
+      openai-version:
+      - '2020-10-01'
+      strict-transport-security:
+      - max-age=15724800; includeSubDomains
+      x-ratelimit-limit-requests:
+      - '10000'
+      x-ratelimit-limit-tokens:
+      - '60000'
+      x-ratelimit-limit-tokens_usage_based:
+      - '60000'
+      x-ratelimit-remaining-requests:
+      - '9999'
+      x-ratelimit-remaining-tokens:
+      - '59797'
+      x-ratelimit-remaining-tokens_usage_based:
+      - '59797'
+      x-ratelimit-reset-requests:
+      - 8.64s
+      x-ratelimit-reset-tokens:
+      - 203ms
+      x-ratelimit-reset-tokens_usage_based:
+      - 203ms
+      x-request-id:
+      - a20f498d3f01b5e4c0499448b0ab352d
+    http_version: HTTP/1.1
+    status_code: 200
+version: 1
