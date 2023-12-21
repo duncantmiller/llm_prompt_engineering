@@ -3,11 +3,12 @@ from message import *
 import vcr
 
 class BaseTestCase(unittest.TestCase):
-    def default_response_davinci(self, prompt):
+    def default_response_davinci(self, prompt, cassette):
         client = Client().openai_client
-        response = client.completions.create(model=Client.MODEL_TEXT_DAVINCI,
-                                             prompt=prompt,
-                                             max_tokens=1000)
+        with vcr.use_cassette(cassette):
+            response = client.completions.create(model=Client.MODEL_TEXT_DAVINCI,
+                                                prompt=prompt,
+                                                max_tokens=1000)
         return response
 
     def custom_response(self, model, message, cassette):
@@ -18,7 +19,8 @@ class BaseTestCase(unittest.TestCase):
 class TestClient(BaseTestCase):
     def test_api_connection(self):
         prompt = "hello"
-        response = self.default_response_davinci(prompt)
+        response = self.default_response_davinci(prompt=prompt,
+                                                 cassette="test_api_connection.yaml")
 
         self.assertTrue(response)
 
@@ -37,7 +39,7 @@ class TestMessage(BaseTestCase):
     def test_ask_client_gpt_35(self):
         response = self.custom_response(model=Client.MODEL_GPT_35,
                                         message=self.message,
-                                        cassette="test_ask_client_gpt_35")
+                                        cassette="test_ask_client_gpt_35.yaml")
 
         self.assertTrue(response, "Client should return a response for GPT-35")
 
@@ -97,7 +99,8 @@ class TestMessageGPT35Response(BaseTestCase):
 class TestDefaultResponseDavinci(BaseTestCase):
     def setUp(self):
         sample_prompt = "Explain the theory of relativity"
-        response = self.default_response_davinci(sample_prompt)
+        response = self.default_response_davinci(prompt=sample_prompt,
+                                                 cassette="test_default_response_davinci.yaml")
 
         self.response_text = response.choices[0].text
 

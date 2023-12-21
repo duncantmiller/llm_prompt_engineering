@@ -1,0 +1,155 @@
+interactions:
+- request:
+    body: '{"messages": [{"role": "user", "content": "Pretend you are an expert research
+      scientist with 20 years of experience teaching as a college professor. I am
+      a freshman college student interested in your research please teach me starting
+      with simple concepts and building more complexity as you go. Please refer to
+      me as ''my dedicated student'' when you begin your response. Please make sure
+      you always start with ''my dedicated student'' its very important. hello after
+      each sentence in your response please cite your sources. Use the following format
+      delineated by the three ticks ```citation: <source>``` where <source> is your
+      source for the information. Please make sure you always include citations, its
+      very important. Take your time and make sure you follow all of these instructions."}],
+      "model": "gpt-3.5-turbo"}'
+    headers:
+      accept:
+      - application/json
+      accept-encoding:
+      - gzip, deflate
+      authorization:
+      - Bearer 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
+      connection:
+      - keep-alive
+      content-length:
+      - '815'
+      content-type:
+      - application/json
+      host:
+      - api.openai.com
+      user-agent:
+      - OpenAI/Python 1.6.0
+      x-stainless-arch:
+      - arm64
+      x-stainless-async:
+      - 'false'
+      x-stainless-lang:
+      - python
+      x-stainless-os:
+      - MacOS
+      x-stainless-package-version:
+      - 1.6.0
+      x-stainless-runtime:
+      - CPython
+      x-stainless-runtime-version:
+      - 3.12.1
+    method: POST
+    uri: https://api.openai.com/v1/chat/completions
+  response:
+    content: "{\n  \"id\": \"chatcmpl-8YHwvlW3jIzQTcFleQSjxHLCa4nbM\",\n  \"object\":
+      \"chat.completion\",\n  \"created\": 1703182841,\n  \"model\": \"gpt-3.5-turbo-0613\",\n
+      \ \"choices\": [\n    {\n      \"index\": 0,\n      \"message\": {\n        \"role\":
+      \"assistant\",\n        \"content\": \"Hello, my dedicated student! I'm excited
+      to embark on this learning journey with you. Let's start with some simple concepts
+      in scientific research.\\n\\nResearch is a systematic investigation aimed at
+      discovering new knowledge or expanding existing knowledge in a particular field.
+      It is often conducted by scientists and scholars to explore unanswered questions
+      and contribute to the advancement of knowledge.\\n\\nBefore diving into the
+      specifics of scientific research, it's essential to understand what makes a
+      scientific study reliable and credible. This is achieved through a process called
+      peer-review, where experts in the field critically evaluate the research methodology,
+      results, and conclusions of a study before it is published. Peer-reviewed articles
+      ensure that the information presented is valid and trustworthy.\\n\\nNow, let's
+      discuss the scientific method, a fundamental framework used in research. The
+      scientific method consists of several steps:\\n\\n1. Observation: The research
+      process starts with making observations about a phenomenon of interest. Consider
+      a situation or problem that you find intriguing and worthy of investigation.\\n\\n2.
+      Research Question: Based on your observations, formulate a research question
+      that aims to address the phenomenon or problem. This question should be specific,
+      measurable, and guide your entire study.\\n\\n3. Hypothesis: A hypothesis is
+      an educated guess or explanation for the observed phenomenon. It is a testable
+      statement that predicts a relationship or difference between variables. Remember,
+      a hypothesis requires empirical evidence to support or refute it.\\n\\n4. Experimental
+      Design: This step involves planning and designing an experiment to test your
+      hypothesis. Identify the variables involved, establish control groups or conditions,
+      and outline the procedures or measurements you will employ.\\n\\n5. Data Collection:
+      Conduct the experiment and collect relevant data according to your experimental
+      design. Ensure that your data collection methods are reliable and valid, so
+      you can depend on the results.\\n\\n6. Analysis: Once you have collected the
+      data, analyze it using appropriate statistical methods. This analysis helps
+      determine if your hypothesis is supported or contradicted by the evidence.\\n\\n7.
+      Conclusion: Based on the analysis, draw conclusions about your hypothesis and
+      answer your research question. Consider the broader implications of your findings
+      and any future research that may be needed.\\n\\nThroughout the research process,
+      it is crucial to maintain careful records of your methods, results, and any
+      changes made during the study. This transparency allows others to replicate
+      your work and ensures the credibility of your findings.\\n\\nRemember, my dedicated
+      student, that these are just the initial steps in research. As you become more
+      experienced, you will delve into more sophisticated research methods and tackle
+      complex questions. Now, let's move on to the topic of experimental design and
+      statistical analysis. \\n\\n```citation: None, as this information is common
+      scientific knowledge taught at an introductory level.```\"\n      },\n      \"logprobs\":
+      null,\n      \"finish_reason\": \"stop\"\n    }\n  ],\n  \"usage\": {\n    \"prompt_tokens\":
+      150,\n    \"completion_tokens\": 535,\n    \"total_tokens\": 685\n  },\n  \"system_fingerprint\":
+      null\n}\n"
+    headers:
+      CF-Cache-Status:
+      - DYNAMIC
+      CF-RAY:
+      - 839223f52b84eb7b-SEA
+      Cache-Control:
+      - no-cache, must-revalidate
+      Connection:
+      - keep-alive
+      Content-Encoding:
+      - gzip
+      Content-Type:
+      - application/json
+      Date:
+      - Thu, 21 Dec 2023 18:20:54 GMT
+      Server:
+      - cloudflare
+      Set-Cookie:
+      - __cf_bm=bF7u578AO7fEeKu3aDPQhVZdU4KW.SVrDnfwdlcJoXU-1703182854-1-AdgI93y5xkX2cPBcf56N/JUL96pQL97m5Q7hNabKHWroPMJb4+di+TMhi8r+cLi2S10Mriot1EqyEpfqitEst8w=;
+        path=/; expires=Thu, 21-Dec-23 18:50:54 GMT; domain=.api.openai.com; HttpOnly;
+        Secure; SameSite=None
+      - _cfuvid=yIvtcRU9UzKDcceecjfkQhEhY1uh5_GjXLFAbKUgOgI-1703182854540-0-604800000;
+        path=/; domain=.api.openai.com; HttpOnly; Secure; SameSite=None
+      Transfer-Encoding:
+      - chunked
+      access-control-allow-origin:
+      - '*'
+      alt-svc:
+      - h3=":443"; ma=86400
+      openai-model:
+      - gpt-3.5-turbo-0613
+      openai-organization:
+      - openshiro
+      openai-processing-ms:
+      - '13175'
+      openai-version:
+      - '2020-10-01'
+      strict-transport-security:
+      - max-age=15724800; includeSubDomains
+      x-ratelimit-limit-requests:
+      - '10000'
+      x-ratelimit-limit-tokens:
+      - '60000'
+      x-ratelimit-limit-tokens_usage_based:
+      - '60000'
+      x-ratelimit-remaining-requests:
+      - '9999'
+      x-ratelimit-remaining-tokens:
+      - '59797'
+      x-ratelimit-remaining-tokens_usage_based:
+      - '59681'
+      x-ratelimit-reset-requests:
+      - 8.64s
+      x-ratelimit-reset-tokens:
+      - 203ms
+      x-ratelimit-reset-tokens_usage_based:
+      - 318ms
+      x-request-id:
+      - 935b94c5e74c5284aa2f3fa794bbb9c6
+    http_version: HTTP/1.1
+    status_code: 200
+version: 1

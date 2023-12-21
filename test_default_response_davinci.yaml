@@ -1,0 +1,120 @@
+interactions:
+- request:
+    body: '{"model": "text-davinci-003", "prompt": "Explain the theory of relativity",
+      "max_tokens": 1000}'
+    headers:
+      accept:
+      - application/json
+      accept-encoding:
+      - gzip, deflate
+      authorization:
+      - Bearer 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
+      connection:
+      - keep-alive
+      content-length:
+      - '95'
+      content-type:
+      - application/json
+      host:
+      - api.openai.com
+      user-agent:
+      - OpenAI/Python 1.6.0
+      x-stainless-arch:
+      - arm64
+      x-stainless-async:
+      - 'false'
+      x-stainless-lang:
+      - python
+      x-stainless-os:
+      - MacOS
+      x-stainless-package-version:
+      - 1.6.0
+      x-stainless-runtime:
+      - CPython
+      x-stainless-runtime-version:
+      - 3.12.1
+    method: POST
+    uri: https://api.openai.com/v1/completions
+  response:
+    content: "{\n  \"warning\": \"This model version is deprecated. Migrate before
+      January 4, 2024 to avoid disruption of service. Learn more https://platform.openai.com/docs/deprecations\",\n
+      \ \"id\": \"cmpl-8YHvyQ308qPTMwmiWBmcfmUbQbPXe\",\n  \"object\": \"text_completion\",\n
+      \ \"created\": 1703182782,\n  \"model\": \"text-davinci-003\",\n  \"choices\":
+      [\n    {\n      \"text\": \"\\n\\nThe Theory of Relativity is a scientific theory
+      that explains the relationship between space and time, as well as the motion
+      of matter and energy. It is based on two fundamental principles: the principle
+      of relativity and the principle of equivalence. The principle of relativity
+      states that the laws of physics are the same in all non-accelerating frames
+      of reference, regardless of their motion relative to each other. The principle
+      of equivalence states that the effects of gravity and acceleration are indistinguishable
+      from each other. From these two principles follows that all observers will measure
+      the same laws of physics regardless of their motion or environment. This has
+      allowed scientists to develop a mathematical description of the universe and
+      its contents, resulting in a more accurate view of the laws of physics. The
+      theory also provides a mathematical framework for many scientific advancements,
+      such as GPS systems, quantum mechanics, and black holes.\",\n      \"index\":
+      0,\n      \"logprobs\": null,\n      \"finish_reason\": \"stop\"\n    }\n  ],\n
+      \ \"usage\": {\n    \"prompt_tokens\": 6,\n    \"completion_tokens\": 175,\n
+      \   \"total_tokens\": 181\n  }\n}\n"
+    headers:
+      CF-Cache-Status:
+      - DYNAMIC
+      CF-RAY:
+      - 8392228359f708be-SEA
+      Cache-Control:
+      - no-cache, must-revalidate
+      Connection:
+      - keep-alive
+      Content-Encoding:
+      - gzip
+      Content-Type:
+      - application/json
+      Date:
+      - Thu, 21 Dec 2023 18:19:45 GMT
+      Server:
+      - cloudflare
+      Set-Cookie:
+      - __cf_bm=Y9XFOuCCnAJqo9WwxK0JjD2QVhifWrzykAeO2dwZB40-1703182785-1-AQSR0QZV3rZ2SBT++x/DN1IcoPwXOmcpwk0g5HQpYGQnaCk+Tep4OsSPFd1JrL6Cetj5ef1U4ARfSU+MNemjDG8=;
+        path=/; expires=Thu, 21-Dec-23 18:49:45 GMT; domain=.api.openai.com; HttpOnly;
+        Secure; SameSite=None
+      - _cfuvid=byNlQW7vnT4yWLxTRkfgQlJQkMVOEb8MwZClXIF.rl8-1703182785544-0-604800000;
+        path=/; domain=.api.openai.com; HttpOnly; Secure; SameSite=None
+      Transfer-Encoding:
+      - chunked
+      access-control-allow-origin:
+      - '*'
+      alt-svc:
+      - h3=":443"; ma=86400
+      openai-model:
+      - text-davinci-003
+      openai-organization:
+      - openshiro
+      openai-processing-ms:
+      - '3452'
+      openai-version:
+      - '2020-10-01'
+      strict-transport-security:
+      - max-age=15724800; includeSubDomains
+      x-ratelimit-limit-requests:
+      - '3000'
+      x-ratelimit-limit-tokens:
+      - '250000'
+      x-ratelimit-limit-tokens_usage_based:
+      - '250000'
+      x-ratelimit-remaining-requests:
+      - '2999'
+      x-ratelimit-remaining-tokens:
+      - '249000'
+      x-ratelimit-remaining-tokens_usage_based:
+      - '249000'
+      x-ratelimit-reset-requests:
+      - 20ms
+      x-ratelimit-reset-tokens:
+      - 240ms
+      x-ratelimit-reset-tokens_usage_based:
+      - 240ms
+      x-request-id:
+      - ff0e354288f11642ca7bd5b55c243c4e
+    http_version: HTTP/1.1
+    status_code: 200
+version: 1

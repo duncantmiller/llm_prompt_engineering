@@ -1,0 +1,120 @@
+interactions:
+- request:
+    body: '{"model": "text-davinci-003", "prompt": "hello", "max_tokens": 1000}'
+    headers:
+      accept:
+      - application/json
+      accept-encoding:
+      - gzip, deflate
+      authorization:
+      - Bearer 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
+      connection:
+      - keep-alive
+      content-length:
+      - '68'
+      content-type:
+      - application/json
+      host:
+      - api.openai.com
+      user-agent:
+      - OpenAI/Python 1.6.0
+      x-stainless-arch:
+      - arm64
+      x-stainless-async:
+      - 'false'
+      x-stainless-lang:
+      - python
+      x-stainless-os:
+      - MacOS
+      x-stainless-package-version:
+      - 1.6.0
+      x-stainless-runtime:
+      - CPython
+      x-stainless-runtime-version:
+      - 3.12.1
+    method: POST
+    uri: https://api.openai.com/v1/completions
+  response:
+    content: "{\n  \"warning\": \"This model version is deprecated. Migrate before
+      January 4, 2024 to avoid disruption of service. Learn more https://platform.openai.com/docs/deprecations\",\n
+      \ \"id\": \"cmpl-8YHvtTHaryZWIKBaXhg38Aa9rxG6w\",\n  \"object\": \"text_completion\",\n
+      \ \"created\": 1703182777,\n  \"model\": \"text-davinci-003\",\n  \"choices\":
+      [\n    {\n      \"text\": \"@joesoft.net\\n\\nDear JoeSoft customer service,\\n\\nI
+      hope this email finds you well. My name is Tim Smith and I have been a customer
+      of JoeSoft for several years now. Recently, I encountered an issue with your
+      product that I was hoping you could help me resolve.\\n\\nThe problem I am having
+      is with the installation and use of your software. I have been using your software
+      for a number of years on both Mac and PC computers. Recently, after completing
+      the installation process, I can\u2019t seem to use the software. When I try
+      to open the application, I keep getting an error message that says \u201CThe
+      application could not be opened.\u201D I have uninstalled and re-installed the
+      software several times to no avail.\\n\\nI was wondering if you could provide
+      me with any help or advice about this problem. Is there any way I can troubleshoot
+      this issue so I can get the software working properly? If not, is there any
+      way I can get a refund or credit for the software?\\n\\nAny help or advice you
+      could provide would be much appreciated.\\n\\nSincerely,\\n\\nTim Smith\",\n
+      \     \"index\": 0,\n      \"logprobs\": null,\n      \"finish_reason\": \"stop\"\n
+      \   }\n  ],\n  \"usage\": {\n    \"prompt_tokens\": 1,\n    \"completion_tokens\":
+      239,\n    \"total_tokens\": 240\n  }\n}\n"
+    headers:
+      CF-Cache-Status:
+      - DYNAMIC
+      CF-RAY:
+      - 839222665c426810-SEA
+      Cache-Control:
+      - no-cache, must-revalidate
+      Connection:
+      - keep-alive
+      Content-Encoding:
+      - gzip
+      Content-Type:
+      - application/json
+      Date:
+      - Thu, 21 Dec 2023 18:19:41 GMT
+      Server:
+      - cloudflare
+      Set-Cookie:
+      - __cf_bm=VAPon_3qMmVW7N5YW1Udxn_TA2fbsK8ghuE1NdCOyFw-1703182781-1-AdsWfKbaOCPbGarEWnLlK/o4YTwQ5SKZz66qss6EWOpJkWj9f47hnywQWszqtlo3LKgop61edKaUXdLK+agZdgM=;
+        path=/; expires=Thu, 21-Dec-23 18:49:41 GMT; domain=.api.openai.com; HttpOnly;
+        Secure; SameSite=None
+      - _cfuvid=jVLJuITGE2MbRxJJgVr2PyH5ZcNEVMJKHLLmk3pTq_w-1703182781786-0-604800000;
+        path=/; domain=.api.openai.com; HttpOnly; Secure; SameSite=None
+      Transfer-Encoding:
+      - chunked
+      access-control-allow-origin:
+      - '*'
+      alt-svc:
+      - h3=":443"; ma=86400
+      openai-model:
+      - text-davinci-003
+      openai-organization:
+      - openshiro
+      openai-processing-ms:
+      - '4355'
+      openai-version:
+      - '2020-10-01'
+      strict-transport-security:
+      - max-age=15724800; includeSubDomains
+      x-ratelimit-limit-requests:
+      - '3000'
+      x-ratelimit-limit-tokens:
+      - '250000'
+      x-ratelimit-limit-tokens_usage_based:
+      - '250000'
+      x-ratelimit-remaining-requests:
+      - '2999'
+      x-ratelimit-remaining-tokens:
+      - '249000'
+      x-ratelimit-remaining-tokens_usage_based:
+      - '249000'
+      x-ratelimit-reset-requests:
+      - 20ms
+      x-ratelimit-reset-tokens:
+      - 240ms
+      x-ratelimit-reset-tokens_usage_based:
+      - 240ms
+      x-request-id:
+      - a2c857f69c6bf16ea41116af69959621
+    http_version: HTTP/1.1
+    status_code: 200
+version: 1
