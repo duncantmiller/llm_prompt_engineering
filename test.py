@@ -79,11 +79,10 @@ class TestMessageGPT35Response(unittest.TestCase):
                       self.response_text.lower(),
                       "Response should comply with pre_prompt instructions")
 
-class TestDefaultResponseDavinci(unittest.TestCase):
+class TestDefaultResponseDavinci(BaseTestCase):
     def setUp(self):
         sample_prompt = "Explain the theory of relativity"
-        client = Client().openai_client
-        response = self.default_response_davinci(prompt)
+        response = self.default_response_davinci(sample_prompt)
 
         self.response_text = response.choices[0].text
 
