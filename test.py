@@ -11,6 +11,20 @@ class BaseTestCase(unittest.TestCase):
                                                 max_tokens=1000)
         return response
 
+    def default_response(self, prompt, cassette):
+        client = Client().openai_client
+        with vcr.use_cassette(cassette):
+            response = client.chat.completions.create(
+                messages=[
+                    {
+                        "role": "user",
+                        "content": prompt,
+                    }
+                ],
+                model=Client.MODEL_GPT_35,
+            )
+        return response
+
     def custom_response(self, model, message, cassette):
         with vcr.use_cassette(cassette):
             response = message.ask_client(model)
@@ -114,19 +128,11 @@ class TestDefaultResponseDavinci(BaseTestCase):
                 self.response_text.lower(),
                 "Response should not include pre_prompt instructions")
 
-class TestDefaultResponseGPT35(unittest.TestCase):
+class TestDefaultResponseGPT35(BaseTestCase):
     def setUp(self):
         sample_prompt = "Explain the theory of relativity"
-        client = Client().openai_client
-        response = client.chat.completions.create(
-            messages=[
-                {
-                    "role": "user",
-                    "content": sample_prompt,
-                }
-            ],
-            model=Client.MODEL_GPT_35,
-        )
+        response = self.default_response(prompt=sample_prompt,
+                                         cassette="test_default_response_gpt35.yaml")
         self.response_text = response.choices[0].message.content
 
     def test_does_not_include_citation(self):

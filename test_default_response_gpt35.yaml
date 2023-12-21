@@ -1,0 +1,136 @@
+interactions:
+- request:
+    body: '{"messages": [{"role": "user", "content": "Explain the theory of relativity"}],
+      "model": "gpt-3.5-turbo"}'
+    headers:
+      accept:
+      - application/json
+      accept-encoding:
+      - gzip, deflate
+      authorization:
+      - Bearer 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
+      connection:
+      - keep-alive
+      content-length:
+      - '105'
+      content-type:
+      - application/json
+      host:
+      - api.openai.com
+      user-agent:
+      - OpenAI/Python 1.6.0
+      x-stainless-arch:
+      - arm64
+      x-stainless-async:
+      - 'false'
+      x-stainless-lang:
+      - python
+      x-stainless-os:
+      - MacOS
+      x-stainless-package-version:
+      - 1.6.0
+      x-stainless-runtime:
+      - CPython
+      x-stainless-runtime-version:
+      - 3.12.1
+    method: POST
+    uri: https://api.openai.com/v1/chat/completions
+  response:
+    content: "{\n  \"id\": \"chatcmpl-8YI1I6cKI3QskLCG5EVFRFR1uk4Fa\",\n  \"object\":
+      \"chat.completion\",\n  \"created\": 1703183112,\n  \"model\": \"gpt-3.5-turbo-0613\",\n
+      \ \"choices\": [\n    {\n      \"index\": 0,\n      \"message\": {\n        \"role\":
+      \"assistant\",\n        \"content\": \"The theory of relativity is a theory
+      in physics, proposed by Albert Einstein in the early 20th century, that revolutionized
+      our understanding of space, time, and gravity. It consists of two parts: the
+      special theory of relativity and the general theory of relativity.\\n\\nThe
+      special theory of relativity, proposed in 1905, states that the laws of physics
+      are the same for all observers, regardless of their relative motion. It introduces
+      the concept of \\\"spacetime,\\\" which combines the three dimensions of space
+      with the dimension of time into a four-dimensional framework. The theory also
+      asserts that the speed of light in a vacuum is constant for all observers, regardless
+      of their relative motion. This means that the passage of time, the length of
+      objects, and the energy of an object depend on its relative motion to other
+      observers.\\n\\nOne of the key consequences of the special theory of relativity
+      is the concept of time dilation. It suggests that time passes differently for
+      observers in relative motion. For example, if two observers are moving relative
+      to each other, one moving at a high velocity, time will appear to pass slower
+      for the moving observer compared to the stationary one.\\n\\nThe general theory
+      of relativity, proposed in 1915, expands upon the special theory by incorporating
+      the influence of gravity. It states that gravity is not just a force, but rather
+      the curvature of spacetime caused by the presence of mass and energy. According
+      to this theory, objects with mass or energy deform the fabric of spacetime,
+      causing other objects to move along curved paths. This is often explained using
+      the analogy of a heavy ball placed on a rubber sheet, causing it to bend and
+      objects rolling nearby to follow curved paths.\\n\\nThe general theory of relativity
+      also predicts phenomena such as gravitational time dilation, where time appears
+      to pass slower in the presence of a strong gravitational field, and the deflection
+      of light by gravity. It has been confirmed by numerous experiments and observations,
+      including the bending of starlight by the Sun during a solar eclipse.\\n\\nOverall,
+      the theory of relativity provides a unified framework for understanding the
+      behavior of the physical world at both small and large scales, and has had profound
+      implications for our understanding of the universe and its workings.\"\n      },\n
+      \     \"logprobs\": null,\n      \"finish_reason\": \"stop\"\n    }\n  ],\n
+      \ \"usage\": {\n    \"prompt_tokens\": 14,\n    \"completion_tokens\": 446,\n
+      \   \"total_tokens\": 460\n  },\n  \"system_fingerprint\": null\n}\n"
+    headers:
+      CF-Cache-Status:
+      - DYNAMIC
+      CF-RAY:
+      - 83922a928920ebe6-SEA
+      Cache-Control:
+      - no-cache, must-revalidate
+      Connection:
+      - keep-alive
+      Content-Encoding:
+      - gzip
+      Content-Type:
+      - application/json
+      Date:
+      - Thu, 21 Dec 2023 18:25:23 GMT
+      Server:
+      - cloudflare
+      Set-Cookie:
+      - __cf_bm=xAZLUD6TRBdNINtJ6rwfP4zkYGe_1BSNlljI6dWCQes-1703183123-1-AVSpy1XHQRJjMvjx4eiaPJ5RxrRPj08Ylov5wX5dUQUONQIyMqGxTVG4okBT28F5J+geDJiyDwfkA5T7181t+YU=;
+        path=/; expires=Thu, 21-Dec-23 18:55:23 GMT; domain=.api.openai.com; HttpOnly;
+        Secure; SameSite=None
+      - _cfuvid=o_mtievtNvBYjjI4Wwn0BW_RlDQ40BnbxscMIjMT2Fo-1703183123324-0-604800000;
+        path=/; domain=.api.openai.com; HttpOnly; Secure; SameSite=None
+      Transfer-Encoding:
+      - chunked
+      access-control-allow-origin:
+      - '*'
+      alt-svc:
+      - h3=":443"; ma=86400
+      openai-model:
+      - gpt-3.5-turbo-0613
+      openai-organization:
+      - openshiro
+      openai-processing-ms:
+      - '11057'
+      openai-version:
+      - '2020-10-01'
+      strict-transport-security:
+      - max-age=15724800; includeSubDomains
+      x-ratelimit-limit-requests:
+      - '10000'
+      x-ratelimit-limit-tokens:
+      - '60000'
+      x-ratelimit-limit-tokens_usage_based:
+      - '60000'
+      x-ratelimit-remaining-requests:
+      - '9999'
+      x-ratelimit-remaining-tokens:
+      - '59975'
+      x-ratelimit-remaining-tokens_usage_based:
+      - '59975'
+      x-ratelimit-reset-requests:
+      - 8.64s
+      x-ratelimit-reset-tokens:
+      - 25ms
+      x-ratelimit-reset-tokens_usage_based:
+      - 25ms
+      x-request-id:
+      - ef95af78c02a14a4ff2207db4ffdf868
+    http_version: HTTP/1.1
+    status_code: 200
+version: 1
