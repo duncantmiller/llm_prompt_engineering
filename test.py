@@ -1,6 +1,12 @@
 import unittest
 from message import *
 import vcr
+import argparse
+
+# Parse command-line arguments
+parser = argparse.ArgumentParser()
+parser.add_argument('--live-test', action='store_true', help='Run live API calls')
+args, _ = parser.parse_known_args()
 
 class BaseTestCase(unittest.TestCase):
     def default_response_davinci(self, prompt, cassette):
