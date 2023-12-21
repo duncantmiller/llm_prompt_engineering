@@ -6,7 +6,7 @@ This code demonstrates how I help ensure the high quality of the prompts I creat
 
 
 #### Usage
-Clone the repository and with `git clone git@github.com:duncantmiller/llm_prompt_engineering.git` then change to the project directory with `cd lm_prompt_engineering`
+Clone the repository and with `git clone git@github.com:duncantmiller/llm_prompt_engineering.git` then change to the project directory with `cd lm_prompt_engineering`.
 
 The tests use [vcrpy](https://github.com/kevin1024/vcrpy) to record and replay the interactions with the OpenAI API. To run the tests, run the command `python test.py`.
 
@@ -15,7 +15,8 @@ It can be helpful to also run the tests against the live OpenAI API, in order to
 - Copy the .env-example file, rename it to .env and include enter the value for your `OPENAI_API_KEY`
 - Run the tests with the command line flag `python test.py --live-test`
 
-#####Re-recording Cassettes
+##### Re-recording Cassettes
+
 If you change the code in your prompts or API calls, you will want to refresh the vcrpy cassettes so a new fresh API call is recorded. To do this simply delete the appropriate .yaml cassette files. You can also optionally set a `re_record_interval` in the vcr command. For example to re-record every 7 days:
 
 ````
