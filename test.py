@@ -6,6 +6,7 @@ import sys
 
 my_vcr = vcr.VCR(
     filter_headers=["authorization"],
+    cassette_library_dir="fixtures/vcr_cassettes"
 )
 
 def parse_custom_args():
