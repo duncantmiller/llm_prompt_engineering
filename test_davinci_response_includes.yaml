@@ -16,8 +16,6 @@ interactions:
       - application/json
       accept-encoding:
       - gzip, deflate
-      authorization:
-      - Bearer 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
       connection:
       - keep-alive
       content-length:
@@ -41,39 +39,36 @@ interactions:
       x-stainless-runtime:
       - CPython
       x-stainless-runtime-version:
-      - 3.12.1
+      - 3.11.6
     method: POST
     uri: https://api.openai.com/v1/completions
   response:
     content: "{\n  \"warning\": \"This model version is deprecated. Migrate before
       January 4, 2024 to avoid disruption of service. Learn more https://platform.openai.com/docs/deprecations\",\n
-      \ \"id\": \"cmpl-8YHqDZYFwEp0NwqvelVaub0QttBU6\",\n  \"object\": \"text_completion\",\n
-      \ \"created\": 1703182425,\n  \"model\": \"text-davinci-003\",\n  \"choices\":
-      [\n    {\n      \"text\": \"\\n\\nMy dedicated student, the Theory of Relativity,
-      originally formulated by Albert Einstein in 1905, is the idea that all motion
-      must be defined relative to a chosen frame of reference. This means that no
-      matter how fast something is moving, if there is no absolute reference point,
-      it cannot be determined whether it is moving or not. In other words, all motion
-      is relative to the observer. \\n\\nThe Theory of Relativity states that the
-      laws of physics are the same for all observers in all inertial frames of reference.
-      This can further be broken down into two main principles: the Principle of Relativity,
-      which states that all the laws of physics are the same in all inertial frames,
-      and the Principle of Invariance, which states that the laws of physics do not
-      change when going from one frame of reference to another.\\n\\nAnother important
-      concept in the Theory of Relativity is the idea of space-time. Space-time is
-      a 4-dimensional construct that combines three dimensions of space and one dimension
-      of time. According to the Theory of Relativity, space-time is curved and this
-      has an effect on the way objects move through it. \\n\\nThe Theory of Relativity
-      is an incredibly complex and powerful theory that is still being explored and
-      studied today.\\n\\nCitation: <https://en.wikipedia.org/wiki/Theory_of_relativity>\",\n
-      \     \"index\": 0,\n      \"logprobs\": null,\n      \"finish_reason\": \"stop\"\n
-      \   }\n  ],\n  \"usage\": {\n    \"prompt_tokens\": 149,\n    \"completion_tokens\":
-      283,\n    \"total_tokens\": 432\n  }\n}\n"
+      \ \"id\": \"cmpl-8YSnCddQnuZiUYOPfktmJehZq7gvx\",\n  \"object\": \"text_completion\",\n
+      \ \"created\": 1703224522,\n  \"model\": \"text-davinci-003\",\n  \"choices\":
+      [\n    {\n      \"text\": \"\\n\\nMy dedicated student, the theory of relativity
+      is a complex concept, but can be broken down into two main principles. The first
+      is the special theory of relativity, which was first proposed by Albert Einstein
+      in 1905. This theory states that the laws of physics remain unchanged in all
+      inertial frames, or frames of reference that move with constant velocity relative
+      to each other. It also states that the speed of light in a vacuum is the same,
+      regardless of the reference frame. This means that time and space can be observed
+      differently by two observers in different inertial frames. \\n\\nFollowing this,
+      Einstein proposed the general theory of relativity in 1915, which extended on
+      the principles of the special theory of relativity. This includes the idea of
+      curved spacetime, or the idea that the presence of mass or energy can warps
+      and bends the fabric of the universe. This is also where the famous equation
+      of E = MC^2 comes from, which explains the relationship between matter and energy.
+      \\n\\nCitation: https://en.wikipedia.org/wiki/Theory_of_relativity\",\n      \"index\":
+      0,\n      \"logprobs\": null,\n      \"finish_reason\": \"stop\"\n    }\n  ],\n
+      \ \"usage\": {\n    \"prompt_tokens\": 149,\n    \"completion_tokens\": 220,\n
+      \   \"total_tokens\": 369\n  }\n}\n"
     headers:
       CF-Cache-Status:
       - DYNAMIC
       CF-RAY:
-      - 839219ceebf0c3dc-SEA
+      - 83961d903c746815-SEA
       Cache-Control:
       - no-cache, must-revalidate
       Connection:
@@ -83,14 +78,14 @@ interactions:
       Content-Type:
       - application/json
       Date:
-      - Thu, 21 Dec 2023 18:13:50 GMT
+      - Fri, 22 Dec 2023 05:55:26 GMT
       Server:
       - cloudflare
       Set-Cookie:
-      - __cf_bm=D9K2oT.j_Hc7SirpqeDWg2.OdWUTqjG8AQ1I86Njp7A-1703182430-1-AU2zTjr1wrLsU1/WfV6U4ed4VgV2ohh7C5NjK+zu78PQTV5A7P6nkDZhF3uIFtH8h8qxTZuQpKf0MvDH+GCill4=;
-        path=/; expires=Thu, 21-Dec-23 18:43:50 GMT; domain=.api.openai.com; HttpOnly;
+      - __cf_bm=MVAmVFXBKONPerNUSP5JFLAKqMmjsC_hkA_b5zHoiH0-1703224526-1-AQY5G8fkDC7BLX+PGFZc+FNNmaJIbHCa6GFCtqOZbW8zd3jrbExhkR1l6kJT0i/VL3KBWG7ZTZgQxSKKlu9hGbs=;
+        path=/; expires=Fri, 22-Dec-23 06:25:26 GMT; domain=.api.openai.com; HttpOnly;
         Secure; SameSite=None
-      - _cfuvid=KFI0H_CKaqECWtSaiPtVE5x_xpppq1Sz6Ko.XzXCoDI-1703182430557-0-604800000;
+      - _cfuvid=bY4TU2.XTuXVaIQ0wFPxqwm2.ukXVUQFMTavyIfiSYw-1703224526685-0-604800000;
         path=/; domain=.api.openai.com; HttpOnly; Secure; SameSite=None
       Transfer-Encoding:
       - chunked
@@ -103,7 +98,7 @@ interactions:
       openai-organization:
       - openshiro
       openai-processing-ms:
-      - '5036'
+      - '4323'
       openai-version:
       - '2020-10-01'
       strict-transport-security:
@@ -127,7 +122,7 @@ interactions:
       x-ratelimit-reset-tokens_usage_based:
       - 240ms
       x-request-id:
-      - 104102fd01f62af171c48a203bf218f5
+      - 6ec014bdb5dc7f450bf95d1d91dd41b9
     http_version: HTTP/1.1
     status_code: 200
 version: 1

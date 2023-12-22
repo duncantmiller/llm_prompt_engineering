@@ -16,8 +16,6 @@ interactions:
       - application/json
       accept-encoding:
       - gzip, deflate
-      authorization:
-      - Bearer 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
       connection:
       - keep-alive
       content-length:
@@ -41,61 +39,60 @@ interactions:
       x-stainless-runtime:
       - CPython
       x-stainless-runtime-version:
-      - 3.12.1
+      - 3.11.6
     method: POST
     uri: https://api.openai.com/v1/chat/completions
   response:
-    content: "{\n  \"id\": \"chatcmpl-8YHwvlW3jIzQTcFleQSjxHLCa4nbM\",\n  \"object\":
-      \"chat.completion\",\n  \"created\": 1703182841,\n  \"model\": \"gpt-3.5-turbo-0613\",\n
+    content: "{\n  \"id\": \"chatcmpl-8YSmxrObhdCDumXT42M7Cv2tjWKVb\",\n  \"object\":
+      \"chat.completion\",\n  \"created\": 1703224507,\n  \"model\": \"gpt-3.5-turbo-0613\",\n
       \ \"choices\": [\n    {\n      \"index\": 0,\n      \"message\": {\n        \"role\":
-      \"assistant\",\n        \"content\": \"Hello, my dedicated student! I'm excited
-      to embark on this learning journey with you. Let's start with some simple concepts
-      in scientific research.\\n\\nResearch is a systematic investigation aimed at
-      discovering new knowledge or expanding existing knowledge in a particular field.
-      It is often conducted by scientists and scholars to explore unanswered questions
-      and contribute to the advancement of knowledge.\\n\\nBefore diving into the
-      specifics of scientific research, it's essential to understand what makes a
-      scientific study reliable and credible. This is achieved through a process called
-      peer-review, where experts in the field critically evaluate the research methodology,
-      results, and conclusions of a study before it is published. Peer-reviewed articles
-      ensure that the information presented is valid and trustworthy.\\n\\nNow, let's
-      discuss the scientific method, a fundamental framework used in research. The
-      scientific method consists of several steps:\\n\\n1. Observation: The research
-      process starts with making observations about a phenomenon of interest. Consider
-      a situation or problem that you find intriguing and worthy of investigation.\\n\\n2.
-      Research Question: Based on your observations, formulate a research question
-      that aims to address the phenomenon or problem. This question should be specific,
-      measurable, and guide your entire study.\\n\\n3. Hypothesis: A hypothesis is
-      an educated guess or explanation for the observed phenomenon. It is a testable
-      statement that predicts a relationship or difference between variables. Remember,
-      a hypothesis requires empirical evidence to support or refute it.\\n\\n4. Experimental
-      Design: This step involves planning and designing an experiment to test your
-      hypothesis. Identify the variables involved, establish control groups or conditions,
-      and outline the procedures or measurements you will employ.\\n\\n5. Data Collection:
-      Conduct the experiment and collect relevant data according to your experimental
-      design. Ensure that your data collection methods are reliable and valid, so
-      you can depend on the results.\\n\\n6. Analysis: Once you have collected the
-      data, analyze it using appropriate statistical methods. This analysis helps
-      determine if your hypothesis is supported or contradicted by the evidence.\\n\\n7.
-      Conclusion: Based on the analysis, draw conclusions about your hypothesis and
-      answer your research question. Consider the broader implications of your findings
-      and any future research that may be needed.\\n\\nThroughout the research process,
-      it is crucial to maintain careful records of your methods, results, and any
-      changes made during the study. This transparency allows others to replicate
-      your work and ensures the credibility of your findings.\\n\\nRemember, my dedicated
-      student, that these are just the initial steps in research. As you become more
-      experienced, you will delve into more sophisticated research methods and tackle
-      complex questions. Now, let's move on to the topic of experimental design and
-      statistical analysis. \\n\\n```citation: None, as this information is common
-      scientific knowledge taught at an introductory level.```\"\n      },\n      \"logprobs\":
-      null,\n      \"finish_reason\": \"stop\"\n    }\n  ],\n  \"usage\": {\n    \"prompt_tokens\":
-      150,\n    \"completion_tokens\": 535,\n    \"total_tokens\": 685\n  },\n  \"system_fingerprint\":
+      \"assistant\",\n        \"content\": \"Hello, my dedicated student. I am thrilled
+      to have you here and to share my knowledge with you. Today, let's start with
+      a foundational concept in research: the scientific method.\\n\\nThe scientific
+      method is a systematic approach used by scientists to investigate natural phenomena
+      and acquire new knowledge. It consists of several interconnected steps that
+      help us understand the world around us.\\n\\n1. Observation: The first step
+      is making observations about a particular phenomenon or problem. This could
+      be done through direct sensory perception or by reviewing existing research
+      in the field. ```citation: National Research Council. (2012). A framework for
+      K-12 science education: Practices, crosscutting concepts, and core ideas. National
+      Academies Press.```\\n\\n2. Research question: Based on those observations,
+      scientists develop specific research questions that they aim to answer through
+      their investigations. These questions serve as the compass for their research.
+      ```citation: McMillan, J. H., & Schumacher, S. (2007). Research in education:
+      Evidence-based inquiry (6th ed.). Pearson.```\\n\\n3. Hypothesis: A hypothesis
+      is a testable explanation for the observed phenomena or a possible answer to
+      the research question. It is an educated guess that guides the investigation.
+      ```citation: Jensen, L. A., & Reed, W. R. (1993). Handbook of Christian education.
+      Baker Book House.```\\n\\n4. Experimentation: To test the hypothesis, scientists
+      design and conduct experiments. They carefully plan and manipulate variables,
+      collect data, and analyze the results to determine if the hypothesis is supported
+      or refuted. ```citation: Salkind, N. J. (2010). Encyclopedia of research design.
+      SAGE Publications.```\\n\\n5. Analysis: Once the data is collected, it needs
+      to be analyzed using appropriate statistical methods. This allows scientists
+      to draw meaningful conclusions from their experiments and determine if their
+      hypothesis is valid. ```citation: Ellis, P. D. (2010). The essential guide to
+      effect sizes: Statistical power, meta-analysis, and the interpretation of research
+      results. Cambridge University Press.```\\n\\n6. Conclusion: Based on the analysis,
+      scientists draw conclusions about their research findings, including whether
+      the results support or contradict their hypothesis. They also consider the limitations
+      of their study and suggest directions for further research. ```citation: McMillan,
+      J. H., & Schumacher, S. (2007). Research in education: Evidence-based inquiry
+      (6th ed.). Pearson.```\\n\\nBy following the scientific method, researchers
+      ensure that their investigations are systematic, replicable, and objective,
+      leading to trustworthy findings. This process forms the foundation of scientific
+      research and helps advance our understanding of the world.\\n\\nRemember, my
+      dedicated student, these are the introductory steps to research. As we progress,
+      we will delve into more complex concepts and methodologies. If you have any
+      questions, please don't hesitate to ask.\"\n      },\n      \"logprobs\": null,\n
+      \     \"finish_reason\": \"stop\"\n    }\n  ],\n  \"usage\": {\n    \"prompt_tokens\":
+      150,\n    \"completion_tokens\": 589,\n    \"total_tokens\": 739\n  },\n  \"system_fingerprint\":
       null\n}\n"
     headers:
       CF-Cache-Status:
       - DYNAMIC
       CF-RAY:
-      - 839223f52b84eb7b-SEA
+      - 83961d335dbb682a-SEA
       Cache-Control:
       - no-cache, must-revalidate
       Connection:
@@ -105,14 +102,14 @@ interactions:
       Content-Type:
       - application/json
       Date:
-      - Thu, 21 Dec 2023 18:20:54 GMT
+      - Fri, 22 Dec 2023 05:55:22 GMT
       Server:
       - cloudflare
       Set-Cookie:
-      - __cf_bm=bF7u578AO7fEeKu3aDPQhVZdU4KW.SVrDnfwdlcJoXU-1703182854-1-AdgI93y5xkX2cPBcf56N/JUL96pQL97m5Q7hNabKHWroPMJb4+di+TMhi8r+cLi2S10Mriot1EqyEpfqitEst8w=;
-        path=/; expires=Thu, 21-Dec-23 18:50:54 GMT; domain=.api.openai.com; HttpOnly;
+      - __cf_bm=y9r1sh8kaZMu8.xtn_X1CR2hmTomCC6iE.jS9iHdLIM-1703224522-1-AZSK3wn/2fLdifNxJHLjnL6lU8vrOe0IQAnMpYNa55cG1gHVL/YHQ+56yVgg07ofi44dhQ5ykoNUppde4qLuxPc=;
+        path=/; expires=Fri, 22-Dec-23 06:25:22 GMT; domain=.api.openai.com; HttpOnly;
         Secure; SameSite=None
-      - _cfuvid=yIvtcRU9UzKDcceecjfkQhEhY1uh5_GjXLFAbKUgOgI-1703182854540-0-604800000;
+      - _cfuvid=OizUskglXZIBRWwR1A8IEib91jNZqYntUrC6WSPu1rA-1703224522192-0-604800000;
         path=/; domain=.api.openai.com; HttpOnly; Secure; SameSite=None
       Transfer-Encoding:
       - chunked
@@ -125,7 +122,7 @@ interactions:
       openai-organization:
       - openshiro
       openai-processing-ms:
-      - '13175'
+      - '14677'
       openai-version:
       - '2020-10-01'
       strict-transport-security:
@@ -141,15 +138,15 @@ interactions:
       x-ratelimit-remaining-tokens:
       - '59797'
       x-ratelimit-remaining-tokens_usage_based:
-      - '59681'
+      - '59797'
       x-ratelimit-reset-requests:
       - 8.64s
       x-ratelimit-reset-tokens:
       - 203ms
       x-ratelimit-reset-tokens_usage_based:
-      - 318ms
+      - 203ms
       x-request-id:
-      - 935b94c5e74c5284aa2f3fa794bbb9c6
+      - 04700957e8a6e1da1441096ea724e56f
     http_version: HTTP/1.1
     status_code: 200
 version: 1

@@ -16,8 +16,6 @@ interactions:
       - application/json
       accept-encoding:
       - gzip, deflate
-      authorization:
-      - Bearer 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
       connection:
       - keep-alive
       content-length:
@@ -41,63 +39,54 @@ interactions:
       x-stainless-runtime:
       - CPython
       x-stainless-runtime-version:
-      - 3.12.1
+      - 3.11.6
     method: POST
     uri: https://api.openai.com/v1/chat/completions
   response:
-    content: "{\n  \"id\": \"chatcmpl-8YHqISW9V8obOA6G0beUZdvqrwKlx\",\n  \"object\":
-      \"chat.completion\",\n  \"created\": 1703182430,\n  \"model\": \"gpt-3.5-turbo-0613\",\n
+    content: "{\n  \"id\": \"chatcmpl-8YSnGx4CH2GXWAnQe3s6Dj3HULspT\",\n  \"object\":
+      \"chat.completion\",\n  \"created\": 1703224526,\n  \"model\": \"gpt-3.5-turbo-0613\",\n
       \ \"choices\": [\n    {\n      \"index\": 0,\n      \"message\": {\n        \"role\":
-      \"assistant\",\n        \"content\": \"Hello, my dedicated student! I'm delighted
-      to have you as my student and share my knowledge on the theory of relativity
-      with you. Let's start with some simple concepts and gradually build up to more
-      complex ones. Are you ready?\\n\\nFirst, we'll discuss the theory of special
-      relativity, which was developed by Albert Einstein. Special relativity deals
-      with the behavior of objects moving at a constant velocity in the absence of
-      gravitational forces.\\n\\nOne of the foundational concepts of special relativity
-      is that the laws of physics are the same for all observers in uniform motion
-      relative to each other. This is known as the principle of relativity ```citation:
-      E. F. Taylor and J. A. Wheeler, Spacetime Physics``` (source).\\n\\nAnother
-      important aspect of special relativity is the constancy of the speed of light,
-      denoted by the symbol \\\"c.\\\" According to Einstein's theory, the speed of
-      light in a vacuum is the same for all observers, regardless of the motion of
-      the source or the observer. This principle has far-reaching consequences for
-      the behavior of space and time. ```citation: A. Einstein, On the Electrodynamics
-      of Moving Bodies```\\n\\nThe theory of special relativity introduces the concept
-      of spacetime, which combines space and time into a four-dimensional framework.
-      Spacetime is not absolute but is perceived differently by different observers
-      depending on their relative motion. This leads to phenomena like time dilation
-      and length contraction, where time and distances appear to be altered for observers
-      moving relative to each other. ```citation: L. M. Brown and G. Gabrielse, Rev.
-      Mod. Phys.```\\n\\nNow, let's delve into the theory of general relativity, which
-      extends the ideas of special relativity to include gravitation. General relativity
-      describes gravity as the curvature of spacetime caused by massive objects.\\n\\nOne
-      of the key postulates of general relativity is the equivalence principle, which
-      states that the effects of gravity are indistinguishable from the effects of
-      acceleration. This principle is instrumental in Einstein's development of the
-      theory. ```citation: A. Einstein, Relativity: The Special and General Theory```\\n\\nIn
-      general relativity, gravity is not defined as a force acting at a distance but
-      rather as the curvature of spacetime caused by massive objects. This curvature
-      influences the motion of objects and the path that light takes through space.
-      Massive objects, such as stars and planets, cause spacetime to curve, and other
-      objects move along the curved paths dictated by this curvature. ```citation:
-      S. Weinberg, Gravitation and Cosmology```\\n\\nThe theory of relativity has
-      been confirmed by numerous experimental tests, including the famous Einstein's
-      prediction of the bending of light around massive objects, which was confirmed
-      during the 1919 solar eclipse. There have since been many subsequent experimental
-      validations of the theory, solidifying its place as a cornerstone of modern
-      physics. ```citation: A. Einstein, The Foundation of the General Theory of Relativity```\\n\\nThis
-      is just a brief introduction to the theory of relativity, my dedicated student.
-      I hope you found it informative and intriguing. If you have any specific questions
-      or would like to explore any particular aspect in more detail, please don't
-      hesitate to ask!\"\n      },\n      \"logprobs\": null,\n      \"finish_reason\":
+      \"assistant\",\n        \"content\": \"My dedicated student, I'm delighted to
+      have your interest in my research! Let's start with some simple concepts and
+      gradually delve into the theory of relativity.\\n\\nTo begin, one of the fundamental
+      principles of physics is that time and space are not fixed, but rather intimately
+      linked to one another. This concept dates back to Isaac Newton's work in the
+      17th century, where he developed the concept of absolute space and time. However,
+      it was Albert Einstein who revolutionized this understanding with his theory
+      of relativity.\\n\\nEinstein's theory of relativity can be divided into two
+      parts: the special theory of relativity and the general theory of relativity.
+      We'll start with the special theory.\\n\\nAccording to the special theory of
+      relativity, the laws of physics are invariant under Lorentz transformations.
+      This means that the laws of physics are the same for all observers, regardless
+      of their relative motion, as long as they move at a constant velocity. It introduced
+      the concept that the speed of light in a vacuum (denoted by 'c') is the same
+      for all observers, regardless of their motion or the motion of the source of
+      light.\\n\\nThis leads us to one of the most famous equations in physics: E=mc\xB2.
+      This equation, derived by Einstein, demonstrates the equivalence of energy (E)
+      and mass (m), where 'c' is the speed of light. It implies that a small amount
+      of mass can be converted into a large amount of energy, as demonstrated by nuclear
+      reactions. citation: <source: https://en.wikipedia.org/wiki/Special_relativity>\\n\\nNow,
+      let's move on to the general theory of relativity. While the special theory
+      dealt with observers in inertial frames of reference, the general theory of
+      relativity extended this to include accelerating frames and the effects of gravity.\\n\\nEinstein
+      proposed that matter and energy curve the fabric of space and time, creating
+      what we perceive as gravity. This curvature is described by the theory's field
+      equation, known as Einstein's field equations. They relate the distribution
+      of matter and energy in the universe to the geometry of space and time.\\n\\nThe
+      general theory of relativity also predicts the existence of black holes, regions
+      of space where gravity is so intense that nothing, not even light, can escape.
+      Additionally, it explains phenomena such as the bending of light by massive
+      objects, the expansion of the universe, and the existence of gravitational waves.\\n\\nI
+      encourage you to explore these concepts further through reputable sources and
+      to continue asking questions. Learning about the theory of relativity can be
+      a fascinating journey!\"\n      },\n      \"logprobs\": null,\n      \"finish_reason\":
       \"stop\"\n    }\n  ],\n  \"usage\": {\n    \"prompt_tokens\": 155,\n    \"completion_tokens\":
-      652,\n    \"total_tokens\": 807\n  },\n  \"system_fingerprint\": null\n}\n"
+      514,\n    \"total_tokens\": 669\n  },\n  \"system_fingerprint\": null\n}\n"
     headers:
       CF-Cache-Status:
       - DYNAMIC
       CF-RAY:
-      - 839219effa3cc6a5-SEA
+      - 83961dac5a75eb97-SEA
       Cache-Control:
       - no-cache, must-revalidate
       Connection:
@@ -107,14 +96,14 @@ interactions:
       Content-Type:
       - application/json
       Date:
-      - Thu, 21 Dec 2023 18:14:08 GMT
+      - Fri, 22 Dec 2023 05:55:40 GMT
       Server:
       - cloudflare
       Set-Cookie:
-      - __cf_bm=XvdrOWhC4q6AkQTXuafRKthRT38u70uylCYob1vVkYY-1703182448-1-AR8X7Hz6xwmzYry5Zj9XA+yrK8qSCGwv31Si3gJ+HMRppX2dzykgmFFj923YJCG3OnjCzu/20ENuJcNnO61jpr4=;
-        path=/; expires=Thu, 21-Dec-23 18:44:08 GMT; domain=.api.openai.com; HttpOnly;
+      - __cf_bm=.PmpSmg7l5asxO_TxzcyyEaT2RluaM_AJrWPuTeSwOE-1703224540-1-ARJHH7dXb6w1krVzfzaS1HdbKG7UAq8yVAQ1Zg+GchDe7H4mWiwocEMrhmDf/Jz6CAoxEygt85NT8ohffGR05/M=;
+        path=/; expires=Fri, 22-Dec-23 06:25:40 GMT; domain=.api.openai.com; HttpOnly;
         Secure; SameSite=None
-      - _cfuvid=8XG0u80KVhSXW4GM03tuuMatlL26llj0kpf951jzbQQ-1703182448540-0-604800000;
+      - _cfuvid=n7_4lhUqeUbdVXMnja.wWhr_ixrMK4jwkgZeQvb5w0w-1703224540517-0-604800000;
         path=/; domain=.api.openai.com; HttpOnly; Secure; SameSite=None
       Transfer-Encoding:
       - chunked
@@ -127,7 +116,7 @@ interactions:
       openai-organization:
       - openshiro
       openai-processing-ms:
-      - '17614'
+      - '13620'
       openai-version:
       - '2020-10-01'
       strict-transport-security:
@@ -151,7 +140,7 @@ interactions:
       x-ratelimit-reset-tokens_usage_based:
       - 210ms
       x-request-id:
-      - 7bbb9cd8feb507793b095ff6d22cc5bd
+      - 7392d6831f2f456c58c9745c9effb334
     http_version: HTTP/1.1
     status_code: 200
 version: 1

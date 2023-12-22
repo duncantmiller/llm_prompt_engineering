@@ -7,8 +7,6 @@ interactions:
       - application/json
       accept-encoding:
       - gzip, deflate
-      authorization:
-      - Bearer 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
       connection:
       - keep-alive
       content-length:
@@ -32,51 +30,59 @@ interactions:
       x-stainless-runtime:
       - CPython
       x-stainless-runtime-version:
-      - 3.12.1
+      - 3.11.6
     method: POST
     uri: https://api.openai.com/v1/chat/completions
   response:
-    content: "{\n  \"id\": \"chatcmpl-8YI1I6cKI3QskLCG5EVFRFR1uk4Fa\",\n  \"object\":
-      \"chat.completion\",\n  \"created\": 1703183112,\n  \"model\": \"gpt-3.5-turbo-0613\",\n
+    content: "{\n  \"id\": \"chatcmpl-8YSmcgslc18NZBKVld7tGBcWucEw8\",\n  \"object\":
+      \"chat.completion\",\n  \"created\": 1703224486,\n  \"model\": \"gpt-3.5-turbo-0613\",\n
       \ \"choices\": [\n    {\n      \"index\": 0,\n      \"message\": {\n        \"role\":
-      \"assistant\",\n        \"content\": \"The theory of relativity is a theory
-      in physics, proposed by Albert Einstein in the early 20th century, that revolutionized
-      our understanding of space, time, and gravity. It consists of two parts: the
-      special theory of relativity and the general theory of relativity.\\n\\nThe
-      special theory of relativity, proposed in 1905, states that the laws of physics
-      are the same for all observers, regardless of their relative motion. It introduces
-      the concept of \\\"spacetime,\\\" which combines the three dimensions of space
-      with the dimension of time into a four-dimensional framework. The theory also
-      asserts that the speed of light in a vacuum is constant for all observers, regardless
-      of their relative motion. This means that the passage of time, the length of
-      objects, and the energy of an object depend on its relative motion to other
-      observers.\\n\\nOne of the key consequences of the special theory of relativity
-      is the concept of time dilation. It suggests that time passes differently for
-      observers in relative motion. For example, if two observers are moving relative
-      to each other, one moving at a high velocity, time will appear to pass slower
-      for the moving observer compared to the stationary one.\\n\\nThe general theory
-      of relativity, proposed in 1915, expands upon the special theory by incorporating
-      the influence of gravity. It states that gravity is not just a force, but rather
-      the curvature of spacetime caused by the presence of mass and energy. According
-      to this theory, objects with mass or energy deform the fabric of spacetime,
-      causing other objects to move along curved paths. This is often explained using
-      the analogy of a heavy ball placed on a rubber sheet, causing it to bend and
-      objects rolling nearby to follow curved paths.\\n\\nThe general theory of relativity
-      also predicts phenomena such as gravitational time dilation, where time appears
-      to pass slower in the presence of a strong gravitational field, and the deflection
-      of light by gravity. It has been confirmed by numerous experiments and observations,
-      including the bending of starlight by the Sun during a solar eclipse.\\n\\nOverall,
-      the theory of relativity provides a unified framework for understanding the
-      behavior of the physical world at both small and large scales, and has had profound
-      implications for our understanding of the universe and its workings.\"\n      },\n
-      \     \"logprobs\": null,\n      \"finish_reason\": \"stop\"\n    }\n  ],\n
-      \ \"usage\": {\n    \"prompt_tokens\": 14,\n    \"completion_tokens\": 446,\n
-      \   \"total_tokens\": 460\n  },\n  \"system_fingerprint\": null\n}\n"
+      \"assistant\",\n        \"content\": \"The theory of relativity is a fundamental
+      theory in physics that fundamentally changed the way we understand space, time,
+      and gravity. It was first proposed by Albert Einstein in the early 20th century
+      and consists of two main parts: the special theory of relativity and the general
+      theory of relativity.\\n\\nThe special theory of relativity, proposed in 1905,
+      deals with the motion of objects that are moving at constant speeds relative
+      to each other, particularly in the absence of gravity. It introduced two key
+      principles: the principle of relativity and the principle of the constancy of
+      the speed of light.\\n\\nThe principle of relativity states that all physical
+      laws are the same in all inertial reference frames. In other words, the laws
+      of physics should be identical for observers moving at a constant velocity relative
+      to each other. This principle challenges the classical notion of absolute space
+      and time.\\n\\nThe second principle, the constancy of the speed of light, states
+      that the speed of light in a vacuum is always the same, regardless of the motion
+      of the source or observer. This means that the speed of light is constant and
+      independent of the relative motion of the source and observer.\\n\\nAs a consequence
+      of these principles, the special theory of relativity leads to several remarkable
+      conclusions. First, it predicts that time is not absolute but instead depends
+      on the relative motion between two observers. This phenomenon is called time
+      dilation. It means that time passes more slowly for objects in motion relative
+      to an observer at rest. This effect has been experimentally confirmed and is
+      critical in modern technologies like GPS.\\n\\nThe theory also predicts length
+      contraction, which means that objects moving relative to an observer will appear
+      shorter in the direction of motion. This effect is only noticeable at high speeds,
+      close to the speed of light.\\n\\nThe general theory of relativity, introduced
+      by Einstein in 1915, extended the special theory of relativity to incorporate
+      gravity. It explains gravity as the curvature of spacetime caused by massive
+      objects. According to this theory, objects with mass create a \\\"bending\\\"
+      of the fabric of spacetime, causing other objects to move on curved paths.\\n\\nIn
+      general relativity, gravity is not seen as a force acting at a distance but
+      rather as a result of the geometry of spacetime. Mass and energy tell spacetime
+      how to curve, and the curved spacetime tells mass and energy how to move. This
+      theory successfully explains phenomena like the bending of light around massive
+      objects (gravitational lensing), the redshift of light in a gravitational field,
+      and the predicted existence of black holes.\\n\\nOverall, the theory of relativity
+      has revolutionized our understanding of the universe and provided a new framework
+      for describing the fundamental processes of nature. It has been extensively
+      tested and confirmed through various experiments and is considered one of the
+      cornerstones of modern physics.\"\n      },\n      \"logprobs\": null,\n      \"finish_reason\":
+      \"stop\"\n    }\n  ],\n  \"usage\": {\n    \"prompt_tokens\": 14,\n    \"completion_tokens\":
+      563,\n    \"total_tokens\": 577\n  },\n  \"system_fingerprint\": null\n}\n"
     headers:
       CF-Cache-Status:
       - DYNAMIC
       CF-RAY:
-      - 83922a928920ebe6-SEA
+      - 83961cb03e19086d-SEA
       Cache-Control:
       - no-cache, must-revalidate
       Connection:
@@ -86,14 +92,14 @@ interactions:
       Content-Type:
       - application/json
       Date:
-      - Thu, 21 Dec 2023 18:25:23 GMT
+      - Fri, 22 Dec 2023 05:55:00 GMT
       Server:
       - cloudflare
       Set-Cookie:
-      - __cf_bm=xAZLUD6TRBdNINtJ6rwfP4zkYGe_1BSNlljI6dWCQes-1703183123-1-AVSpy1XHQRJjMvjx4eiaPJ5RxrRPj08Ylov5wX5dUQUONQIyMqGxTVG4okBT28F5J+geDJiyDwfkA5T7181t+YU=;
-        path=/; expires=Thu, 21-Dec-23 18:55:23 GMT; domain=.api.openai.com; HttpOnly;
+      - __cf_bm=aFbCsPAm1U.hDPEfik8JJNQ817Tg30e1Uovo.7KW8lo-1703224500-1-AYcP3MhfXoUpexI6avWNizr/Pclm++N18NkrwfFzXADeE1ZIZd3n4k87cv1VbMm7LeR4LkzJ5WDCyg4BVqeuSoU=;
+        path=/; expires=Fri, 22-Dec-23 06:25:00 GMT; domain=.api.openai.com; HttpOnly;
         Secure; SameSite=None
-      - _cfuvid=o_mtievtNvBYjjI4Wwn0BW_RlDQ40BnbxscMIjMT2Fo-1703183123324-0-604800000;
+      - _cfuvid=wGMG3.1j_4IqsnJCbWc2XsAs5Ztur1BzRvcFNhY30Vw-1703224500537-0-604800000;
         path=/; domain=.api.openai.com; HttpOnly; Secure; SameSite=None
       Transfer-Encoding:
       - chunked
@@ -106,7 +112,7 @@ interactions:
       openai-organization:
       - openshiro
       openai-processing-ms:
-      - '11057'
+      - '13827'
       openai-version:
       - '2020-10-01'
       strict-transport-security:
@@ -130,7 +136,7 @@ interactions:
       x-ratelimit-reset-tokens_usage_based:
       - 25ms
       x-request-id:
-      - ef95af78c02a14a4ff2207db4ffdf868
+      - ddb56c3f44be1da503576c499ce7d7bf
     http_version: HTTP/1.1
     status_code: 200
 version: 1
