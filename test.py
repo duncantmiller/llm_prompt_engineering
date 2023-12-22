@@ -4,12 +4,16 @@ import vcr
 import argparse
 import sys
 
+my_vcr = vcr.VCR(
+    filter_headers=["authorization"],
+)
+
 def parse_custom_args():
     """
     Parse custom arguments and remove them from sys.argv
     """
     parser = argparse.ArgumentParser(add_help=False)
-    parser.add_argument('--live-test', action='store_true', help='Run live API calls')
+    parser.add_argument("--live-test", action="store_true", help="Run live API calls")
     args, remaining_argv = parser.parse_known_args()
     sys.argv[1:] = remaining_argv
     return args.live_test
@@ -19,7 +23,7 @@ class BaseTestCase(unittest.TestCase):
 
     def default_response_davinci(self, prompt, cassette):
         client = Client().openai_client
-        with vcr.use_cassette(cassette):
+        with my_vcr.use_cassette(cassette):
             response = client.completions.create(model=Client.MODEL_TEXT_DAVINCI,
                                                 prompt=prompt,
                                                 max_tokens=1000)
@@ -30,7 +34,7 @@ class BaseTestCase(unittest.TestCase):
         if self.live_test:
             response = self.default_api_call(prompt=prompt, client=client)
         else:
-            with vcr.use_cassette(cassette):
+            with my_vcr.use_cassette(cassette):
                 response = self.default_api_call(prompt=prompt, client=client)
         return response
 
@@ -51,7 +55,7 @@ class BaseTestCase(unittest.TestCase):
         if self.live_test:
             response = message.ask_client(model)
         else:
-            with vcr.use_cassette(cassette):
+            with my_vcr.use_cassette(cassette):
                 response = message.ask_client(model)
         return response
 
