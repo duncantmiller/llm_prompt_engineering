@@ -4,7 +4,7 @@ class Message():
     def __init__(self, prompt):
         client = Client()
         self.client = client.openai_client
-        self.prompt = prompt
+        self.user_prompt = prompt
 
     def ask_client(self, model):
         """
@@ -46,9 +46,9 @@ class Message():
 
     def full_prompt(self):
         """
-        Returns the full prompt including cite sources
+        Returns the full prompt including pre_prompt and cite sources
         """
-        return f"{self.pre_prompt()} {self.prompt} {self.cite_sources_prompt()}"
+        return f"{self.pre_prompt()} {self.user_prompt} {self.cite_sources_prompt()}"
 
     def cite_sources_prompt(self):
         """
