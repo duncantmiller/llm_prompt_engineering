@@ -3,6 +3,8 @@ from message import *
 import vcr
 import argparse
 import sys
+from sentence_transformers import util
+import openai
 
 my_vcr = vcr.VCR(
     filter_headers=["authorization"],
@@ -139,6 +141,16 @@ class TestMessageGPT35Response(BaseTestCase):
         self.assertIn("my dedicated student",
                       self.response_text.lower(),
                       "Response should comply with pre_prompt instructions")
+
+    def test_response_is_similar_to_expected(self):
+        def get_open_ai_embeddings(text):
+            response = openai.embeddings.create(model="text-embedding-ada-002", input=text)
+            return response.data[0].embedding[0]
+        embeddings1 = [get_open_ai_embeddings(self.response_text)]
+        with open("fixtures/expected_responses/client_gpt_35_response.txt", 'r') as file:
+            embeddings2 = [get_open_ai_embeddings(file.read())]
+        cosine_scores = util.cos_sim(embeddings1, embeddings2)
+        self.assertTrue(cosine_scores > 0.7, "Response should be similar to expected")
 
 class TestDefaultResponseDavinci(BaseTestCase):
     def setUp(self):
