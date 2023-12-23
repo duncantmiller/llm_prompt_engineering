@@ -15,11 +15,11 @@ jobs:
         python-version: '3.11.7'
     - name: Install PyTorch
       run: |
+        pip install pipenv
         export PIP_EXTRA_INDEX_URL=https://download.pytorch.org/whl/cpu
         pipenv run pip install torch
     - name: Install other dependencies
       run: |
-        pip install pipenv
         pipenv install --dev
     - name: Run tests
       env:
