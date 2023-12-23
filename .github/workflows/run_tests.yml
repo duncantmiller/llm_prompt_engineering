@@ -16,6 +16,7 @@ jobs:
     - name: Install dependencies
       run: |
         pip install pipenv
+        pipenv install torch==1.x.x+cpu -f https://download.pytorch.org/whl/torch_stable.html
         pipenv install --dev
     - name: Run tests
       env:
