@@ -30,43 +30,66 @@ with vcr.use_cassette('cassette_name.yaml', re_record_interval=7*24*60*60):
     # API call goes here
 ````
 
-### Test.py Documentation
+### Test Documentation
 
-The following is documentation on the tests used in the test.py file.
+The following is a review of all tests and methods used in the test.py file.
 
 #### Custom Argument Parsing
 - `parse_custom_args()`: Parses `--live-test` flag for live API calls. If the `--live-test` flag is not present when running the tests, then the tests will use the responses recorded in vcrpy cassetts.
 
-#### Custom Argument Parsing
-- `parse_custom_args()`: Identifies the `--live-test` flag for executing live API calls.
-
-#### Base Test Case
-##### `BaseTestCase`
+#### BaseTestCase
 Base class for all test cases with common testing methods.
 
-##### Methods
-- `default_response_davinci()`: Sends a given prompt to the Davinci model and retrieves the response. All of the default methods only send the raw prompt without supplementing with a pre_prompt or cite_sources_prompt.
-- `default_response()`: General method for sending prompts and retrieving responses, applicable to any model. It chooses between live API calls and recorded responses based on the `live_test` flag.
-- `default_api_call()`: Directly performs API calls with given prompts and client settings.
-- `custom_response()`: Sends a `Message()` object to a specified model and retrieves the response, considering the `live_test` setting. The custom response does supplement the provided user prompt with the `pre_prompt()` and `cite_sources_prompt()` by calling the `full_prompt()` method defined in the `Message()` class.
+##### `default_response_davinci()`:
+Sends a given prompt to the Davinci model and retrieves the response. All of the default methods only send the raw prompt without supplementing with a pre_prompt or cite_sources_prompt.
+
+##### `default_response()`:
+General method for sending prompts and retrieving responses, applicable to any model. It chooses between live API calls and recorded responses based on the `live_test` flag.
+
+##### `default_api_call()`:
+Directly performs API calls with given prompts and client settings.
+
+##### `custom_response()`:
+Uses the `Message()` object to send the `full_prompt()` to a specified model and retrieves the response, considering the `live_test` setting. The `full_prompt()` method defined in the `Message()` class does supplement the provided user prompt with the `pre_prompt()` and `cite_sources_prompt()`.
 
 #### TestClient
-- `test_api_connection()`: Ensures that the API connection to the Davinci model is functional by sending a test prompt to the `Client()` class directly instead of via the `Message()` class and verifies a valid response.
+
+##### `test_api_connection()`:
+Ensures that the API connection is functional by sending a test prompt to the `Client()` class directly, instead of via the `Message()` class, and verifies a valid response.
 
 #### TestMessageDavinciResponse
-- `test_response_includes_citation()`: Checks if the response from the Davinci model includes a citation as required.
-- `test_response_includes_pre_prompt()`: Verifies that the response adheres to the pre-prompt instructions provided.
+Uses the `Message()` object to send the `full_prompt()` to the Davinci model.
+
+##### `test_response_includes_citation()`:
+Verifies the response text includes a citation.
+
+##### `test_response_includes_pre_prompt()`:
+Verifies the response text adheres to the pre-prompt instructions provided.
 
 #### TestMessageGPT35Response
-- `test_response_includes_citation()`: Similar to Davinci, but checks for citation inclusion in responses from the GPT-3.5 model.
-- `test_response_includes_pre_prompt()`: Confirms that the GPT-3.5 model's response complies with pre-prompt instructions.
-- `test_response_is_similar_to_expected()`: Compares the response's similarity to a predetermined expected response using cosine similarity scores.
-    - The predetermined expected response is read from the `/fixtures/expected_responses/client_gpt_35_response.txt` file. Additional expected responses for other prompts or models can optionally be stored in this directory.
-    - The text from the expected response file as well as the text from the model response are then converted to vector embeddings with the `get_open_ai_embeddings()` method which uses the `openai` package (not the `Client().openai_client`) to generate embeddings.
-    - The cosine similarity is then derived using the `util` function from the `sentence_transformers` package.
-- `test_response_is_not_biased()`: Assesses the response for any potential biases. This method takes the response from the model, then feeds the response back to the model again with a prompt asking to assess the bias. Right now it uses the same model as generated the response, but ideally you might use a different model or a model specifically tuned for recognizing bias for the evaluation step.
+Uses the `Message()` object to send the `full_prompt()` to the GPT-3.5 model.
 
-#### TestDefaultResponse
-- `test_does_not_include_citation()`: Ensures that the default response does not inadvertently include citations.
-- `test_does_not_include_pre_prompt()`: Confirms that the default response excludes pre-prompt instructions, as expected.
+##### `test_response_includes_citation()`:
+Verifies the response text includes a citation.
+
+##### `test_response_includes_pre_prompt()`:
+Verifies the response text adheres to the pre-prompt instructions provided.
+
+##### `test_response_is_similar_to_expected()`:
+Compares the response's similarity to a predetermined expected response using cosine similarity scores.
+- The predetermined expected response is read from the `/fixtures/expected_responses/client_gpt_35_response.txt` file. Additional expected responses for other prompts or models can optionally be stored in this directory.
+- The text from the expected response file as well as the text from the model response are then converted to vector embeddings with the `get_open_ai_embeddings()` method which uses the `openai` package (not the `Client().openai_client`) to generate embeddings.
+- The cosine similarity is then derived using the `util` function from the `sentence_transformers` package.
+
+##### `test_response_is_not_biased()`:
+Assesses the response for any potential biases. This method takes the response from the model, then feeds the response back to the model again with a prompt asking to assess the bias. Right now it uses the same model as generated the response, but ideally you might use a different model or a model specifically tuned for recognizing bias for the evaluation step.
+
+#### TestDefaultResponseGPT35
+Sends the raw prompt to the GPT-3.5 model.
+
+##### `test_does_not_include_citation()`:
+Verifies the response text does not inadvertently include citations.
+
+##### `test_does_not_include_pre_prompt()`:
+Verifies the response text does not follow pre-prompt instructions, as expected.
 
