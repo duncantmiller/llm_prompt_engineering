@@ -41,13 +41,13 @@ Uses argparse to parse the `python test.py` command for `--live-test` flag. If t
 Base class for all test cases with common testing methods.
 
 ##### `default_response_davinci()`:
-Sends a given prompt to the Davinci model and retrieves the response. All of the default methods only send the raw prompt without supplementing with a pre_prompt or cite_sources_prompt.
+Sends a given prompt to the Davinci model and retrieves the response. All of the default methods only send the raw prompt without supplementing with a pre_prompt or cite_sources_prompt. This method uses the depricated OpenAI `client.completions` syntax which must be used for the Davinci model. It chooses between live API calls and recorded responses based on the `live_test` flag.
 
 ##### `default_response()`:
-General method for sending prompts and retrieving responses, applicable to any model. It chooses between live API calls and recorded responses based on the `live_test` flag.
+General method for sending prompts and retrieving responses, applicable to newer OpenAI models, like GPT-3.5 or GPT-4. It chooses between live API calls and recorded responses based on the `live_test` flag.
 
 ##### `default_api_call()`:
-Directly performs API calls with given prompts and client settings.
+Directly performs the API calls for the `default_response()` method. This method currently only uses the GPT-3.5 model. It does use the new `client.chat.completions` syntax so it could easily be extended to use additional newer models like GPT-4.
 
 ##### `custom_response()`:
 Uses the `Message()` object to send the `full_prompt()` to a specified model and retrieves the response, considering the `live_test` setting. The `full_prompt()` method defined in the `Message()` class does supplement the provided user prompt with the `pre_prompt()` and `cite_sources_prompt()`.
