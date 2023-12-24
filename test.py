@@ -53,7 +53,6 @@ class BaseTestCase(unittest.TestCase):
         )
         return response
 
-
     def custom_response(self, model, message, cassette):
         if self.live_test:
             response = message.ask_client(model)
