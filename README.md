@@ -6,7 +6,7 @@ This code demonstrates how I ensure the high quality of the prompts I create. Th
 
 This automated test suite makes it easier for me to hone prompts or switch models (text-davinci-003 to gpt-3.5-turbo) and ensure that the prompts provide a consistent response. It also enables me to monitor for ethical and bias mitigation and model drift over time.
 
-This is a simplified version of the logic used in [OpenShiro](https://openshiro.com) prompts for educational purposes. The full product involves many more parameters including additional model versions, additional APIs like Azure, Google, HuggingFace, Anthropic and Cohere, and a library of pre-formatted prompts from which the users can select.
+This is a simplified version of the logic used in [OpenShiro](https://openshiro.com) prompts and is intended for educational purposes. The full product involves many more parameters which the prompts are tested against including additional model versions, additional APIs like Azure, Google, HuggingFace, Anthropic and Cohere, and a library of pre-formatted prompts from which the users can select.
 
 ## Usage
 Clone the repository with `git clone git@github.com:duncantmiller/llm_prompt_engineering.git` then change to the project directory with `cd llm_prompt_engineering`.
@@ -35,9 +35,9 @@ with vcr.use_cassette('cassette_name.yaml', re_record_interval=7*24*60*60):
 The following is a review of all tests and methods used in the test.py file.
 
 ##### `parse_custom_args()`:
-Parses `--live-test` flag for live API calls. If the `--live-test` flag is present, then live API calls will be made. If the flag is not present, then the tests will use the responses recorded in vcrpy cassetts.
+Uses argparse to parse the `python test.py` command for `--live-test` flag. If the flag is present (the commend executed is `python test.py --live-test`) then live API calls will be made. If the flag is not present, then the tests will use the responses recorded in vcrpy cassetts.
 
-### BaseTestCase
+### BaseTestCase(unittest.TestCase)
 Base class for all test cases with common testing methods.
 
 ##### `default_response_davinci()`:
@@ -52,12 +52,12 @@ Directly performs API calls with given prompts and client settings.
 ##### `custom_response()`:
 Uses the `Message()` object to send the `full_prompt()` to a specified model and retrieves the response, considering the `live_test` setting. The `full_prompt()` method defined in the `Message()` class does supplement the provided user prompt with the `pre_prompt()` and `cite_sources_prompt()`.
 
-### TestClient
+### TestClient(BaseTestCase)
 
 ##### `test_api_connection()`:
 Ensures that the API connection is functional by sending a test prompt to the `Client()` class directly, instead of via the `Message()` class, and verifies a valid response.
 
-### TestMessageDavinciResponse
+### TestMessageDavinciResponse(BaseTestCase)
 Uses the `Message()` object to send the `full_prompt()` to the Davinci model.
 
 ##### `test_response_includes_citation()`:
@@ -66,7 +66,7 @@ Verifies the response text includes a citation.
 ##### `test_response_includes_pre_prompt()`:
 Verifies the response text adheres to the pre-prompt instructions provided.
 
-### TestMessageGPT35Response
+### TestMessageGPT35Response(BaseTestCase)
 Uses the `Message()` object to send the `full_prompt()` to the GPT-3.5 model.
 
 ##### `test_response_includes_citation()`:
@@ -84,7 +84,7 @@ Compares the response's similarity to a predetermined expected response using co
 ##### `test_response_is_not_biased()`:
 Assesses the response for any potential biases. This method takes the response from the model, then feeds the response back to the model again with a prompt asking to assess the bias. Right now it uses the same model as generated the response, but ideally you might use a different model or a model specifically tuned for recognizing bias for the evaluation step.
 
-### TestDefaultResponseDavinci
+### TestDefaultResponseDavinci(BaseTestCase)
 Sends the raw prompt to the Davinci model.
 
 ##### `test_does_not_include_citation()`:
@@ -93,7 +93,7 @@ Verifies the response text does not inadvertently include citations.
 ##### `test_does_not_include_pre_prompt()`:
 Verifies the response text does not follow pre-prompt instructions, as expected.
 
-### TestDefaultResponseGPT35
+### TestDefaultResponseGPT35(BaseTestCase)
 Sends the raw prompt to the GPT-3.5 model.
 
 ##### `test_does_not_include_citation()`:
