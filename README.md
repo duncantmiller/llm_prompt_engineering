@@ -1,4 +1,4 @@
-## Prompt Engineering Testing Strategies
+# Prompt Engineering Testing Strategies
 
 This is an example project showing prompt engineering testing strategies, using the OpenAI API.
 
@@ -8,7 +8,7 @@ This automated test suite makes it easier for me to hone prompts or switch model
 
 This is a simplified version of the logic used in [OpenShiro](https://openshiro.com) prompts for educational purposes. The full product involves many more parameters including additional model versions, additional APIs like Azure, Google, HuggingFace, Anthropic and Cohere, and a library of pre-formatted prompts from which the users can select.
 
-### Usage
+## Usage
 Clone the repository with `git clone git@github.com:duncantmiller/llm_prompt_engineering.git` then change to the project directory with `cd llm_prompt_engineering`.
 
 Use if you use [pipenv](https://pypi.org/project/pipenv/) you can install the dependencies with `pipenv install`, otherwise use `pip install -r requirements.txt`. Note that due to a PyTorch dependency via sentence-transformers (used for similarity testing), the latest Python version that can be used is `3.11.7`.
@@ -21,7 +21,7 @@ It can also be helpful to run the tests against the live OpenAI API. Note that w
 - Open the .env file and enter the value for your OpenAI API Key for the `OPENAI_API_KEY=` variable. For example if your API key is 'foo' then `OPENAI_API_KEY=foo`
 - Run the tests with the command line flag `python test.py --live-test`
 
-#### Re-recording Cassettes
+### Re-recording Cassettes
 
 If you change the code in your prompts or API calls, you will want to refresh the vcrpy cassettes so a new API call is recorded. To do this simply delete the appropriate .yaml cassette files in the fixtures/vcr_cassettes directory. You can also optionally set a `re_record_interval` in the `vcr` command. For example to re-record every 7 days:
 
@@ -30,14 +30,14 @@ with vcr.use_cassette('cassette_name.yaml', re_record_interval=7*24*60*60):
     # API call goes here
 ````
 
-### Test Documentation
+## Test Documentation
 
 The following is a review of all tests and methods used in the test.py file.
 
-#### Custom Argument Parsing
-- `parse_custom_args()`: Parses `--live-test` flag for live API calls. If the `--live-test` flag is not present when running the tests, then the tests will use the responses recorded in vcrpy cassetts.
+##### `parse_custom_args()`:
+Parses `--live-test` flag for live API calls. If the `--live-test` flag is present, then live API calls will be made. If the flag is not present, then the tests will use the responses recorded in vcrpy cassetts.
 
-#### BaseTestCase
+### BaseTestCase
 Base class for all test cases with common testing methods.
 
 ##### `default_response_davinci()`:
@@ -52,12 +52,12 @@ Directly performs API calls with given prompts and client settings.
 ##### `custom_response()`:
 Uses the `Message()` object to send the `full_prompt()` to a specified model and retrieves the response, considering the `live_test` setting. The `full_prompt()` method defined in the `Message()` class does supplement the provided user prompt with the `pre_prompt()` and `cite_sources_prompt()`.
 
-#### TestClient
+### TestClient
 
 ##### `test_api_connection()`:
 Ensures that the API connection is functional by sending a test prompt to the `Client()` class directly, instead of via the `Message()` class, and verifies a valid response.
 
-#### TestMessageDavinciResponse
+### TestMessageDavinciResponse
 Uses the `Message()` object to send the `full_prompt()` to the Davinci model.
 
 ##### `test_response_includes_citation()`:
@@ -66,7 +66,7 @@ Verifies the response text includes a citation.
 ##### `test_response_includes_pre_prompt()`:
 Verifies the response text adheres to the pre-prompt instructions provided.
 
-#### TestMessageGPT35Response
+### TestMessageGPT35Response
 Uses the `Message()` object to send the `full_prompt()` to the GPT-3.5 model.
 
 ##### `test_response_includes_citation()`:
@@ -84,7 +84,16 @@ Compares the response's similarity to a predetermined expected response using co
 ##### `test_response_is_not_biased()`:
 Assesses the response for any potential biases. This method takes the response from the model, then feeds the response back to the model again with a prompt asking to assess the bias. Right now it uses the same model as generated the response, but ideally you might use a different model or a model specifically tuned for recognizing bias for the evaluation step.
 
-#### TestDefaultResponseGPT35
+### TestDefaultResponseDavinci
+Sends the raw prompt to the Davinci model.
+
+##### `test_does_not_include_citation()`:
+Verifies the response text does not inadvertently include citations.
+
+##### `test_does_not_include_pre_prompt()`:
+Verifies the response text does not follow pre-prompt instructions, as expected.
+
+### TestDefaultResponseGPT35
 Sends the raw prompt to the GPT-3.5 model.
 
 ##### `test_does_not_include_citation()`:
