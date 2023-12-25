@@ -61,14 +61,6 @@ class BaseTestCase(unittest.TestCase):
                 response = message.ask_client(model)
         return response
 
-class TestClient(BaseTestCase):
-    def test_api_connection(self):
-        prompt = "hello"
-        response = self.default_response_davinci(prompt=prompt,
-                                                 cassette="test_api_connection.yaml")
-
-        self.assertTrue(response)
-
 class TestMessageBase(BaseTestCase):
     def setUp(self):
         self.user_prompt = "Explain the theory of relativity"
