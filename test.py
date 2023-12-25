@@ -100,7 +100,7 @@ class TestMessageResponseDavinci(TestMessageBase):
         super().setUp()
         response = self.custom_response(model=Client.MODEL_TEXT_DAVINCI,
                                         message=self.message,
-                                        cassette="test_davinci_response_includes.yaml")
+                                        cassette="test_message_response_davinci.yaml")
         self.response_text = response.choices[0].text
 
     def test_response_includes_citation(self):
@@ -118,7 +118,7 @@ class TestMessageResponseGPT35(TestMessageBase):
         super().setUp()
         response = self.custom_response(model=Client.MODEL_GPT_35,
                                         message=self.message,
-                                        cassette="test_gpt35_response_includes.yaml")
+                                        cassette="test_message_response_gpt35.yaml")
 
         self.response_text = response.choices[0].message.content
 
