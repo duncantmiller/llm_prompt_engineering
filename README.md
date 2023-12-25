@@ -52,12 +52,28 @@ Directly performs the API calls for the `default_response()` method. This method
 ##### `custom_response()`:
 Uses the `Message()` object to send the `full_prompt()` to a specified model and retrieves the response, considering the `live_test` setting. The `full_prompt()` method defined in the `Message()` class does supplement the provided user prompt with the `pre_prompt()` and `cite_sources_prompt()`.
 
-### TestClient(BaseTestCase)
+### TestDefaultResponseDavinci(BaseTestCase)
+Sends the raw user prompt to the Davinci model.
 
-##### `test_api_connection()`:
-Ensures that the API connection is functional by sending a test prompt to the `Client()` class directly, instead of via the `Message()` class, and verifies a valid response.
+##### `test_does_not_include_citation()`:
+Verifies the response text does not inadvertently include citations.
 
-### TestMessageDavinciResponse(BaseTestCase)
+##### `test_does_not_include_pre_prompt()`:
+Verifies the response text does not follow pre-prompt instructions, as expected.
+
+### TestDefaultResponseGPT35(BaseTestCase)
+Sends the raw user prompt to the GPT-3.5 model.
+
+##### `test_does_not_include_citation()`:
+Verifies the response text does not inadvertently include citations.
+
+##### `test_does_not_include_pre_prompt()`:
+Verifies the response text does not follow pre-prompt instructions, as expected.
+
+### TestMessageBase(BaseTestCase):
+Defines a setUp() method which instantiates a Message() object for use in Message tests.
+
+### TestMessageResponseDavinci(TestMessageBase)
 Uses the `Message()` object to send the `full_prompt()` to the Davinci model.
 
 ##### `test_response_includes_citation()`:
@@ -66,7 +82,7 @@ Verifies the response text includes a citation.
 ##### `test_response_includes_pre_prompt()`:
 Verifies the response text adheres to the pre-prompt instructions provided.
 
-### TestMessageGPT35Response(BaseTestCase)
+### TestMessageResponseGPT35(TestMessageBase)
 Uses the `Message()` object to send the `full_prompt()` to the GPT-3.5 model.
 
 ##### `test_response_includes_citation()`:
@@ -83,22 +99,3 @@ Compares the response's similarity to a predetermined expected response using co
 
 ##### `test_response_is_not_biased()`:
 Assesses the response for any potential biases. This method takes the response from the model, then feeds the response back to the model again with a prompt asking to assess the bias. Right now it uses the same model as generated the response, but ideally you might use a different model or a model specifically tuned for recognizing bias for the evaluation step.
-
-### TestDefaultResponseDavinci(BaseTestCase)
-Sends the raw prompt to the Davinci model.
-
-##### `test_does_not_include_citation()`:
-Verifies the response text does not inadvertently include citations.
-
-##### `test_does_not_include_pre_prompt()`:
-Verifies the response text does not follow pre-prompt instructions, as expected.
-
-### TestDefaultResponseGPT35(BaseTestCase)
-Sends the raw prompt to the GPT-3.5 model.
-
-##### `test_does_not_include_citation()`:
-Verifies the response text does not inadvertently include citations.
-
-##### `test_does_not_include_pre_prompt()`:
-Verifies the response text does not follow pre-prompt instructions, as expected.
-
