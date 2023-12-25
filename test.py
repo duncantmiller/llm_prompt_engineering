@@ -24,6 +24,9 @@ def parse_custom_args():
 class BaseTestCase(unittest.TestCase):
     live_test = parse_custom_args()
 
+    def setUp(self):
+        self.user_prompt = "Explain the theory of relativity"
+
     def default_response_davinci(self, prompt, cassette):
         client = Client().openai_client
         with my_vcr.use_cassette(cassette):
@@ -61,9 +64,44 @@ class BaseTestCase(unittest.TestCase):
                 response = message.ask_client(model)
         return response
 
+class TestDefaultResponseDavinci(BaseTestCase):
+    def setUp(self):
+        super().setUp()
+        response = self.default_response_davinci(prompt=self.user_prompt,
+                                                 cassette="test_default_response_davinci.yaml")
+
+        self.response_text = response.choices[0].text
+
+    def test_does_not_include_citation(self):
+        self.assertNotIn(
+            "citation", self.response_text.lower(), "Response should not include the <citation:> tag"
+        )
+
+    def test_does_not_include_pre_prompt(self):
+        self.assertNotIn("my dedicated student",
+                self.response_text.lower(),
+                "Response should not include pre_prompt instructions")
+
+class TestDefaultResponseGPT35(BaseTestCase):
+    def setUp(self):
+        super().setUp()
+        response = self.default_response(prompt=self.user_prompt,
+                                         cassette="test_default_response_gpt35.yaml")
+        self.response_text = response.choices[0].message.content
+
+    def test_does_not_include_citation(self):
+        self.assertNotIn(
+            "citation", self.response_text.lower(), "Response should not include the <citation:> tag"
+        )
+
+    def test_does_not_include_pre_prompt(self):
+        self.assertNotIn("my dedicated student",
+                self.response_text.lower(),
+                "Response should not include pre_prompt instructions")
+
 class TestMessageBase(BaseTestCase):
     def setUp(self):
-        self.user_prompt = "Explain the theory of relativity"
+        super().setUp()
         self.message = Message(self.user_prompt)
 
 class TestMessage(TestMessageBase):
@@ -151,45 +189,6 @@ class TestMessageResponseGPT35(TestMessageBase):
         self.assertEqual(
             "no", bias_check_response.choices[0].message.content, "Response should not be biased"
         )
-
-class TestDefaultBase(BaseTestCase):
-    def setUp(self):
-        self.user_prompt = "Explain the theory of relativity"
-
-class TestDefaultResponseDavinci(TestDefaultBase):
-    def setUp(self):
-        super().setUp()
-        response = self.default_response_davinci(prompt=self.user_prompt,
-                                                 cassette="test_default_response_davinci.yaml")
-
-        self.response_text = response.choices[0].text
-
-    def test_does_not_include_citation(self):
-        self.assertNotIn(
-            "citation", self.response_text.lower(), "Response should not include the <citation:> tag"
-        )
-
-    def test_does_not_include_pre_prompt(self):
-        self.assertNotIn("my dedicated student",
-                self.response_text.lower(),
-                "Response should not include pre_prompt instructions")
-
-class TestDefaultResponseGPT35(TestDefaultBase):
-    def setUp(self):
-        super().setUp()
-        response = self.default_response(prompt=self.user_prompt,
-                                         cassette="test_default_response_gpt35.yaml")
-        self.response_text = response.choices[0].message.content
-
-    def test_does_not_include_citation(self):
-        self.assertNotIn(
-            "citation", self.response_text.lower(), "Response should not include the <citation:> tag"
-        )
-
-    def test_does_not_include_pre_prompt(self):
-        self.assertNotIn("my dedicated student",
-                self.response_text.lower(),
-                "Response should not include pre_prompt instructions")
 
 if __name__ == '__main__':
     unittest.main()
