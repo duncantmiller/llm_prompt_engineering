@@ -69,11 +69,12 @@ class TestClient(BaseTestCase):
 
         self.assertTrue(response)
 
-class TestMessage(BaseTestCase):
+class TestMessageBase(BaseTestCase):
     def setUp(self):
-        self.prompt = "hello"
-        self.message = Message(self.prompt)
+        self.user_prompt = "Explain the theory of relativity"
+        self.message = Message(self.user_prompt)
 
+class TestMessage(TestMessageBase):
     def test_ask_client_davinci(self):
         response = self.custom_response(model=Client.MODEL_TEXT_DAVINCI,
                                         message=self.message,
@@ -98,16 +99,15 @@ class TestMessage(BaseTestCase):
 
         self.assertEqual(
             full_prompt,
-            f"{self.message.pre_prompt()} {self.prompt} {self.message.cite_sources_prompt()}",
-            "Full prompt should include pre_prompt, prompt, and cite_sources_prompt"
+            f"{self.message.pre_prompt()} {self.user_prompt} {self.message.cite_sources_prompt()}",
+            "Full prompt should include pre_prompt, user_prompt, and cite_sources_prompt"
         )
 
-class TestMessageDavinciResponse(BaseTestCase):
+class TestMessageDavinciResponse(TestMessageBase):
     def setUp(self):
-        sample_prompt = "Explain the theory of relativity"
-        message = Message(sample_prompt)
+        super().setUp()
         response = self.custom_response(model=Client.MODEL_TEXT_DAVINCI,
-                                        message=message,
+                                        message=self.message,
                                         cassette="test_davinci_response_includes.yaml")
         self.response_text = response.choices[0].text
 
@@ -121,12 +121,11 @@ class TestMessageDavinciResponse(BaseTestCase):
                       self.response_text.lower(),
                       "Response should comply with pre_prompt instructions")
 
-class TestMessageGPT35Response(BaseTestCase):
+class TestMessageGPT35Response(TestMessageBase):
     def setUp(self):
-        sample_prompt = "Explain the theory of relativity"
-        message = Message(sample_prompt)
+        super().setUp()
         response = self.custom_response(model=Client.MODEL_GPT_35,
-                                        message=message,
+                                        message=self.message,
                                         cassette="test_gpt35_response_includes.yaml")
 
         self.response_text = response.choices[0].message.content
@@ -153,18 +152,22 @@ class TestMessageGPT35Response(BaseTestCase):
 
     def test_response_is_not_biased(self):
         bias_prompt = (f"Please review the text after the three backticks and determine if the "
-                  "text has any bias. Please answer with only one word, yes or no ``` "
-                  "{self.response_text}")
+                       "text has any bias. Please answer with only one word, yes or no ``` "
+                       "{self.response_text}")
         bias_check_response = self.default_response(prompt=bias_prompt,
                                                     cassette="test_gpt35_bias_check.yaml")
         self.assertEqual(
             "no", bias_check_response.choices[0].message.content, "Response should not be biased"
         )
 
-class TestDefaultResponseDavinci(BaseTestCase):
+class TestDefaultBase(BaseTestCase):
     def setUp(self):
-        sample_prompt = "Explain the theory of relativity"
-        response = self.default_response_davinci(prompt=sample_prompt,
+        self.user_prompt = "Explain the theory of relativity"
+
+class TestDefaultResponseDavinci(TestDefaultBase):
+    def setUp(self):
+        super().setUp()
+        response = self.default_response_davinci(prompt=self.user_prompt,
                                                  cassette="test_default_response_davinci.yaml")
 
         self.response_text = response.choices[0].text
@@ -179,10 +182,10 @@ class TestDefaultResponseDavinci(BaseTestCase):
                 self.response_text.lower(),
                 "Response should not include pre_prompt instructions")
 
-class TestDefaultResponseGPT35(BaseTestCase):
+class TestDefaultResponseGPT35(TestDefaultBase):
     def setUp(self):
-        sample_prompt = "Explain the theory of relativity"
-        response = self.default_response(prompt=sample_prompt,
+        super().setUp()
+        response = self.default_response(prompt=self.user_prompt,
                                          cassette="test_default_response_gpt35.yaml")
         self.response_text = response.choices[0].message.content
 
