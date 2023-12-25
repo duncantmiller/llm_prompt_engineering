@@ -95,7 +95,7 @@ class TestMessage(TestMessageBase):
             "Full prompt should include pre_prompt, user_prompt, and cite_sources_prompt"
         )
 
-class TestMessageDavinciResponse(TestMessageBase):
+class TestMessageResponseDavinci(TestMessageBase):
     def setUp(self):
         super().setUp()
         response = self.custom_response(model=Client.MODEL_TEXT_DAVINCI,
@@ -113,7 +113,7 @@ class TestMessageDavinciResponse(TestMessageBase):
                       self.response_text.lower(),
                       "Response should comply with pre_prompt instructions")
 
-class TestMessageGPT35Response(TestMessageBase):
+class TestMessageResponseGPT35(TestMessageBase):
     def setUp(self):
         super().setUp()
         response = self.custom_response(model=Client.MODEL_GPT_35,
