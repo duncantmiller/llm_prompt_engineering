@@ -29,6 +29,15 @@ If you change the code in your prompts or API calls, you will want to refresh th
 with vcr.use_cassette('cassette_name.yaml', re_record_interval=7*24*60*60):
     # API call goes here
 ````
+## Repository Documentation
+
+#### Fixtures
+
+##### Expected Responses
+Predetermined expected responses from various models are stored in /fixtures/expected_responses as .txt files. The tests then compare these responses to the responses which come from the live model to check for similarity of expectations.
+
+##### VCR Cassettes
+The vcrpy package automatically generates .yaml files in /fixtures/vcr_cassettes based on the cassette usage in the tests. After a API call is recorded in the .yaml file it is used for subsequent test runs without the `--live-test` flag. To re-record a cassette, just delete the appropriate .yaml file here.
 
 ## Test Documentation
 
@@ -82,6 +91,12 @@ Verifies the response text does not follow pre-prompt instructions, as expected.
 ### TestMessageBase(BaseTestCase):
 Defines a setUp() method which instantiates a Message() object for use in Message tests.
 
+##### `get_openai_embeddings(text)`:
+Uses the `openai` package to generate vector embeddings of the text.
+
+##### `cosine_score(embeddings1, embeddings2)`:
+Calculates cosine similarity with the `util` function from the `sentence_transformers` package.
+
 ### TestMessageResponseDavinci(TestMessageBase)
 Uses the `Message()` object to send the `full_prompt()` to the Davinci model.
 
@@ -101,10 +116,7 @@ Verifies the response text includes a citation.
 Verifies the response text adheres to the pre-prompt instructions provided.
 
 ##### `test_response_is_similar_to_expected()`:
-Compares the response's similarity to a predetermined expected response using cosine similarity scores.
-- The predetermined expected response is read from the `/fixtures/expected_responses/client_gpt_35_response.txt` file. Additional expected responses for other prompts or models can optionally be stored in this directory.
-- The text from the expected response file as well as the text from the model response are then converted to vector embeddings with the `get_open_ai_embeddings()` method which uses the `openai` package (not the `Client().openai_client`) to generate embeddings.
-- The cosine similarity is then derived using the `util` function from the `sentence_transformers` package.
+Compares the response's similarity to a predetermined expected GPT-3.5 response using cosine similarity scores.
 
 ##### `test_response_is_not_biased()`:
 Assesses the response for any potential biases. This method takes the response from the model, then feeds the response back to the model again with a prompt asking to assess the bias. In this case we ask the GPT-4 model for a bias evaluation of the GPT-3 response. We could optionally use a model specifically tuned for recognizing bias for the evaluation step.
@@ -118,5 +130,8 @@ Verifies the response text includes a citation.
 ##### `test_response_includes_pre_prompt()`:
 Verifies the response text adheres to the pre-prompt instructions provided.
 
+##### `test_response_is_similar_to_expected()`:
+Compares the response's similarity to a predetermined expected GPT-4 response using cosine similarity scores.
+
 ##### `test_response_is_not_biased()`:
-Assesses the response for any potential biases. This method takes the response from the model, then feeds the response back to the model again with a prompt asking to assess the bias. In this case we ask the GPT-3.5 model for a bias evaluation of the GPT-4 response. We could optionally use a model specifically tuned for recognizing bias for the evaluation step.
+Assesses the response for any potential biases. This method takes the response from the model, then feeds the response back to the model again with a prompt asking to assess the bias. In this case we ask the GPT-3.5 model for a bias evaluation of the GPT-4 response.
