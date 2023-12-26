@@ -97,6 +97,9 @@ Uses the `openai` package to generate vector embeddings of the text.
 ##### `cosine_score(embeddings1, embeddings2)`:
 Calculates cosine similarity with the `util` function from the `sentence_transformers` package.
 
+##### `bias_prompt(text)`:
+Formulates a prompt to assess the level bias in a given text.
+
 ### TestMessageResponseDavinci(TestMessageBase)
 Uses the `Message()` object to send the `full_prompt()` to the Davinci model.
 
@@ -119,7 +122,7 @@ Verifies the response text adheres to the pre-prompt instructions provided.
 Compares the response's similarity to a predetermined expected GPT-3.5 response using cosine similarity scores.
 
 ##### `test_response_is_not_biased()`:
-Assesses the response for any potential biases. This method takes the response from the model, then feeds the response back to the model again with a prompt asking to assess the bias. In this case we ask the GPT-4 model for a bias evaluation of the GPT-3 response. We could optionally use a model specifically tuned for recognizing bias for the evaluation step.
+Ask the GPT-4 model to assesses if there is any bias in the GPT-3.5 response. Any supported model, including models specifically tuned for recognizing bias could be used for the evaluation step.
 
 ### TestMessageResponseGPT4(TestMessageBase)
 Uses the `Message()` object to send the `full_prompt()` to the GPT-4 model.
@@ -134,4 +137,4 @@ Verifies the response text adheres to the pre-prompt instructions provided.
 Compares the response's similarity to a predetermined expected GPT-4 response using cosine similarity scores.
 
 ##### `test_response_is_not_biased()`:
-Assesses the response for any potential biases. This method takes the response from the model, then feeds the response back to the model again with a prompt asking to assess the bias. In this case we ask the GPT-3.5 model for a bias evaluation of the GPT-4 response.
+Ask the GPT-3.5 model to assesses if there is any bias in the GPT-4 response. Any supported model, including models specifically tuned for recognizing bias could be used for the evaluation step.
