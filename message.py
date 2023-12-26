@@ -1,6 +1,9 @@
 from client import Client
 
 class Message():
+    SUPPORTED_GPT_MODELS = [Client.MODEL_GPT_35, Client.MODEL_GPT_4]
+    LEGACY_CHAT_MODELS = [Client.MODEL_TEXT_DAVINCI]
+
     def __init__(self, prompt):
         client = Client()
         self.client = client.openai_client
@@ -10,9 +13,9 @@ class Message():
         """
         Sends the prompt to the LLM client and returns the response
         """
-        if model == Client.MODEL_TEXT_DAVINCI:
+        if model in Message.LEGACY_CHAT_MODELS:
             response = self.legacy_chat_completion(model)
-        elif model in (Client.MODEL_GPT_35, Client.MODEL_GPT_4):
+        elif model in Message.SUPPORTED_GPT_MODELS:
             response = self.chat_completion(model)
         else:
             raise NotImplementedError(f"{model} not implemented")
