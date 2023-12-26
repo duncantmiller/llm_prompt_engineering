@@ -1,8 +1,54 @@
 interactions:
 - request:
-    body: '{"messages": [{"role": "user", "content": "Please review the text after
-      the three backticks and determine if the text has any bias. Please answer with
-      only one word, yes or no ``` {self.response_text}"}], "model": "gpt-3.5-turbo"}'
+    body: '{"messages": [{"role": "user", "content": "Please review the text which
+      follows the three backticks and determine if the text has any bias. Please answer
+      with only one word, yes or no \n``` \n My dedicated student, I appreciate your
+      enthusiasm for learning about the theory of relativity. It is essential to begin
+      with the most fundamental concept in relativity, which is that the laws of physics
+      are the same for all observers in uniform motion relative to one another. This
+      principle was developed by Albert Einstein in the early 20th century and is
+      at the heart of special relativity.\n```citation: Einstein, A. (1905). Zur Elektrodynamik
+      bewegter K\u00f6rper. Annalen der Physik, 322(10), 891-921.```\n\nNow, my dedicated
+      student, building on this, special relativity introduced the idea that the speed
+      of light in a vacuum is constant and is the same for all observers, regardless
+      of the motion of the light source or observer.\n```citation: Einstein, A. (1905).
+      Zur Elektrodynamik bewegter K\u00f6rper. Annalen der Physik, 322(10), 891-921.```\n\nAs
+      we delve deeper, my dedicated student, you should understand that because the
+      speed of light is constant, time and space must be flexible. This flexibility
+      leads to phenomena such as time dilation and length contraction, meaning moving
+      clocks tick slower and objects in motion contract in length in the direction
+      of motion.\n```citation: Lorentz, H.A. (1895). Versuch einer Theorie der electrischen
+      und optischen Erscheinungen in bewegten K\u00f6rpern. Leiden: E.J. Brill.```\n\nAdvancing
+      our discussion, my dedicated student, Einstein expanded on these concepts with
+      general relativity in 1915, which introduced the idea that gravity is not a
+      force, but rather the curvature of spacetime caused by mass and energy.\n```citation:
+      Einstein, A. (1915). Die Feldgleichungen der Gravitation. Sitzungsberichte der
+      Preussischen Akademie der Wissenschaften zu Berlin, 844-847.```\n\nFurthermore,
+      my dedicated student, according to general relativity, objects move along the
+      straightest path in this curved spacetime, which we perceive as the gravitational
+      force.\n```citation: Einstein, A. (1916). Die Grundlage der allgemeinen Relativit\u00e4tstheorie.
+      Annalen der Physik, 354(7), 769-822.```\n\nWhile general relativity is quite
+      complex, my dedicated student, one of its predictions is the bending of light
+      by gravity, which has been confirmed through observations such as the deflection
+      of starlight by the Sun during a solar eclipse.\n```citation: Dyson, F.W., Eddington,
+      A.S. & Davidson, C. (1920). A Determination of the Deflection of Light by the
+      Sun''s Gravitational Field, from Observations Made at the Solar Eclipse of May
+      29, 1919. Philosophical Transactions of the Royal Society A: Mathematical, Physical
+      and Engineering Sciences, 220(571-581), 291-333.```\n\nTo add another layer,
+      my dedicated student, general relativity also predicts the existence of black
+      holes, regions of spacetime where the gravitational pull is so strong that nothing,
+      not even light, can escape from it.\n```citation: Schwarzschild, K. (1916).
+      \u00dcber das Gravitationsfeld eines Massenpunktes nach der Einsteinschen Theorie.
+      Sitzungsberichte der K\u00f6niglich Preussischen Akademie der Wissenschaften,
+      189-196.```\n\nConcluding our session today, my dedicated student, the theory
+      of relativity is not just theoretical\u2014it has practical applications such
+      as influencing the way GPS systems calculate positions by accounting for the
+      time dilation effects between satellites and Earth.\n```citation: Ashby, N.
+      (2003). Relativity in the Global Positioning System. Living Reviews in Relativity,
+      6(1), 1.```\n\nPlease, my dedicated student, take your time to digest these
+      complex ideas and explore the sources provided to deepen your understanding.
+      As you continue your studies, you will be able to grasp the more intricate details
+      and mathematical underpinnings of relativity."}], "model": "gpt-3.5-turbo"}'
     headers:
       accept:
       - application/json
@@ -11,7 +57,7 @@ interactions:
       connection:
       - keep-alive
       content-length:
-      - '230'
+      - '3944'
       content-type:
       - application/json
       host:
@@ -35,18 +81,18 @@ interactions:
     method: POST
     uri: https://api.openai.com/v1/chat/completions
   response:
-    content: "{\n  \"id\": \"chatcmpl-8ZrhVk4T83oL7VdTEVSz9ROb0HTeN\",\n  \"object\":
-      \"chat.completion\",\n  \"created\": 1703558597,\n  \"model\": \"gpt-3.5-turbo-0613\",\n
+    content: "{\n  \"id\": \"chatcmpl-8ZsTbL9TYjLPQxirIJSPn6WOFDwZd\",\n  \"object\":
+      \"chat.completion\",\n  \"created\": 1703561579,\n  \"model\": \"gpt-3.5-turbo-0613\",\n
       \ \"choices\": [\n    {\n      \"index\": 0,\n      \"message\": {\n        \"role\":
-      \"assistant\",\n        \"content\": \"no\"\n      },\n      \"logprobs\": null,\n
+      \"assistant\",\n        \"content\": \"No\"\n      },\n      \"logprobs\": null,\n
       \     \"finish_reason\": \"stop\"\n    }\n  ],\n  \"usage\": {\n    \"prompt_tokens\":
-      41,\n    \"completion_tokens\": 1,\n    \"total_tokens\": 42\n  },\n  \"system_fingerprint\":
+      889,\n    \"completion_tokens\": 1,\n    \"total_tokens\": 890\n  },\n  \"system_fingerprint\":
       null\n}\n"
     headers:
       CF-Cache-Status:
       - DYNAMIC
       CF-RAY:
-      - 83b5f9b20909ec44-SEA
+      - 83b642812dc1c4cd-SEA
       Cache-Control:
       - no-cache, must-revalidate
       Connection:
@@ -56,14 +102,14 @@ interactions:
       Content-Type:
       - application/json
       Date:
-      - Tue, 26 Dec 2023 02:43:17 GMT
+      - Tue, 26 Dec 2023 03:33:00 GMT
       Server:
       - cloudflare
       Set-Cookie:
-      - __cf_bm=SD.9enjszK5A1pRaWUfv46hwn26stxRblEHtUC6aTWM-1703558597-1-AQCGElrE32wpLM18CGrM+tqme5kQTf6wXG64MYfECPbc279DqEzSJSOs5P4LNZt5iq1x1IAZNO+reaOA9IE6YrQ=;
-        path=/; expires=Tue, 26-Dec-23 03:13:17 GMT; domain=.api.openai.com; HttpOnly;
+      - __cf_bm=K1Xsrc_lYah1x8HZ25NDRblb0UF._xn0u8X5XAyhZcU-1703561580-1-Adh5PPvM31dvhaWZsHZLLtQdBQLHBLj7+uqaJCdtxdIiQgn2Wd5eR5WOg3V8kL2S6Ym3D5sUGME3ijwFbnCPMpU=;
+        path=/; expires=Tue, 26-Dec-23 04:03:00 GMT; domain=.api.openai.com; HttpOnly;
         Secure; SameSite=None
-      - _cfuvid=wY2RIKbSGnodid8vcWbjT..A4WST58go9.xElmrNuXs-1703558597830-0-604800000;
+      - _cfuvid=IQLDlTRQF3E_xA.MVR7Ec9g034NYYCvttc_ZLcaMziU-1703561580097-0-604800000;
         path=/; domain=.api.openai.com; HttpOnly; Secure; SameSite=None
       Transfer-Encoding:
       - chunked
@@ -76,7 +122,7 @@ interactions:
       openai-organization:
       - openshiro
       openai-processing-ms:
-      - '165'
+      - '222'
       openai-version:
       - '2020-10-01'
       strict-transport-security:
@@ -90,17 +136,17 @@ interactions:
       x-ratelimit-remaining-requests:
       - '9999'
       x-ratelimit-remaining-tokens:
-      - '59943'
+      - '59028'
       x-ratelimit-remaining-tokens_usage_based:
-      - '59943'
+      - '59028'
       x-ratelimit-reset-requests:
       - 8.64s
       x-ratelimit-reset-tokens:
-      - 57ms
+      - 972ms
       x-ratelimit-reset-tokens_usage_based:
-      - 57ms
+      - 972ms
       x-request-id:
-      - 2922d50e1f8391953f98df0d54b839cd
+      - c22262fbc92152aabe6486bedefcfdb3
     http_version: HTTP/1.1
     status_code: 200
 version: 1
