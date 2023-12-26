@@ -1,0 +1,145 @@
+interactions:
+- request:
+    body: '{"messages": [{"role": "user", "content": "Explain the theory of relativity"}],
+      "model": "gpt-4-1106-preview"}'
+    headers:
+      accept:
+      - application/json
+      accept-encoding:
+      - gzip, deflate
+      connection:
+      - keep-alive
+      content-length:
+      - '110'
+      content-type:
+      - application/json
+      host:
+      - api.openai.com
+      user-agent:
+      - OpenAI/Python 1.6.1
+      x-stainless-arch:
+      - arm64
+      x-stainless-async:
+      - 'false'
+      x-stainless-lang:
+      - python
+      x-stainless-os:
+      - MacOS
+      x-stainless-package-version:
+      - 1.6.1
+      x-stainless-runtime:
+      - CPython
+      x-stainless-runtime-version:
+      - 3.11.7
+    method: POST
+    uri: https://api.openai.com/v1/chat/completions
+  response:
+    content: "{\n  \"id\": \"chatcmpl-8ZsJESGhbPCsiPScbTnedU9blSD1J\",\n  \"object\":
+      \"chat.completion\",\n  \"created\": 1703560936,\n  \"model\": \"gpt-4-1106-preview\",\n
+      \ \"choices\": [\n    {\n      \"index\": 0,\n      \"message\": {\n        \"role\":
+      \"assistant\",\n        \"content\": \"The theory of relativity actually refers
+      to two related theories proposed by Albert Einstein: Special Relativity and
+      General Relativity.\\n\\n**1. Special Relativity (1905):**\\nEinstein's theory
+      of Special Relativity addresses frames of reference that are moving at constant
+      speeds relative to one another (i.e., inertial frames). The theory postulates
+      that:\\n\\n- The laws of physics are the same in all inertial frames. No physical
+      experiment (without looking outside) can detect constant velocity.\\n- The speed
+      of light in a vacuum is the same for all observers, regardless of the motion
+      of the light source or observer.\\n\\nSpecial Relativity introduced several
+      revolutionary concepts:\\n\\n- Time Dilation: An observer moving relative to
+      a clock will measure the clock ticking slower than it would if the observer
+      and the clock were at rest with respect to one another (this effect has been
+      observed in precise experiments with atomic clocks, for example).\\n- Length
+      Contraction: Objects moving relative to an observer will be measured to be shortened
+      in the direction of motion (though this effect is only noticeable at speeds
+      approaching that of light).\\n- Relativity of Simultaneity: Events that are
+      simultaneous in one frame of reference may not be simultaneous in another moving
+      frame of reference.\\n- Mass-Energy Equivalence: Perhaps the most famous equation
+      in physics, E=mc\xB2, arises from Special Relativity, stating that mass (m)
+      and energy (E) are equivalent, with c (the speed of light) as the proportionality
+      constant. That means an object gains energy as it gains velocity, and that energy
+      is equivalent to an increase in mass.\\n\\n**2. General Relativity (1915):**\\nEinstein's
+      theory of General Relativity is a theory of gravitation that replaced Newton's
+      law of universal gravitation. It describes gravity not as a force, but as the
+      curvature of spacetime caused by mass and energy. According to General Relativity:\\n\\n-
+      Mass/energy tells space how to curve, and the curvature of space tells mass
+      how to move.\\n- Time alongside the three dimensions of space are interwoven
+      into a single four-dimensional fabric called spacetime.\\n- Massive objects
+      cause a distortion in spacetime, which is felt as gravity. The more massive
+      an object, the more it warps the space around it.\\n- Time also dilates in a
+      gravitational field, known as gravitational time dilation. Clocks closer to
+      a massive body ticks slower than those further away.\\n\\nGeneral Relativity
+      has been confirmed by numerous experiments and observations. One of its most
+      famous predictions is the bending of light around massive objects, known as
+      gravitational lensing, which has been observed astronomically. It also predicts
+      exotic phenomena such as black holes and the expansion of the universe, both
+      of which have strong observational support.\\n\\nBoth Special and General Relativity
+      have profound implications for our understanding of the universe and have been
+      confirmed by many experiments and observations to date. However, it should be
+      noted that relativity remains incompatible with quantum mechanics, and a grand
+      unified theory that can reconcile both large-scale gravity and quantum effects
+      has yet to be formulated.\"\n      },\n      \"logprobs\": null,\n      \"finish_reason\":
+      \"stop\"\n    }\n  ],\n  \"usage\": {\n    \"prompt_tokens\": 14,\n    \"completion_tokens\":
+      618,\n    \"total_tokens\": 632\n  },\n  \"system_fingerprint\": \"fp_3905aa4f79\"\n}\n"
+    headers:
+      CF-Cache-Status:
+      - DYNAMIC
+      CF-RAY:
+      - 83b632caba096829-SEA
+      Cache-Control:
+      - no-cache, must-revalidate
+      Connection:
+      - keep-alive
+      Content-Encoding:
+      - gzip
+      Content-Type:
+      - application/json
+      Date:
+      - Tue, 26 Dec 2023 03:23:03 GMT
+      Server:
+      - cloudflare
+      Set-Cookie:
+      - __cf_bm=qm.lFtk_2VEI6bwx1hDoJewOcuFAMr6NSRFuMhoHlC8-1703560983-1-AdHQXCIxcWFCTPVFFleuZyA52bduUNpYEqPEWVn8Uk5PZUz07fTM6296bDIoKHapz9L3u3SJ1XMPo7QTWm27zQE=;
+        path=/; expires=Tue, 26-Dec-23 03:53:03 GMT; domain=.api.openai.com; HttpOnly;
+        Secure; SameSite=None
+      - _cfuvid=8KVccuo5IQ7Sfj7j6xELlSdJ7lt1CK34t1TRRaQrf4w-1703560983081-0-604800000;
+        path=/; domain=.api.openai.com; HttpOnly; Secure; SameSite=None
+      Transfer-Encoding:
+      - chunked
+      access-control-allow-origin:
+      - '*'
+      alt-svc:
+      - h3=":443"; ma=86400
+      openai-model:
+      - gpt-4-1106-preview
+      openai-organization:
+      - openshiro
+      openai-processing-ms:
+      - '46890'
+      openai-version:
+      - '2020-10-01'
+      strict-transport-security:
+      - max-age=15724800; includeSubDomains
+      x-ratelimit-limit-requests:
+      - '10000'
+      x-ratelimit-limit-tokens:
+      - '500000'
+      x-ratelimit-limit-tokens_usage_based:
+      - '500000'
+      x-ratelimit-remaining-requests:
+      - '9999'
+      x-ratelimit-remaining-tokens:
+      - '499975'
+      x-ratelimit-remaining-tokens_usage_based:
+      - '499975'
+      x-ratelimit-reset-requests:
+      - 8.64s
+      x-ratelimit-reset-tokens:
+      - 4.32s
+      x-ratelimit-reset-tokens_usage_based:
+      - 4.32s
+      x-request-id:
+      - bf79c3145fb19a62324df2a6809d64d9
+    http_version: HTTP/1.1
+    status_code: 200
+version: 1
