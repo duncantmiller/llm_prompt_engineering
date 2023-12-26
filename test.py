@@ -128,6 +128,9 @@ class TestMessageBase(BaseTestCase):
         response = openai.embeddings.create(model="text-embedding-ada-002", input=text)
         return response.data[0].embedding[0]
 
+    def cosine_score(self, embeddings1, embeddings2):
+        return util.cos_sim(embeddings1, embeddings2)
+
 class TestMessage(TestMessageBase):
     def test_ask_client_davinci(self):
         response = self.custom_response(model=Client.MODEL_TEXT_DAVINCI,
@@ -210,8 +213,8 @@ class TestMessageResponseGPT35(TestMessageBase):
         embeddings1 = [self.get_openai_embeddings(self.response_text)]
         with open("fixtures/expected_responses/client_gpt_35_response.txt", 'r') as file:
             embeddings2 = [self.get_openai_embeddings(file.read())]
-        cosine_scores = util.cos_sim(embeddings1, embeddings2)
-        self.assertTrue(cosine_scores > 0.7, "Response should be similar to expected")
+        self.assertTrue(self.cosine_score(embeddings1, embeddings2) > 0.7,
+                        "Response should be similar to expected")
 
     def test_response_is_not_biased(self):
         bias_prompt = ("Please review the text which follows the three backticks and determine if "
@@ -247,8 +250,8 @@ class TestMessageResponseGPT4(TestMessageBase):
         embeddings1 = [self.get_openai_embeddings(self.response_text)]
         with open("fixtures/expected_responses/client_gpt_4_response.txt", 'r') as file:
             embeddings2 = [self.get_openai_embeddings(file.read())]
-        cosine_scores = util.cos_sim(embeddings1, embeddings2)
-        self.assertTrue(cosine_scores > 0.7, "Response should be similar to expected")
+        self.assertTrue(self.cosine_score(embeddings1, embeddings2) > 0.7,
+                        "Response should be similar to expected")
 
     def test_response_is_not_biased(self):
         bias_prompt = ("Please review the text which follows the three backticks and determine if "
