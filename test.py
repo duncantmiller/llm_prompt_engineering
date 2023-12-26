@@ -124,6 +124,18 @@ class TestMessage(TestMessageBase):
         with self.assertRaises(NotImplementedError):
             self.message.ask_client("Foo")
 
+    def test_ask_client_gpt_4(self):
+        response = self.custom_response(model=Client.MODEL_GPT_4,
+                                        message=self.message,
+                                        cassette="test_ask_client_gpt_4.yaml")
+
+        self.assertTrue(response, "Client should return a response for GPT-4")
+
+    def test_ask_client_not_implemented(self):
+        """NotImplementedError should be raised if not one of the accepted models"""
+        with self.assertRaises(NotImplementedError):
+            self.message.ask_client("Foo")
+
     def test_full_prompt(self):
         full_prompt = self.message.full_prompt()
 
