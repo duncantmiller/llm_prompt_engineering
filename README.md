@@ -4,7 +4,7 @@ This is an example project showing prompt engineering testing strategies, using 
 
 This code demonstrates how I ensure the high quality of the prompts I create. The [test.py](https://github.com/duncantmiller/llm_prompt_engineering/blob/main/test.py) file shows a series of tests I wrote for the project using test-driven development. These tests helped me to repeatedly test a system where a user prompt is augmented by additional prompts, including a [pre_prompt](https://github.com/duncantmiller/llm_prompt_engineering/blob/15c2ffe4c476f0a1ae563ffb8498320069c14c1b/message.py#L64) and a [cite_sources_prompt](https://github.com/duncantmiller/llm_prompt_engineering/blob/15c2ffe4c476f0a1ae563ffb8498320069c14c1b/message.py#L53) which provide additional instruction to the LLM beyond the user prompt.
 
-This automated test suite makes it easier for me to hone prompts or switch models (text-davinci-003 to gpt-3.5-turbo) and ensure that the prompts provide a consistent response. It also enables me to monitor for ethical and bias mitigation and model drift over time.
+This automated test suite makes it easier for me to hone prompts or switch models (text-davinci-003, gpt-3.5-turbo, gpt-4-1106-preview) and ensure that the prompts provide a consistent response. It also enables me to monitor for ethical and bias mitigation and model drift over time.
 
 This is a simplified version of the logic used in [OpenShiro](https://openshiro.com) prompts and is intended for educational purposes. The full product involves many more parameters which the prompts are tested against including additional model versions, additional APIs like Azure, Google, HuggingFace, Anthropic and Cohere, and a library of pre-formatted prompts from which the users can select.
 
@@ -47,7 +47,7 @@ Sends a given prompt to the Davinci model and retrieves the response. All of the
 General method for sending prompts and retrieving responses, applicable to newer OpenAI models, like GPT-3.5 or GPT-4. It chooses between live API calls and recorded responses based on the `live_test` flag.
 
 ##### `default_api_call()`:
-Directly performs the API calls for the `default_response()` method. This method currently only uses the GPT-3.5 model. It does use the new `client.chat.completions` syntax so it could easily be extended to use additional newer models like GPT-4.
+Directly performs the API calls for the `default_response()` method. This method uses the new `client.chat.completions` syntax for required for models like GPT-3.5 and GPT-4.
 
 ##### `custom_response()`:
 Uses the `Message()` object to send the `full_prompt()` to a specified model and retrieves the response, considering the `live_test` setting. The `full_prompt()` method defined in the `Message()` class does supplement the provided user prompt with the `pre_prompt()` and `cite_sources_prompt()`.
@@ -63,6 +63,15 @@ Verifies the response text does not follow pre-prompt instructions, as expected.
 
 ### TestDefaultResponseGPT35(BaseTestCase)
 Sends the raw user prompt to the GPT-3.5 model.
+
+##### `test_does_not_include_citation()`:
+Verifies the response text does not inadvertently include citations.
+
+##### `test_does_not_include_pre_prompt()`:
+Verifies the response text does not follow pre-prompt instructions, as expected.
+
+### TestDefaultResponseGPT4(BaseTestCase)
+Sends the raw user prompt to the GPT-4 model.
 
 ##### `test_does_not_include_citation()`:
 Verifies the response text does not inadvertently include citations.
@@ -98,4 +107,16 @@ Compares the response's similarity to a predetermined expected response using co
 - The cosine similarity is then derived using the `util` function from the `sentence_transformers` package.
 
 ##### `test_response_is_not_biased()`:
-Assesses the response for any potential biases. This method takes the response from the model, then feeds the response back to the model again with a prompt asking to assess the bias. Right now it uses the same model as generated the response, but ideally you might use a different model or a model specifically tuned for recognizing bias for the evaluation step.
+Assesses the response for any potential biases. This method takes the response from the model, then feeds the response back to the model again with a prompt asking to assess the bias. In this case we ask the GPT-4 model for a bias evaluation of the GPT-3 response. We could optionally use a model specifically tuned for recognizing bias for the evaluation step.
+
+### TestMessageResponseGPT4(TestMessageBase)
+Uses the `Message()` object to send the `full_prompt()` to the GPT-4 model.
+
+##### `test_response_includes_citation()`:
+Verifies the response text includes a citation.
+
+##### `test_response_includes_pre_prompt()`:
+Verifies the response text adheres to the pre-prompt instructions provided.
+
+##### `test_response_is_not_biased()`:
+Assesses the response for any potential biases. This method takes the response from the model, then feeds the response back to the model again with a prompt asking to assess the bias. In this case we ask the GPT-3.5 model for a bias evaluation of the GPT-4 response. We could optionally use a model specifically tuned for recognizing bias for the evaluation step.
