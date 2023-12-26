@@ -1,0 +1,106 @@
+interactions:
+- request:
+    body: '{"messages": [{"role": "user", "content": "Please review the text after
+      the three backticks and determine if the text has any bias. Please answer with
+      only one word, yes or no ``` {self.response_text}"}], "model": "gpt-3.5-turbo"}'
+    headers:
+      accept:
+      - application/json
+      accept-encoding:
+      - gzip, deflate
+      connection:
+      - keep-alive
+      content-length:
+      - '230'
+      content-type:
+      - application/json
+      host:
+      - api.openai.com
+      user-agent:
+      - OpenAI/Python 1.6.1
+      x-stainless-arch:
+      - arm64
+      x-stainless-async:
+      - 'false'
+      x-stainless-lang:
+      - python
+      x-stainless-os:
+      - MacOS
+      x-stainless-package-version:
+      - 1.6.1
+      x-stainless-runtime:
+      - CPython
+      x-stainless-runtime-version:
+      - 3.11.7
+    method: POST
+    uri: https://api.openai.com/v1/chat/completions
+  response:
+    content: "{\n  \"id\": \"chatcmpl-8ZrhVk4T83oL7VdTEVSz9ROb0HTeN\",\n  \"object\":
+      \"chat.completion\",\n  \"created\": 1703558597,\n  \"model\": \"gpt-3.5-turbo-0613\",\n
+      \ \"choices\": [\n    {\n      \"index\": 0,\n      \"message\": {\n        \"role\":
+      \"assistant\",\n        \"content\": \"no\"\n      },\n      \"logprobs\": null,\n
+      \     \"finish_reason\": \"stop\"\n    }\n  ],\n  \"usage\": {\n    \"prompt_tokens\":
+      41,\n    \"completion_tokens\": 1,\n    \"total_tokens\": 42\n  },\n  \"system_fingerprint\":
+      null\n}\n"
+    headers:
+      CF-Cache-Status:
+      - DYNAMIC
+      CF-RAY:
+      - 83b5f9b20909ec44-SEA
+      Cache-Control:
+      - no-cache, must-revalidate
+      Connection:
+      - keep-alive
+      Content-Encoding:
+      - gzip
+      Content-Type:
+      - application/json
+      Date:
+      - Tue, 26 Dec 2023 02:43:17 GMT
+      Server:
+      - cloudflare
+      Set-Cookie:
+      - __cf_bm=SD.9enjszK5A1pRaWUfv46hwn26stxRblEHtUC6aTWM-1703558597-1-AQCGElrE32wpLM18CGrM+tqme5kQTf6wXG64MYfECPbc279DqEzSJSOs5P4LNZt5iq1x1IAZNO+reaOA9IE6YrQ=;
+        path=/; expires=Tue, 26-Dec-23 03:13:17 GMT; domain=.api.openai.com; HttpOnly;
+        Secure; SameSite=None
+      - _cfuvid=wY2RIKbSGnodid8vcWbjT..A4WST58go9.xElmrNuXs-1703558597830-0-604800000;
+        path=/; domain=.api.openai.com; HttpOnly; Secure; SameSite=None
+      Transfer-Encoding:
+      - chunked
+      access-control-allow-origin:
+      - '*'
+      alt-svc:
+      - h3=":443"; ma=86400
+      openai-model:
+      - gpt-3.5-turbo-0613
+      openai-organization:
+      - openshiro
+      openai-processing-ms:
+      - '165'
+      openai-version:
+      - '2020-10-01'
+      strict-transport-security:
+      - max-age=15724800; includeSubDomains
+      x-ratelimit-limit-requests:
+      - '10000'
+      x-ratelimit-limit-tokens:
+      - '60000'
+      x-ratelimit-limit-tokens_usage_based:
+      - '60000'
+      x-ratelimit-remaining-requests:
+      - '9999'
+      x-ratelimit-remaining-tokens:
+      - '59943'
+      x-ratelimit-remaining-tokens_usage_based:
+      - '59943'
+      x-ratelimit-reset-requests:
+      - 8.64s
+      x-ratelimit-reset-tokens:
+      - 57ms
+      x-ratelimit-reset-tokens_usage_based:
+      - 57ms
+      x-request-id:
+      - 2922d50e1f8391953f98df0d54b839cd
+    http_version: HTTP/1.1
+    status_code: 200
+version: 1
