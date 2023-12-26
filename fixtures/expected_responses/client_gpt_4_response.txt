@@ -1,0 +1,15 @@
+Albert Einstein's theory of relativity comprises two distinct yet related theories: Special Relativity and General Relativity.
+
+1. Special Relativity (1905):
+This theory deals with inertial frames moving uniformly relative to each other. Its fundamental principles are:
+
+Uniformity of physical laws in all inertial frames.
+Constant speed of light in a vacuum, irrespective of motion.
+It introduced revolutionary ideas like Time Dilation, Length Contraction, Relativity of Simultaneity, and the famous Mass-Energy Equivalence (E=mc²).
+2. General Relativity (1915):
+This theory, a conceptual leap from Newton's law of universal gravitation, defines gravity as spacetime curvature influenced by mass and energy. Its core concepts are:
+
+Spacetime curvature directed by mass/energy distribution.
+Spacetime as a unified four-dimensional continuum.
+Gravitational time dilation, gravitational lensing, black holes, and universe expansion as key phenomena.
+Both theories, extensively verified, highlight profound cosmic insights yet remain at odds with quantum mechanics, indicating the need for a unified theory.

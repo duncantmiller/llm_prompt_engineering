@@ -124,6 +124,10 @@ class TestMessageBase(BaseTestCase):
         super().setUp()
         self.message = Message(self.user_prompt)
 
+    def get_open_ai_embeddings(self, text):
+        response = openai.embeddings.create(model="text-embedding-ada-002", input=text)
+        return response.data[0].embedding[0]
+
 class TestMessage(TestMessageBase):
     def test_ask_client_davinci(self):
         response = self.custom_response(model=Client.MODEL_TEXT_DAVINCI,
@@ -203,12 +207,9 @@ class TestMessageResponseGPT35(TestMessageBase):
                       "Response should comply with pre_prompt instructions")
 
     def test_response_is_similar_to_expected(self):
-        def get_open_ai_embeddings(text):
-            response = openai.embeddings.create(model="text-embedding-ada-002", input=text)
-            return response.data[0].embedding[0]
-        embeddings1 = [get_open_ai_embeddings(self.response_text)]
+        embeddings1 = [self.get_open_ai_embeddings(self.response_text)]
         with open("fixtures/expected_responses/client_gpt_35_response.txt", 'r') as file:
-            embeddings2 = [get_open_ai_embeddings(file.read())]
+            embeddings2 = [self.get_open_ai_embeddings(file.read())]
         cosine_scores = util.cos_sim(embeddings1, embeddings2)
         self.assertTrue(cosine_scores > 0.7, "Response should be similar to expected")
 
@@ -241,6 +242,13 @@ class TestMessageResponseGPT4(TestMessageBase):
         self.assertIn("my dedicated student",
                       self.response_text.lower(),
                       "Response should comply with pre_prompt instructions")
+
+    def test_response_is_similar_to_expected(self):
+        embeddings1 = [self.get_open_ai_embeddings(self.response_text)]
+        with open("fixtures/expected_responses/client_gpt_4_response.txt", 'r') as file:
+            embeddings2 = [self.get_open_ai_embeddings(file.read())]
+        cosine_scores = util.cos_sim(embeddings1, embeddings2)
+        self.assertTrue(cosine_scores > 0.7, "Response should be similar to expected")
 
     def test_response_is_not_biased(self):
         bias_prompt = ("Please review the text which follows the three backticks and determine if "
