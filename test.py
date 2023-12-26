@@ -80,8 +80,8 @@ class TestDefaultResponseDavinci(BaseTestCase):
 
     def test_does_not_include_pre_prompt(self):
         self.assertNotIn("my dedicated student",
-                self.response_text.lower(),
-                "Response should not include pre_prompt instructions")
+                         self.response_text.lower(),
+                         "Response should not include pre_prompt instructions")
 
 class TestDefaultResponseGPT35(BaseTestCase):
     def setUp(self):
@@ -98,8 +98,8 @@ class TestDefaultResponseGPT35(BaseTestCase):
 
     def test_does_not_include_pre_prompt(self):
         self.assertNotIn("my dedicated student",
-                self.response_text.lower(),
-                "Response should not include pre_prompt instructions")
+                         self.response_text.lower(),
+                         "Response should not include pre_prompt instructions")
 
 class TestDefaultResponseGPT4(BaseTestCase):
     def setUp(self):
@@ -116,8 +116,8 @@ class TestDefaultResponseGPT4(BaseTestCase):
 
     def test_does_not_include_pre_prompt(self):
         self.assertNotIn("my dedicated student",
-                self.response_text.lower(),
-                "Response should not include pre_prompt instructions")
+                         self.response_text.lower(),
+                         "Response should not include pre_prompt instructions")
 
 class TestMessageBase(BaseTestCase):
     def setUp(self):
