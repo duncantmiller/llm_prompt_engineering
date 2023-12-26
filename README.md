@@ -15,7 +15,7 @@ Use if you use [pipenv](https://pypi.org/project/pipenv/) you can install the de
 
 The tests use [vcrpy](https://github.com/kevin1024/vcrpy) to record and replay the interactions with the OpenAI API. To run the tests, execute the command `python test.py`.
 
-It can also be helpful to run the tests against the live OpenAI API. Note that when your run tests against the live API you will need an OpenAI API key and it will incur a cost. Also the tests will take much longer to run (approximately 93.5s using the live API vs 0.2s using the vcr cassette responses on my machine). To run the tests against the live API follow these steps:
+It can also be helpful to run the tests against the live OpenAI API. Note that when your run tests against the live API you will need an OpenAI API key, it will incur a cost, and the tests will take significantly longer to run. To run the tests against the live API follow these steps:
 
 - Copy the .env_example file and rename it as .env with `cp .env_example .env` (Linux/macOS) or `copy .env_example .env` (Windows)
 - Open the .env file and enter the value for your OpenAI API Key for the `OPENAI_API_KEY=` variable. For example if your API key is 'foo' then `OPENAI_API_KEY=foo`
