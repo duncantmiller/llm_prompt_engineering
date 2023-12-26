@@ -12,7 +12,7 @@ class Message():
         """
         if model == Client.MODEL_TEXT_DAVINCI:
             response = self.legacy_chat_completion(model)
-        elif model == Client.MODEL_GPT_35:
+        elif model == Client.MODEL_GPT_35 or model == Client.MODEL_GPT_4:
             response = self.chat_completion(model)
         else:
             raise NotImplementedError(f"{model} not implemented")
