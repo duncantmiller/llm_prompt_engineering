@@ -43,64 +43,78 @@ interactions:
     method: POST
     uri: https://api.openai.com/v1/chat/completions
   response:
-    content: "{\n  \"id\": \"chatcmpl-8ZrenbwSjZRpIuHMc0lxgt4BJwpln\",\n  \"object\":
-      \"chat.completion\",\n  \"created\": 1703558429,\n  \"model\": \"gpt-4-1106-preview\",\n
+    content: "{\n  \"id\": \"chatcmpl-8ZuhaoLCbYHxOxnwpJeVepDpF0D3u\",\n  \"object\":
+      \"chat.completion\",\n  \"created\": 1703570134,\n  \"model\": \"gpt-4-1106-preview\",\n
       \ \"choices\": [\n    {\n      \"index\": 0,\n      \"message\": {\n        \"role\":
-      \"assistant\",\n        \"content\": \"My dedicated student, I appreciate your
-      enthusiasm for learning about the theory of relativity. It is essential to begin
-      with the most fundamental concept in relativity, which is that the laws of physics
-      are the same for all observers in uniform motion relative to one another. This
-      principle was developed by Albert Einstein in the early 20th century and is
-      at the heart of special relativity.\\n```citation: Einstein, A. (1905). Zur
-      Elektrodynamik bewegter K\xF6rper. Annalen der Physik, 322(10), 891-921.```\\n\\nNow,
-      my dedicated student, building on this, special relativity introduced the idea
-      that the speed of light in a vacuum is constant and is the same for all observers,
-      regardless of the motion of the light source or observer.\\n```citation: Einstein,
-      A. (1905). Zur Elektrodynamik bewegter K\xF6rper. Annalen der Physik, 322(10),
-      891-921.```\\n\\nAs we delve deeper, my dedicated student, you should understand
-      that because the speed of light is constant, time and space must be flexible.
-      This flexibility leads to phenomena such as time dilation and length contraction,
-      meaning moving clocks tick slower and objects in motion contract in length in
-      the direction of motion.\\n```citation: Lorentz, H.A. (1895). Versuch einer
-      Theorie der electrischen und optischen Erscheinungen in bewegten K\xF6rpern.
-      Leiden: E.J. Brill.```\\n\\nAdvancing our discussion, my dedicated student,
-      Einstein expanded on these concepts with general relativity in 1915, which introduced
-      the idea that gravity is not a force, but rather the curvature of spacetime
-      caused by mass and energy.\\n```citation: Einstein, A. (1915). Die Feldgleichungen
-      der Gravitation. Sitzungsberichte der Preussischen Akademie der Wissenschaften
-      zu Berlin, 844-847.```\\n\\nFurthermore, my dedicated student, according to
-      general relativity, objects move along the straightest path in this curved spacetime,
-      which we perceive as the gravitational force.\\n```citation: Einstein, A. (1916).
-      Die Grundlage der allgemeinen Relativit\xE4tstheorie. Annalen der Physik, 354(7),
-      769-822.```\\n\\nWhile general relativity is quite complex, my dedicated student,
-      one of its predictions is the bending of light by gravity, which has been confirmed
-      through observations such as the deflection of starlight by the Sun during a
-      solar eclipse.\\n```citation: Dyson, F.W., Eddington, A.S. & Davidson, C. (1920).
-      A Determination of the Deflection of Light by the Sun's Gravitational Field,
-      from Observations Made at the Solar Eclipse of May 29, 1919. Philosophical Transactions
-      of the Royal Society A: Mathematical, Physical and Engineering Sciences, 220(571-581),
-      291-333.```\\n\\nTo add another layer, my dedicated student, general relativity
-      also predicts the existence of black holes, regions of spacetime where the gravitational
-      pull is so strong that nothing, not even light, can escape from it.\\n```citation:
-      Schwarzschild, K. (1916). \xDCber das Gravitationsfeld eines Massenpunktes nach
-      der Einsteinschen Theorie. Sitzungsberichte der K\xF6niglich Preussischen Akademie
-      der Wissenschaften, 189-196.```\\n\\nConcluding our session today, my dedicated
-      student, the theory of relativity is not just theoretical\u2014it has practical
-      applications such as influencing the way GPS systems calculate positions by
-      accounting for the time dilation effects between satellites and Earth.\\n```citation:
-      Ashby, N. (2003). Relativity in the Global Positioning System. Living Reviews
-      in Relativity, 6(1), 1.```\\n\\nPlease, my dedicated student, take your time
-      to digest these complex ideas and explore the sources provided to deepen your
-      understanding. As you continue your studies, you will be able to grasp the more
-      intricate details and mathematical underpinnings of relativity.\"\n      },\n
-      \     \"logprobs\": null,\n      \"finish_reason\": \"stop\"\n    }\n  ],\n
-      \ \"usage\": {\n    \"prompt_tokens\": 155,\n    \"completion_tokens\": 850,\n
-      \   \"total_tokens\": 1005\n  },\n  \"system_fingerprint\": \"fp_3905aa4f79\"\n}\n"
+      \"assistant\",\n        \"content\": \"My dedicated student, I'm thrilled to
+      see your enthusiasm for learning about the theory of relativity. To begin, the
+      theory of relativity actually encompasses two theories proposed by Albert Einstein:
+      special relativity and general relativity.\\n```citation: Einstein, Albert (1905).
+      \\\"Zur Elektrodynamik bewegter K\xF6rper\\\". Annalen der Physik. 322 (10).```\\n\\nSpecial
+      relativity, proposed in 1905, fundamentally changed our understanding of space
+      and time, showing that they are interwoven into a single continuum known as
+      spacetime.\\n```citation: Einstein, Albert (1905). \\\"On the Electrodynamics
+      of Moving Bodies\\\". Annalen der Physik. 17 (10).```\\n\\nOne of the key postulates
+      of special relativity is that the speed of light in a vacuum is the same for
+      all observers, regardless of the motion of the light source or observer.\\n```citation:
+      Einstein, Albert (1905). \\\"On the Electrodynamics of Moving Bodies\\\". Annalen
+      der Physik. 17 (10).```\\n\\nThis leads to several mind-bending implications,
+      such as time dilation, where time can pass at different rates for observers
+      who are in relative motion to one another.\\n```citation: Einstein, Albert (1905).
+      \\\"On the Electrodynamics of Moving Bodies\\\". Annalen der Physik. 17 (10).```\\n\\nNext
+      is length contraction, another consequence of special relativity, which means
+      that objects compress along the direction of motion as they approach the speed
+      of light, when observed from a stationary frame of reference.\\n```citation:
+      Einstein, Albert (1905). \\\"On the Electrodynamics of Moving Bodies\\\". Annalen
+      der Physik. 17 (10).```\\n\\nNow, general relativity, proposed by Einstein in
+      1915, extends the theory of special relativity and Newton's law of universal
+      gravitation to provide a unified description of gravity as a geometric property
+      of space and time, or spacetime.\\n```citation: Einstein, Albert (1915). \\\"Die
+      Feldgleichungen der Gravitation\\\". Sitzungsberichte der Preussischen Akademie
+      der Wissenschaften zu Berlin.```\\n\\nGeneral relativity predicts that massive
+      objects cause a distortion in spacetime, which is felt as gravity by other objects.\\n```citation:
+      Einstein, Albert (1915). \\\"Die Feldgleichungen der Gravitation\\\". Sitzungsberichte
+      der Preussischen Akademie der Wissenschaften zu Berlin.```\\n\\nAn important
+      prediction of general relativity is the bending of light around massive objects,
+      a phenomenon called gravitational lensing, which has been confirmed by many
+      observations.\\n```citation: Dyson, F.W.; Eddington, A.S.; Davidson, C. (1920).
+      \\\"A Determination of the Deflection of Light by the Sun's Gravitational Field\\\".
+      Philosophical Transactions of the Royal Society A. 220 (571-581).```\\n\\nAs
+      you can see, my dedicated student, the theory of relativity is a cornerstone
+      of modern physics, providing a comprehensive framework for understanding the
+      cosmos from the behavior of subatomic particles to the movements of galaxies.\\n```citation:
+      Overbye, D. (2008). \\\"Einstein's Universe, Still Splendid\\\". New York Times.```\\n\\nMoving
+      forward, if you'd like to delve deeper, we can explore more advanced topics
+      such as black holes, cosmology, and the search for a Theory of Everything that
+      attempts to reconcile relativity with quantum mechanics.\\n```citation: Hawking,
+      S.W. (1988). \\\"A Brief History of Time\\\". Bantam Dell Publishing Group.```\\n\\nRemember
+      that this is an overview, and each concept in relativity theory is intricate
+      and fascinating, warranting a closer look and deeper understanding through study
+      and discussion.\\n```citation: Rindler, W. (2006). \\\"Relativity: Special,
+      General, and Cosmological\\\". Oxford University Press.```\\n\\nAs you continue
+      your journey in physics, I encourage you to read the seminal papers by Einstein
+      and other physicists, explore textbooks in the field, and engage in discussions
+      to solidify your understanding.\\n```citation: Einstein, Albert (1916). \\\"Die
+      Grundlage der allgemeinen Relativit\xE4tstheorie\\\". Annalen der Physik. 49
+      (7).```\\n\\nBy comprehending these revolutionary ideas, you, my dedicated student,
+      will be well-equipped to appreciate the mysteries of the universe and possibly
+      contribute to the next great discoveries in physics.\\n```citation: Greene,
+      B. (2004). \\\"The Fabric of the Cosmos: Space, Time, and the Texture of Reality\\\".
+      Vintage Books.```\\n\\nI hope this foundational introduction gives you a starting
+      point from which to explore and discover the beauty of the theory of relativity.\\n```citation:
+      Einstein, Albert (1916). \\\"Relativity: The Special and the General Theory\\\".
+      Henry Holt and Company.```\\n\\nFeel free to reach out with any questions or
+      if you wish to delve further into specific aspects of relativity, my dedicated
+      student.\\n```citation: Adapted from my personal expertise as a simulated research
+      scientist with 20 years of experience teaching as a college professor.```\"\n
+      \     },\n      \"logprobs\": null,\n      \"finish_reason\": \"stop\"\n    }\n
+      \ ],\n  \"usage\": {\n    \"prompt_tokens\": 155,\n    \"completion_tokens\":
+      1061,\n    \"total_tokens\": 1216\n  },\n  \"system_fingerprint\": \"fp_3905aa4f79\"\n}\n"
     headers:
       CF-Cache-Status:
       - DYNAMIC
       CF-RAY:
-      - 83b5f598f937ec23-SEA
+      - 83b7135d88aaeb73-SEA
       Cache-Control:
       - no-cache, must-revalidate
       Connection:
@@ -110,14 +124,14 @@ interactions:
       Content-Type:
       - application/json
       Date:
-      - Tue, 26 Dec 2023 02:41:10 GMT
+      - Tue, 26 Dec 2023 05:56:30 GMT
       Server:
       - cloudflare
       Set-Cookie:
-      - __cf_bm=cCrLYnBDBynUX_UsuTMLL7LoMO50Dggb7OTPyAkOXC0-1703558470-1-AWhn+ptcNNj3Z8UvXL9W4sjrJsZyXnQR82a42sZYPcnRFp+RchB+fo68gr/H8aCe8jnHt4d7Lyrpm2LZsRTaNgw=;
-        path=/; expires=Tue, 26-Dec-23 03:11:10 GMT; domain=.api.openai.com; HttpOnly;
+      - __cf_bm=oLC_AYW5YYT7r149ofmPDXoKG_iUTVxiQKktiJbn7Hc-1703570190-1-AZ+4bRZXW7yWmY93Wa7lzQk7Z0Mt+MyM9yBadCDgv223wL1DWbMkPVPgveRaFbI7ai8Dr5whg/y7Q2+xJWEiu2U=;
+        path=/; expires=Tue, 26-Dec-23 06:26:30 GMT; domain=.api.openai.com; HttpOnly;
         Secure; SameSite=None
-      - _cfuvid=OxXNd6TKl4QGJXlq64el8UIZcieAIyUTlV2L1ShfzdI-1703558470675-0-604800000;
+      - _cfuvid=tPNmy8rri3EpP5nKNghlVMSdDHlvhM6s3xT7JmDzaA8-1703570190261-0-604800000;
         path=/; domain=.api.openai.com; HttpOnly; Secure; SameSite=None
       Transfer-Encoding:
       - chunked
@@ -130,7 +144,7 @@ interactions:
       openai-organization:
       - openshiro
       openai-processing-ms:
-      - '40936'
+      - '55512'
       openai-version:
       - '2020-10-01'
       strict-transport-security:
@@ -142,19 +156,19 @@ interactions:
       x-ratelimit-limit-tokens_usage_based:
       - '500000'
       x-ratelimit-remaining-requests:
-      - '9999'
+      - '9998'
       x-ratelimit-remaining-tokens:
-      - '499790'
+      - '498708'
       x-ratelimit-remaining-tokens_usage_based:
-      - '499790'
+      - '498061'
       x-ratelimit-reset-requests:
-      - 8.64s
+      - 16.025s
       x-ratelimit-reset-tokens:
-      - 36.288s
+      - 3m43.212s
       x-ratelimit-reset-tokens_usage_based:
-      - 36.288s
+      - 5m35.05s
       x-request-id:
-      - c46f356b65f6b7bd04fbe57bc4849be0
+      - ee46335efdd2feff2177dac8cea29310
     http_version: HTTP/1.1
     status_code: 200
 version: 1

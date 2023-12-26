@@ -16,7 +16,7 @@ interactions:
       host:
       - api.openai.com
       user-agent:
-      - OpenAI/Python 1.6.0
+      - OpenAI/Python 1.6.1
       x-stainless-arch:
       - arm64
       x-stainless-async:
@@ -26,35 +26,38 @@ interactions:
       x-stainless-os:
       - MacOS
       x-stainless-package-version:
-      - 1.6.0
+      - 1.6.1
       x-stainless-runtime:
       - CPython
       x-stainless-runtime-version:
-      - 3.11.6
+      - 3.11.7
     method: POST
     uri: https://api.openai.com/v1/completions
   response:
     content: "{\n  \"warning\": \"This model version is deprecated. Migrate before
       January 4, 2024 to avoid disruption of service. Learn more https://platform.openai.com/docs/deprecations\",\n
-      \ \"id\": \"cmpl-8YSmZ6AGGj9irSY3vpa8IUnfIIwaq\",\n  \"object\": \"text_completion\",\n
-      \ \"created\": 1703224483,\n  \"model\": \"text-davinci-003\",\n  \"choices\":
-      [\n    {\n      \"text\": \"\\n\\nThe theory of relativity is the idea that
-      the laws of physics are the same for all observers, no matter their relative
-      motion. It states that the speed of light in a vacuum is always the same regardless
-      of the motion of the observer or source of the light. This stands in contrast
-      to the idea of absolute motion between different observers. The two parts of
-      the theory are the special theory of relativity, which deals with non-accelerating
-      observers in uniform motion through space, and the general theory of relativity,
-      which deals with accelerating observers such as gravity. These theories revolutionized
-      our understanding of space, time, matter, and energy.\",\n      \"index\": 0,\n
+      \ \"id\": \"cmpl-8ZuetldrgObri8aHH3KEU3N7iShFD\",\n  \"object\": \"text_completion\",\n
+      \ \"created\": 1703569967,\n  \"model\": \"text-davinci-003\",\n  \"choices\":
+      [\n    {\n      \"text\": \"\\n\\nThe theory of relativity is a set of two theories
+      of Albert Einstein published in the early 1900s. The first, the special theory
+      of relativity, explains how to interpret motion between different inertial frames
+      of reference \u2014 that is, places that are moving at constant speeds relative
+      to each other. It defines the laws of motion and shows that the speed of light
+      in a vacuum is constant regardless of the motion of the observer. The second,
+      the general theory of relativity, is a theory of gravitation that replaces Newton's
+      law of universal gravitation. It explains the law of gravitation and its relation
+      to other forces of nature and provides a unified description of gravity as a
+      geometric property of space and time. This theory predicts the existence of
+      gravitational waves, describes how gravitational fields curve space and time,
+      and suggests that masses cause spacetime to curve.\",\n      \"index\": 0,\n
       \     \"logprobs\": null,\n      \"finish_reason\": \"stop\"\n    }\n  ],\n
-      \ \"usage\": {\n    \"prompt_tokens\": 6,\n    \"completion_tokens\": 128,\n
-      \   \"total_tokens\": 134\n  }\n}\n"
+      \ \"usage\": {\n    \"prompt_tokens\": 6,\n    \"completion_tokens\": 169,\n
+      \   \"total_tokens\": 175\n  }\n}\n"
     headers:
       CF-Cache-Status:
       - DYNAMIC
       CF-RAY:
-      - 83961ca04806c74d-SEA
+      - 83b70f4928e4276b-SEA
       Cache-Control:
       - no-cache, must-revalidate
       Connection:
@@ -64,14 +67,14 @@ interactions:
       Content-Type:
       - application/json
       Date:
-      - Fri, 22 Dec 2023 05:54:46 GMT
+      - Tue, 26 Dec 2023 05:52:50 GMT
       Server:
       - cloudflare
       Set-Cookie:
-      - __cf_bm=FFTRMXFXtdqKEjmjTU6c9hBnW1aZrm4bTgVXhLEr4CI-1703224486-1-AedWu+UQ3SsO1lqENv0H7BUcwx6WPVcOHOlugfDBuTk4jrpyi4BRhuBQXU0j8mTou2q0EfQl9ZDQbBWffLi7dXI=;
-        path=/; expires=Fri, 22-Dec-23 06:24:46 GMT; domain=.api.openai.com; HttpOnly;
+      - __cf_bm=f1fEWncMkq.yup.mDVmjijNuvdcCWJbFktJKrP83mtQ-1703569970-1-AfFQlsAVoJRv1gHFWR4nE6yrFfJsVnzkKcO3a4SGOKC/Tc2nv7ZenyznU1tn30PCr4cSCl19I2o3g8HekRqOT/s=;
+        path=/; expires=Tue, 26-Dec-23 06:22:50 GMT; domain=.api.openai.com; HttpOnly;
         Secure; SameSite=None
-      - _cfuvid=cxEkvu59_UGVMerBKxYFxFX2CXZexK6dSWmkkR1C2xY-1703224486286-0-604800000;
+      - _cfuvid=CBeCDXij0cFV3gUzeAgAnIFlOMTC1LjXOXxLU9xqNPM-1703569970579-0-604800000;
         path=/; domain=.api.openai.com; HttpOnly; Secure; SameSite=None
       Transfer-Encoding:
       - chunked
@@ -84,7 +87,7 @@ interactions:
       openai-organization:
       - openshiro
       openai-processing-ms:
-      - '2308'
+      - '2949'
       openai-version:
       - '2020-10-01'
       strict-transport-security:
@@ -108,7 +111,7 @@ interactions:
       x-ratelimit-reset-tokens_usage_based:
       - 240ms
       x-request-id:
-      - a07969c296fc4017b5404136847c8047
+      - 7623a29600a945a1fcd3323d2ef48bef
     http_version: HTTP/1.1
     status_code: 200
 version: 1

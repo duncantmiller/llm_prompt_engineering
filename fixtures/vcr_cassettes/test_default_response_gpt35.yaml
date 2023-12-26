@@ -16,7 +16,7 @@ interactions:
       host:
       - api.openai.com
       user-agent:
-      - OpenAI/Python 1.6.0
+      - OpenAI/Python 1.6.1
       x-stainless-arch:
       - arm64
       x-stainless-async:
@@ -26,63 +26,68 @@ interactions:
       x-stainless-os:
       - MacOS
       x-stainless-package-version:
-      - 1.6.0
+      - 1.6.1
       x-stainless-runtime:
       - CPython
       x-stainless-runtime-version:
-      - 3.11.6
+      - 3.11.7
     method: POST
     uri: https://api.openai.com/v1/chat/completions
   response:
-    content: "{\n  \"id\": \"chatcmpl-8YSmcgslc18NZBKVld7tGBcWucEw8\",\n  \"object\":
-      \"chat.completion\",\n  \"created\": 1703224486,\n  \"model\": \"gpt-3.5-turbo-0613\",\n
+    content: "{\n  \"id\": \"chatcmpl-8ZuewGIRBPpmJINkOG13SLptjKPuR\",\n  \"object\":
+      \"chat.completion\",\n  \"created\": 1703569970,\n  \"model\": \"gpt-3.5-turbo-0613\",\n
       \ \"choices\": [\n    {\n      \"index\": 0,\n      \"message\": {\n        \"role\":
-      \"assistant\",\n        \"content\": \"The theory of relativity is a fundamental
-      theory in physics that fundamentally changed the way we understand space, time,
-      and gravity. It was first proposed by Albert Einstein in the early 20th century
-      and consists of two main parts: the special theory of relativity and the general
-      theory of relativity.\\n\\nThe special theory of relativity, proposed in 1905,
-      deals with the motion of objects that are moving at constant speeds relative
-      to each other, particularly in the absence of gravity. It introduced two key
-      principles: the principle of relativity and the principle of the constancy of
-      the speed of light.\\n\\nThe principle of relativity states that all physical
-      laws are the same in all inertial reference frames. In other words, the laws
-      of physics should be identical for observers moving at a constant velocity relative
-      to each other. This principle challenges the classical notion of absolute space
-      and time.\\n\\nThe second principle, the constancy of the speed of light, states
-      that the speed of light in a vacuum is always the same, regardless of the motion
-      of the source or observer. This means that the speed of light is constant and
-      independent of the relative motion of the source and observer.\\n\\nAs a consequence
-      of these principles, the special theory of relativity leads to several remarkable
-      conclusions. First, it predicts that time is not absolute but instead depends
-      on the relative motion between two observers. This phenomenon is called time
-      dilation. It means that time passes more slowly for objects in motion relative
-      to an observer at rest. This effect has been experimentally confirmed and is
-      critical in modern technologies like GPS.\\n\\nThe theory also predicts length
-      contraction, which means that objects moving relative to an observer will appear
-      shorter in the direction of motion. This effect is only noticeable at high speeds,
-      close to the speed of light.\\n\\nThe general theory of relativity, introduced
-      by Einstein in 1915, extended the special theory of relativity to incorporate
-      gravity. It explains gravity as the curvature of spacetime caused by massive
-      objects. According to this theory, objects with mass create a \\\"bending\\\"
-      of the fabric of spacetime, causing other objects to move on curved paths.\\n\\nIn
-      general relativity, gravity is not seen as a force acting at a distance but
-      rather as a result of the geometry of spacetime. Mass and energy tell spacetime
-      how to curve, and the curved spacetime tells mass and energy how to move. This
-      theory successfully explains phenomena like the bending of light around massive
-      objects (gravitational lensing), the redshift of light in a gravitational field,
-      and the predicted existence of black holes.\\n\\nOverall, the theory of relativity
-      has revolutionized our understanding of the universe and provided a new framework
-      for describing the fundamental processes of nature. It has been extensively
-      tested and confirmed through various experiments and is considered one of the
-      cornerstones of modern physics.\"\n      },\n      \"logprobs\": null,\n      \"finish_reason\":
-      \"stop\"\n    }\n  ],\n  \"usage\": {\n    \"prompt_tokens\": 14,\n    \"completion_tokens\":
-      563,\n    \"total_tokens\": 577\n  },\n  \"system_fingerprint\": null\n}\n"
+      \"assistant\",\n        \"content\": \"The theory of relativity, developed by
+      physicist Albert Einstein, is a fundamental theory in physics that revolutionized
+      our understanding of space, time, and gravity. It consists of two main parts:
+      the special theory of relativity and the general theory of relativity.\\n\\n1.
+      Special Theory of Relativity:\\nThe special theory of relativity, published
+      in 1905, deals with objects moving at constant speeds relative to each other,
+      and provides a new understanding of space and time. Its key postulates are as
+      follows:\\n\\n- The laws of physics are the same in all inertial (non-accelerating)
+      reference frames. This means that the fundamental laws and principles of physics
+      are not affected by an observer's constant velocity.\\n\\n- The speed of light
+      in a vacuum is constant for all observers, regardless of their relative motion.
+      This is denoted by the symbol 'c' and has a value of approximately 299,792,458
+      meters per second.\\n\\nBased on these principles, the theory introduces two
+      important concepts:\\n\\n- Time Dilation: According to special relativity, time
+      is not absolute and can vary depending on the relative motion between observers.
+      When an object moves at high speeds relative to a stationary observer, time
+      will appear to pass more slowly for the moving object. This effect is known
+      as time dilation.\\n\\n- Length Contraction: Special relativity also predicts
+      that objects moving at high speeds relative to an observer will appear shorter
+      in the direction of motion. This contraction is called length contraction.\\n\\nMoreover,
+      the theory of special relativity introduces the famous equation: E=mc\xB2, which
+      states that energy (E) and mass (m) are interchangeable, and the speed of light
+      squared (c\xB2) acts as the conversion factor between the two.\\n\\n2. General
+      Theory of Relativity:\\nThe general theory of relativity, published in 1915,
+      expands upon the special theory by incorporating gravity into the framework.
+      It explains gravity as the curvature of space-time caused by the presence of
+      mass and energy. The main postulate of general relativity is:\\n\\n- Mass and
+      energy curve the fabric of space-time, and objects move along the resulting
+      curves shaped by this curvature.\\n\\nIn simpler terms, objects with mass create
+      a gravitational field that warps the space and time around them. This curvature
+      influences the motion of other objects and is responsible for the force of gravity.\\n\\nGeneral
+      relativity predicts several phenomena, including:\\n\\n- Gravitational time
+      dilation: Clocks in a gravitational field tick slower compared to those in a
+      weaker field or in space.\\n\\n- Gravitational lensing: Mass can bend the path
+      of light, causing it to curve when passing near massive objects. This effect
+      leads to the phenomenon of lensing, where distant objects appear distorted or
+      magnified.\\n\\n- Gravitational waves: Accelerating massive objects can produce
+      ripples in the fabric of space-time, known as gravitational waves. These waves
+      were directly observed for the first time in 2015.\\n\\nOverall, the theory
+      of relativity has shaped our understanding of the universe, challenging and
+      expanding upon classical Newtonian physics. Its predictions have been extensively
+      tested and confirmed through various experiments and observations, making it
+      one of the most successful scientific theories ever developed.\"\n      },\n
+      \     \"logprobs\": null,\n      \"finish_reason\": \"stop\"\n    }\n  ],\n
+      \ \"usage\": {\n    \"prompt_tokens\": 14,\n    \"completion_tokens\": 641,\n
+      \   \"total_tokens\": 655\n  },\n  \"system_fingerprint\": null\n}\n"
     headers:
       CF-Cache-Status:
       - DYNAMIC
       CF-RAY:
-      - 83961cb03e19086d-SEA
+      - 83b70f5cca3ac539-SEA
       Cache-Control:
       - no-cache, must-revalidate
       Connection:
@@ -92,14 +97,14 @@ interactions:
       Content-Type:
       - application/json
       Date:
-      - Fri, 22 Dec 2023 05:55:00 GMT
+      - Tue, 26 Dec 2023 05:53:12 GMT
       Server:
       - cloudflare
       Set-Cookie:
-      - __cf_bm=aFbCsPAm1U.hDPEfik8JJNQ817Tg30e1Uovo.7KW8lo-1703224500-1-AYcP3MhfXoUpexI6avWNizr/Pclm++N18NkrwfFzXADeE1ZIZd3n4k87cv1VbMm7LeR4LkzJ5WDCyg4BVqeuSoU=;
-        path=/; expires=Fri, 22-Dec-23 06:25:00 GMT; domain=.api.openai.com; HttpOnly;
+      - __cf_bm=NWyzMcQfP26UghTOnBzofTo9Ngqcmq9.zvmQG3AGpJc-1703569992-1-Ac1bIYzOv3pwrb3xJMm2P+1iuuSRjCrt/XB9dvfxVURwaSCl8hDNQmSo6dvsy9nDzEDbN/smBGvTFzR3+cUGkfk=;
+        path=/; expires=Tue, 26-Dec-23 06:23:12 GMT; domain=.api.openai.com; HttpOnly;
         Secure; SameSite=None
-      - _cfuvid=wGMG3.1j_4IqsnJCbWc2XsAs5Ztur1BzRvcFNhY30Vw-1703224500537-0-604800000;
+      - _cfuvid=JE67SjeHLGXcPEl1G0rW4zn0p4lhb74S0QGNpetY.ds-1703569992865-0-604800000;
         path=/; domain=.api.openai.com; HttpOnly; Secure; SameSite=None
       Transfer-Encoding:
       - chunked
@@ -112,7 +117,7 @@ interactions:
       openai-organization:
       - openshiro
       openai-processing-ms:
-      - '13827'
+      - '22069'
       openai-version:
       - '2020-10-01'
       strict-transport-security:
@@ -136,7 +141,7 @@ interactions:
       x-ratelimit-reset-tokens_usage_based:
       - 25ms
       x-request-id:
-      - ddb56c3f44be1da503576c499ce7d7bf
+      - d2954a5e263b1bf97b467e39857b1f80
     http_version: HTTP/1.1
     status_code: 200
 version: 1

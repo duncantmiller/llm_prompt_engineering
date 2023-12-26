@@ -34,58 +34,59 @@ interactions:
     method: POST
     uri: https://api.openai.com/v1/chat/completions
   response:
-    content: "{\n  \"id\": \"chatcmpl-8ZsJESGhbPCsiPScbTnedU9blSD1J\",\n  \"object\":
-      \"chat.completion\",\n  \"created\": 1703560936,\n  \"model\": \"gpt-4-1106-preview\",\n
+    content: "{\n  \"id\": \"chatcmpl-8ZufJO8x7PdMX6Q6bT8qDnfF8oF4F\",\n  \"object\":
+      \"chat.completion\",\n  \"created\": 1703569993,\n  \"model\": \"gpt-4-1106-preview\",\n
       \ \"choices\": [\n    {\n      \"index\": 0,\n      \"message\": {\n        \"role\":
-      \"assistant\",\n        \"content\": \"The theory of relativity actually refers
-      to two related theories proposed by Albert Einstein: Special Relativity and
-      General Relativity.\\n\\n**1. Special Relativity (1905):**\\nEinstein's theory
-      of Special Relativity addresses frames of reference that are moving at constant
-      speeds relative to one another (i.e., inertial frames). The theory postulates
-      that:\\n\\n- The laws of physics are the same in all inertial frames. No physical
-      experiment (without looking outside) can detect constant velocity.\\n- The speed
-      of light in a vacuum is the same for all observers, regardless of the motion
-      of the light source or observer.\\n\\nSpecial Relativity introduced several
-      revolutionary concepts:\\n\\n- Time Dilation: An observer moving relative to
-      a clock will measure the clock ticking slower than it would if the observer
-      and the clock were at rest with respect to one another (this effect has been
-      observed in precise experiments with atomic clocks, for example).\\n- Length
-      Contraction: Objects moving relative to an observer will be measured to be shortened
-      in the direction of motion (though this effect is only noticeable at speeds
-      approaching that of light).\\n- Relativity of Simultaneity: Events that are
-      simultaneous in one frame of reference may not be simultaneous in another moving
-      frame of reference.\\n- Mass-Energy Equivalence: Perhaps the most famous equation
-      in physics, E=mc\xB2, arises from Special Relativity, stating that mass (m)
-      and energy (E) are equivalent, with c (the speed of light) as the proportionality
-      constant. That means an object gains energy as it gains velocity, and that energy
-      is equivalent to an increase in mass.\\n\\n**2. General Relativity (1915):**\\nEinstein's
-      theory of General Relativity is a theory of gravitation that replaced Newton's
-      law of universal gravitation. It describes gravity not as a force, but as the
-      curvature of spacetime caused by mass and energy. According to General Relativity:\\n\\n-
-      Mass/energy tells space how to curve, and the curvature of space tells mass
-      how to move.\\n- Time alongside the three dimensions of space are interwoven
-      into a single four-dimensional fabric called spacetime.\\n- Massive objects
-      cause a distortion in spacetime, which is felt as gravity. The more massive
-      an object, the more it warps the space around it.\\n- Time also dilates in a
-      gravitational field, known as gravitational time dilation. Clocks closer to
-      a massive body ticks slower than those further away.\\n\\nGeneral Relativity
-      has been confirmed by numerous experiments and observations. One of its most
-      famous predictions is the bending of light around massive objects, known as
-      gravitational lensing, which has been observed astronomically. It also predicts
-      exotic phenomena such as black holes and the expansion of the universe, both
-      of which have strong observational support.\\n\\nBoth Special and General Relativity
-      have profound implications for our understanding of the universe and have been
-      confirmed by many experiments and observations to date. However, it should be
-      noted that relativity remains incompatible with quantum mechanics, and a grand
-      unified theory that can reconcile both large-scale gravity and quantum effects
-      has yet to be formulated.\"\n      },\n      \"logprobs\": null,\n      \"finish_reason\":
-      \"stop\"\n    }\n  ],\n  \"usage\": {\n    \"prompt_tokens\": 14,\n    \"completion_tokens\":
-      618,\n    \"total_tokens\": 632\n  },\n  \"system_fingerprint\": \"fp_3905aa4f79\"\n}\n"
+      \"assistant\",\n        \"content\": \"The theory of relativity is actually
+      comprised of two theories proposed by Albert Einstein: the special theory of
+      relativity and the general theory of relativity.\\n\\n**Special Theory of Relativity
+      (1905):**\\n\\nThe special theory of relativity postulates two main ideas:\\n\\n1.
+      The laws of physics are the same for all non-accelerating observers, which means
+      the laws of physics apply equally and universally, regardless of the observer's
+      constant velocity.\\n\\n2. The speed of light in a vacuum is the same for all
+      observers, regardless of the motion of the light source or observer. This speed
+      is approximately 299,792,458 meters per second and is considered an ultimate
+      constant; nothing can travel faster.\\n\\nFrom these two postulates, Einstein
+      derived several groundbreaking conclusions:\\n\\n- Time Dilation: Time is not
+      absolute and can pass at different rates for different observers. Objects in
+      motion relative to an observer will experience time more slowly than those that
+      are at rest with respect to that observer.\\n\\n- Length Contraction (Lorentz
+      Contraction): Objects appear to contract along the direction of motion as they
+      approach the speed of light.\\n\\n- Mass-Energy Equivalence: Energy and mass
+      are interchangeable, which is expressed in the famous equation E=mc\xB2, where
+      E is energy, m is mass, and c is the speed of light. This implies that as an
+      object's speed increases, its mass effectively does as well, making it require
+      more energy to accelerate further.\\n\\n- Relativity of Simultaneity: Two events
+      that appear simultaneous to an observer in one frame of reference may not appear
+      simultaneous to an observer in a different frame of reference.\\n\\n**General
+      Theory of Relativity (1915):**\\n\\nThe general theory of relativity extends
+      the principles of special relativity to include acceleration and gravity. It
+      is a theory of gravitation that describes gravity not as a force (as in Newtonian
+      mechanics) but as a consequence of the curvature of spacetime caused by the
+      presence of mass and energy.\\n\\nThe key ideas in general relativity are:\\n\\n-
+      Equivalence Principle: The effects of being in a gravitational field and being
+      in an accelerating frame of reference are locally indistinguishable.\\n\\n-
+      Spacetime Curvature: Matter tells spacetime how to curve, and curved spacetime
+      tells matter how to move. Massive objects like planets and stars actually warp
+      the spacetime around them, and this curvature affects how objects move through
+      space.\\n\\n- Geodesics: Objects free from other forces move along paths in
+      spacetime called geodesics, which can be thought of as the \\\"straightest possible\\\"
+      paths in a curved spacetime.\\n\\nGeneral relativity has numerous experimental
+      confirmations, such as the precession of Mercury's orbit and the bending of
+      light around massive objects, known as gravitational lensing. One of the most
+      significant predictions of general relativity was the existence of gravitational
+      waves, which were directly detected by the LIGO observatory in 2015.\\n\\nTogether,
+      special and general relativity form the cornerstone of modern physics and have
+      led to a deeper understanding of how the universe works, from the behavior of
+      subatomic particles to the movements of galaxies.\"\n      },\n      \"logprobs\":
+      null,\n      \"finish_reason\": \"stop\"\n    }\n  ],\n  \"usage\": {\n    \"prompt_tokens\":
+      14,\n    \"completion_tokens\": 628,\n    \"total_tokens\": 642\n  },\n  \"system_fingerprint\":
+      \"fp_3905aa4f79\"\n}\n"
     headers:
       CF-Cache-Status:
       - DYNAMIC
       CF-RAY:
-      - 83b632caba096829-SEA
+      - 83b70fe7da14681b-SEA
       Cache-Control:
       - no-cache, must-revalidate
       Connection:
@@ -95,14 +96,14 @@ interactions:
       Content-Type:
       - application/json
       Date:
-      - Tue, 26 Dec 2023 03:23:03 GMT
+      - Tue, 26 Dec 2023 05:53:55 GMT
       Server:
       - cloudflare
       Set-Cookie:
-      - __cf_bm=qm.lFtk_2VEI6bwx1hDoJewOcuFAMr6NSRFuMhoHlC8-1703560983-1-AdHQXCIxcWFCTPVFFleuZyA52bduUNpYEqPEWVn8Uk5PZUz07fTM6296bDIoKHapz9L3u3SJ1XMPo7QTWm27zQE=;
-        path=/; expires=Tue, 26-Dec-23 03:53:03 GMT; domain=.api.openai.com; HttpOnly;
+      - __cf_bm=2X_wXIyDV_T1hSS2T9xCf6JnJpTexNnSd8wOYenTnM4-1703570035-1-AfkoSHLp3Ijv7rg8hHn3g8dv7BiJ5ch1imCLcqMX5xYiPakc3DyE4rZVvf1BGkrGmL5PDkvZN3GsvOTaIA4c+F0=;
+        path=/; expires=Tue, 26-Dec-23 06:23:55 GMT; domain=.api.openai.com; HttpOnly;
         Secure; SameSite=None
-      - _cfuvid=8KVccuo5IQ7Sfj7j6xELlSdJ7lt1CK34t1TRRaQrf4w-1703560983081-0-604800000;
+      - _cfuvid=RwHeV18SThEqd4gNFc5IZw2iYGyhyEMjZT0DSbhli_4-1703570035509-0-604800000;
         path=/; domain=.api.openai.com; HttpOnly; Secure; SameSite=None
       Transfer-Encoding:
       - chunked
@@ -115,7 +116,7 @@ interactions:
       openai-organization:
       - openshiro
       openai-processing-ms:
-      - '46890'
+      - '42501'
       openai-version:
       - '2020-10-01'
       strict-transport-security:
@@ -139,7 +140,7 @@ interactions:
       x-ratelimit-reset-tokens_usage_based:
       - 4.32s
       x-request-id:
-      - bf79c3145fb19a62324df2a6809d64d9
+      - cc4efec19adce8a3fbe8f2f81b4cdbf3
     http_version: HTTP/1.1
     status_code: 200
 version: 1

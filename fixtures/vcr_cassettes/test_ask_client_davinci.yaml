@@ -5,12 +5,12 @@ interactions:
       a freshman college student interested in your research please teach me starting
       with simple concepts and building more complexity as you go. Please refer to
       me as ''my dedicated student'' when you begin your response. Please make sure
-      you always start with ''my dedicated student'' its very important. hello after
-      each sentence in your response please cite your sources. Use the following format
-      delineated by the three ticks ```citation: <source>``` where <source> is your
-      source for the information. Please make sure you always include citations, its
-      very important. Take your time and make sure you follow all of these instructions.",
-      "max_tokens": 1000}'
+      you always start with ''my dedicated student'' its very important. Explain the
+      theory of relativity after each sentence in your response please cite your sources.
+      Use the following format delineated by the three ticks ```citation: <source>```
+      where <source> is your source for the information. Please make sure you always
+      include citations, its very important. Take your time and make sure you follow
+      all of these instructions.", "max_tokens": 1000}'
     headers:
       accept:
       - application/json
@@ -19,13 +19,13 @@ interactions:
       connection:
       - keep-alive
       content-length:
-      - '805'
+      - '832'
       content-type:
       - application/json
       host:
       - api.openai.com
       user-agent:
-      - OpenAI/Python 1.6.0
+      - OpenAI/Python 1.6.1
       x-stainless-arch:
       - arm64
       x-stainless-async:
@@ -35,54 +35,45 @@ interactions:
       x-stainless-os:
       - MacOS
       x-stainless-package-version:
-      - 1.6.0
+      - 1.6.1
       x-stainless-runtime:
       - CPython
       x-stainless-runtime-version:
-      - 3.11.6
+      - 3.11.7
     method: POST
     uri: https://api.openai.com/v1/completions
   response:
     content: "{\n  \"warning\": \"This model version is deprecated. Migrate before
       January 4, 2024 to avoid disruption of service. Learn more https://platform.openai.com/docs/deprecations\",\n
-      \ \"id\": \"cmpl-8YSmqaARxgrXYwhfURdnmLjnPcJ0J\",\n  \"object\": \"text_completion\",\n
-      \ \"created\": 1703224500,\n  \"model\": \"text-davinci-003\",\n  \"choices\":
-      [\n    {\n      \"text\": \"\\n\\nMy dedicated student, a key concept to understanding
-      research is the scientific method, which describes the process through which
-      scientists systematically observe, test, and refine hypotheses. This process
-      typically includes 6 steps: make an observation, ask a question, form a hypothesis,
-      conduct an experiment, analyze the results, and form a conclusion. This method
-      of inquiry allows scientists to gather data and gain insights into their research
-      question, and can help in developing a greater understanding of different phenomena.
-      \\n```citation: <https://www.sciencebuddies.org/science-fair-projects/science-fair/steps-of-the-scientific-method>```\\n\\nAnother
-      important factor to consider when conducting research is the type of data gathered.
-      Data can be categorized into either qualitative or quantitative data, depending
-      on the type of its characteristics. Qualitative data is descriptive; it is often
-      subject to interpretation, and can include words and other non-numerical forms
-      of measurement. When conducting research over a long-term period, qualitative
-      data can be useful in tracking small and sometimes unpredictable changes in
-      behavior or ideas. On the other hand, quantitative data is more objective; it
-      includes numerical measurements and measurements that fit a specific range of
-      values. This data is often easier to analyze and can be more reliable when researching
-      a large sample size. \\n```citation: <https://www.simplypsychology.org/qualitative-quantitative.html>```\\n\\nFinally,
-      when assessing research, it is important to consider the validity and reliability
-      of the methods used. Validity refers to the accuracy of the research and its
-      results \u2015 the extent to which it measures what it is intended to measure.
-      Reliability is the consistency of the data \u2015 whether the results remain
-      consistent over multiple data sets or experiments. Building a research study
-      with validity and reliability ensures the accuracy of the findings and helps
-      to minimize the likelihood of bias or distortion. Many scientists use methods
-      such as random selection or blinding to control for external variables and improve
-      the reliability and validity of their results.\\n```citation: <https://www.simplypsychology.org/research-methods.html>```
-      \\n\\nI hope this has been helpful to you, my dedicated student \u2015 happy
-      researching!\",\n      \"index\": 0,\n      \"logprobs\": null,\n      \"finish_reason\":
-      \"stop\"\n    }\n  ],\n  \"usage\": {\n    \"prompt_tokens\": 145,\n    \"completion_tokens\":
-      464,\n    \"total_tokens\": 609\n  }\n}\n"
+      \ \"id\": \"cmpl-8ZufzSaLK4O4qEGXUnvw83X9nzuCP\",\n  \"object\": \"text_completion\",\n
+      \ \"created\": 1703570035,\n  \"model\": \"text-davinci-003\",\n  \"choices\":
+      [\n    {\n      \"text\": \"\\n\\nMy dedicated student, the theory of relativity,
+      proposed by Albert Einstein in 1905, is one of the most important scientific
+      theories of the 20th century. It states that the laws of physics are the same
+      for all observers regardless of their motion, and makes predictions about gravity
+      and its effects on space, time, and motion. At its most basic, the theory states
+      that space and time are not absolute, but rather a curved, non-Euclidean space-time
+      continuum in which all objects are determined by the warping of space and time
+      caused by gravity. As an observer moves closer to a mass, time moves slower
+      for them relative to another observer farther away. \\n\\n```citation: <https://spaceplace.nasa.gov/review/dr-marc-relativity/en/>```\\n\\nIt
+      also predicts that gravity is the result of the acceleration of masses in space-time,
+      like a bowling ball rolling down a hill. All masses also cause the warping of
+      space-time around them, causing a deformation of the gravitational field, creating
+      an effect known as gravitational lensing. \\n\\n```citation: <https://en.wikipedia.org/wiki/Theory_of_relativity>```\\n\\nFinally,
+      the theory of relativity states that the speed of light is always constant with
+      respect to an observer, regardless of the observer's speed, and that the mass
+      of an object increases with its speed. This has led to the realization that
+      a great deal of the universe is composed of unseen energy, known as dark energy,
+      which is responsible for the accelerated expansion of the universe. \\n\\n```citation:
+      <https://www.space.com/24085-theory-of-relativity.html>```\",\n      \"index\":
+      0,\n      \"logprobs\": null,\n      \"finish_reason\": \"stop\"\n    }\n  ],\n
+      \ \"usage\": {\n    \"prompt_tokens\": 149,\n    \"completion_tokens\": 369,\n
+      \   \"total_tokens\": 518\n  }\n}\n"
     headers:
       CF-Cache-Status:
       - DYNAMIC
       CF-RAY:
-      - 83961d0929a6c390-SEA
+      - 83b710f29c17eb87-SEA
       Cache-Control:
       - no-cache, must-revalidate
       Connection:
@@ -92,14 +83,14 @@ interactions:
       Content-Type:
       - application/json
       Date:
-      - Fri, 22 Dec 2023 05:55:07 GMT
+      - Tue, 26 Dec 2023 05:54:03 GMT
       Server:
       - cloudflare
       Set-Cookie:
-      - __cf_bm=zNlXGIDAk2OELbjwinEjmM.L5hgx6AJc1TiQLNnfo_Y-1703224507-1-AdzHKUw0m13As0YfG8FkpOLPRAAinkoMmvlgUMNksnbjOhtQKzdY39cS7F+BCJqG2JEVnje+hWipehcfngmbmkg=;
-        path=/; expires=Fri, 22-Dec-23 06:25:07 GMT; domain=.api.openai.com; HttpOnly;
+      - __cf_bm=xoPTTFyiR0QJNCdzkj88ymSAPXHijrueJRDKvgmyfzE-1703570043-1-AVCowHjOXhnslV6PjvPXJHlsC5Fb1T6uIxhZ5/tek+gBLJA7GcYR4ombCiyVbVcAWq9FlOzthcWimRLxMpFZoe4=;
+        path=/; expires=Tue, 26-Dec-23 06:24:03 GMT; domain=.api.openai.com; HttpOnly;
         Secure; SameSite=None
-      - _cfuvid=yK9045Qw1TnZkyADhsePeomLknXwAPTvfV1SKNyOm3I-1703224507353-0-604800000;
+      - _cfuvid=1wKlrfJa5thPpI2tEOyHHYGB15MruRJ2a6wRv5MePe0-1703570043249-0-604800000;
         path=/; domain=.api.openai.com; HttpOnly; Secure; SameSite=None
       Transfer-Encoding:
       - chunked
@@ -112,7 +103,7 @@ interactions:
       openai-organization:
       - openshiro
       openai-processing-ms:
-      - '6600'
+      - '7541'
       openai-version:
       - '2020-10-01'
       strict-transport-security:
@@ -136,7 +127,7 @@ interactions:
       x-ratelimit-reset-tokens_usage_based:
       - 240ms
       x-request-id:
-      - 73a9e52c99d920425a6031420f115634
+      - 6b1afd57abb1a96d16a640653605c4b0
     http_version: HTTP/1.1
     status_code: 200
 version: 1

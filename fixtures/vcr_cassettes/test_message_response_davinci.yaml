@@ -25,7 +25,7 @@ interactions:
       host:
       - api.openai.com
       user-agent:
-      - OpenAI/Python 1.6.0
+      - OpenAI/Python 1.6.1
       x-stainless-arch:
       - arm64
       x-stainless-async:
@@ -35,40 +35,34 @@ interactions:
       x-stainless-os:
       - MacOS
       x-stainless-package-version:
-      - 1.6.0
+      - 1.6.1
       x-stainless-runtime:
       - CPython
       x-stainless-runtime-version:
-      - 3.11.6
+      - 3.11.7
     method: POST
     uri: https://api.openai.com/v1/completions
   response:
     content: "{\n  \"warning\": \"This model version is deprecated. Migrate before
       January 4, 2024 to avoid disruption of service. Learn more https://platform.openai.com/docs/deprecations\",\n
-      \ \"id\": \"cmpl-8YSnCddQnuZiUYOPfktmJehZq7gvx\",\n  \"object\": \"text_completion\",\n
-      \ \"created\": 1703224522,\n  \"model\": \"text-davinci-003\",\n  \"choices\":
+      \ \"id\": \"cmpl-8Zuh5HNQ70a779l4QcsLFGKTCJsAt\",\n  \"object\": \"text_completion\",\n
+      \ \"created\": 1703570103,\n  \"model\": \"text-davinci-003\",\n  \"choices\":
       [\n    {\n      \"text\": \"\\n\\nMy dedicated student, the theory of relativity
-      is a complex concept, but can be broken down into two main principles. The first
-      is the special theory of relativity, which was first proposed by Albert Einstein
-      in 1905. This theory states that the laws of physics remain unchanged in all
-      inertial frames, or frames of reference that move with constant velocity relative
-      to each other. It also states that the speed of light in a vacuum is the same,
-      regardless of the reference frame. This means that time and space can be observed
-      differently by two observers in different inertial frames. \\n\\nFollowing this,
-      Einstein proposed the general theory of relativity in 1915, which extended on
-      the principles of the special theory of relativity. This includes the idea of
-      curved spacetime, or the idea that the presence of mass or energy can warps
-      and bends the fabric of the universe. This is also where the famous equation
-      of E = MC^2 comes from, which explains the relationship between matter and energy.
-      \\n\\nCitation: https://en.wikipedia.org/wiki/Theory_of_relativity\",\n      \"index\":
+      is the idea that the laws of physics are the same in all inertial frames of
+      reference. This means that no matter how you are moving, all observations of
+      physical phenomena should be the same. This theory was put forward by Albert
+      Einstein, a German physicist, in the early 20th century. It was a revolutionary
+      change in the way we think about physics, because it showed that things like
+      time and space could be distorted and warped due to the presence of gravity.\\n\\nCitation:
+      Kotz, David C., ed. Understanding Physics. John Wiley & Sons, 2019.\",\n      \"index\":
       0,\n      \"logprobs\": null,\n      \"finish_reason\": \"stop\"\n    }\n  ],\n
-      \ \"usage\": {\n    \"prompt_tokens\": 149,\n    \"completion_tokens\": 220,\n
-      \   \"total_tokens\": 369\n  }\n}\n"
+      \ \"usage\": {\n    \"prompt_tokens\": 149,\n    \"completion_tokens\": 126,\n
+      \   \"total_tokens\": 275\n  }\n}\n"
     headers:
       CF-Cache-Status:
       - DYNAMIC
       CF-RAY:
-      - 83961d903c746815-SEA
+      - 83b7129bbd1dc3a2-SEA
       Cache-Control:
       - no-cache, must-revalidate
       Connection:
@@ -78,14 +72,14 @@ interactions:
       Content-Type:
       - application/json
       Date:
-      - Fri, 22 Dec 2023 05:55:26 GMT
+      - Tue, 26 Dec 2023 05:55:06 GMT
       Server:
       - cloudflare
       Set-Cookie:
-      - __cf_bm=MVAmVFXBKONPerNUSP5JFLAKqMmjsC_hkA_b5zHoiH0-1703224526-1-AQY5G8fkDC7BLX+PGFZc+FNNmaJIbHCa6GFCtqOZbW8zd3jrbExhkR1l6kJT0i/VL3KBWG7ZTZgQxSKKlu9hGbs=;
-        path=/; expires=Fri, 22-Dec-23 06:25:26 GMT; domain=.api.openai.com; HttpOnly;
+      - __cf_bm=4necLQYB3FITyx0FeWQt.fJPrc7Qi7cWWEdotSA8hPg-1703570106-1-AQS3FjfOXRhe1706nej1xKu5eONKL4kxnFL5fqwLxQSP8F/PFX/gSEoIO0H5Pbu/AvLXWSgNCwls7YQTo0ArewU=;
+        path=/; expires=Tue, 26-Dec-23 06:25:06 GMT; domain=.api.openai.com; HttpOnly;
         Secure; SameSite=None
-      - _cfuvid=bY4TU2.XTuXVaIQ0wFPxqwm2.ukXVUQFMTavyIfiSYw-1703224526685-0-604800000;
+      - _cfuvid=hPojzLSzCiRDzJg0QfjqLUF4Qe7sgnsab8RwbgZHE5U-1703570106063-0-604800000;
         path=/; domain=.api.openai.com; HttpOnly; Secure; SameSite=None
       Transfer-Encoding:
       - chunked
@@ -98,7 +92,7 @@ interactions:
       openai-organization:
       - openshiro
       openai-processing-ms:
-      - '4323'
+      - '2321'
       openai-version:
       - '2020-10-01'
       strict-transport-security:
@@ -122,7 +116,7 @@ interactions:
       x-ratelimit-reset-tokens_usage_based:
       - 240ms
       x-request-id:
-      - 6ec014bdb5dc7f450bf95d1d91dd41b9
+      - 2e5148cc817dbe7bc69b5b36ac2f3bc2
     http_version: HTTP/1.1
     status_code: 200
 version: 1
