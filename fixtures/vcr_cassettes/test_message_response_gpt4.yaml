@@ -1,0 +1,160 @@
+interactions:
+- request:
+    body: '{"messages": [{"role": "user", "content": "Pretend you are an expert research
+      scientist with 20 years of experience teaching as a college professor. I am
+      a freshman college student interested in your research please teach me starting
+      with simple concepts and building more complexity as you go. Please refer to
+      me as ''my dedicated student'' when you begin your response. Please make sure
+      you always start with ''my dedicated student'' its very important. Explain the
+      theory of relativity after each sentence in your response please cite your sources.
+      Use the following format delineated by the three ticks ```citation: <source>```
+      where <source> is your source for the information. Please make sure you always
+      include citations, its very important. Take your time and make sure you follow
+      all of these instructions."}], "model": "gpt-4-1106-preview"}'
+    headers:
+      accept:
+      - application/json
+      accept-encoding:
+      - gzip, deflate
+      connection:
+      - keep-alive
+      content-length:
+      - '847'
+      content-type:
+      - application/json
+      host:
+      - api.openai.com
+      user-agent:
+      - OpenAI/Python 1.6.1
+      x-stainless-arch:
+      - arm64
+      x-stainless-async:
+      - 'false'
+      x-stainless-lang:
+      - python
+      x-stainless-os:
+      - MacOS
+      x-stainless-package-version:
+      - 1.6.1
+      x-stainless-runtime:
+      - CPython
+      x-stainless-runtime-version:
+      - 3.11.7
+    method: POST
+    uri: https://api.openai.com/v1/chat/completions
+  response:
+    content: "{\n  \"id\": \"chatcmpl-8ZrenbwSjZRpIuHMc0lxgt4BJwpln\",\n  \"object\":
+      \"chat.completion\",\n  \"created\": 1703558429,\n  \"model\": \"gpt-4-1106-preview\",\n
+      \ \"choices\": [\n    {\n      \"index\": 0,\n      \"message\": {\n        \"role\":
+      \"assistant\",\n        \"content\": \"My dedicated student, I appreciate your
+      enthusiasm for learning about the theory of relativity. It is essential to begin
+      with the most fundamental concept in relativity, which is that the laws of physics
+      are the same for all observers in uniform motion relative to one another. This
+      principle was developed by Albert Einstein in the early 20th century and is
+      at the heart of special relativity.\\n```citation: Einstein, A. (1905). Zur
+      Elektrodynamik bewegter K\xF6rper. Annalen der Physik, 322(10), 891-921.```\\n\\nNow,
+      my dedicated student, building on this, special relativity introduced the idea
+      that the speed of light in a vacuum is constant and is the same for all observers,
+      regardless of the motion of the light source or observer.\\n```citation: Einstein,
+      A. (1905). Zur Elektrodynamik bewegter K\xF6rper. Annalen der Physik, 322(10),
+      891-921.```\\n\\nAs we delve deeper, my dedicated student, you should understand
+      that because the speed of light is constant, time and space must be flexible.
+      This flexibility leads to phenomena such as time dilation and length contraction,
+      meaning moving clocks tick slower and objects in motion contract in length in
+      the direction of motion.\\n```citation: Lorentz, H.A. (1895). Versuch einer
+      Theorie der electrischen und optischen Erscheinungen in bewegten K\xF6rpern.
+      Leiden: E.J. Brill.```\\n\\nAdvancing our discussion, my dedicated student,
+      Einstein expanded on these concepts with general relativity in 1915, which introduced
+      the idea that gravity is not a force, but rather the curvature of spacetime
+      caused by mass and energy.\\n```citation: Einstein, A. (1915). Die Feldgleichungen
+      der Gravitation. Sitzungsberichte der Preussischen Akademie der Wissenschaften
+      zu Berlin, 844-847.```\\n\\nFurthermore, my dedicated student, according to
+      general relativity, objects move along the straightest path in this curved spacetime,
+      which we perceive as the gravitational force.\\n```citation: Einstein, A. (1916).
+      Die Grundlage der allgemeinen Relativit\xE4tstheorie. Annalen der Physik, 354(7),
+      769-822.```\\n\\nWhile general relativity is quite complex, my dedicated student,
+      one of its predictions is the bending of light by gravity, which has been confirmed
+      through observations such as the deflection of starlight by the Sun during a
+      solar eclipse.\\n```citation: Dyson, F.W., Eddington, A.S. & Davidson, C. (1920).
+      A Determination of the Deflection of Light by the Sun's Gravitational Field,
+      from Observations Made at the Solar Eclipse of May 29, 1919. Philosophical Transactions
+      of the Royal Society A: Mathematical, Physical and Engineering Sciences, 220(571-581),
+      291-333.```\\n\\nTo add another layer, my dedicated student, general relativity
+      also predicts the existence of black holes, regions of spacetime where the gravitational
+      pull is so strong that nothing, not even light, can escape from it.\\n```citation:
+      Schwarzschild, K. (1916). \xDCber das Gravitationsfeld eines Massenpunktes nach
+      der Einsteinschen Theorie. Sitzungsberichte der K\xF6niglich Preussischen Akademie
+      der Wissenschaften, 189-196.```\\n\\nConcluding our session today, my dedicated
+      student, the theory of relativity is not just theoretical\u2014it has practical
+      applications such as influencing the way GPS systems calculate positions by
+      accounting for the time dilation effects between satellites and Earth.\\n```citation:
+      Ashby, N. (2003). Relativity in the Global Positioning System. Living Reviews
+      in Relativity, 6(1), 1.```\\n\\nPlease, my dedicated student, take your time
+      to digest these complex ideas and explore the sources provided to deepen your
+      understanding. As you continue your studies, you will be able to grasp the more
+      intricate details and mathematical underpinnings of relativity.\"\n      },\n
+      \     \"logprobs\": null,\n      \"finish_reason\": \"stop\"\n    }\n  ],\n
+      \ \"usage\": {\n    \"prompt_tokens\": 155,\n    \"completion_tokens\": 850,\n
+      \   \"total_tokens\": 1005\n  },\n  \"system_fingerprint\": \"fp_3905aa4f79\"\n}\n"
+    headers:
+      CF-Cache-Status:
+      - DYNAMIC
+      CF-RAY:
+      - 83b5f598f937ec23-SEA
+      Cache-Control:
+      - no-cache, must-revalidate
+      Connection:
+      - keep-alive
+      Content-Encoding:
+      - gzip
+      Content-Type:
+      - application/json
+      Date:
+      - Tue, 26 Dec 2023 02:41:10 GMT
+      Server:
+      - cloudflare
+      Set-Cookie:
+      - __cf_bm=cCrLYnBDBynUX_UsuTMLL7LoMO50Dggb7OTPyAkOXC0-1703558470-1-AWhn+ptcNNj3Z8UvXL9W4sjrJsZyXnQR82a42sZYPcnRFp+RchB+fo68gr/H8aCe8jnHt4d7Lyrpm2LZsRTaNgw=;
+        path=/; expires=Tue, 26-Dec-23 03:11:10 GMT; domain=.api.openai.com; HttpOnly;
+        Secure; SameSite=None
+      - _cfuvid=OxXNd6TKl4QGJXlq64el8UIZcieAIyUTlV2L1ShfzdI-1703558470675-0-604800000;
+        path=/; domain=.api.openai.com; HttpOnly; Secure; SameSite=None
+      Transfer-Encoding:
+      - chunked
+      access-control-allow-origin:
+      - '*'
+      alt-svc:
+      - h3=":443"; ma=86400
+      openai-model:
+      - gpt-4-1106-preview
+      openai-organization:
+      - openshiro
+      openai-processing-ms:
+      - '40936'
+      openai-version:
+      - '2020-10-01'
+      strict-transport-security:
+      - max-age=15724800; includeSubDomains
+      x-ratelimit-limit-requests:
+      - '10000'
+      x-ratelimit-limit-tokens:
+      - '500000'
+      x-ratelimit-limit-tokens_usage_based:
+      - '500000'
+      x-ratelimit-remaining-requests:
+      - '9999'
+      x-ratelimit-remaining-tokens:
+      - '499790'
+      x-ratelimit-remaining-tokens_usage_based:
+      - '499790'
+      x-ratelimit-reset-requests:
+      - 8.64s
+      x-ratelimit-reset-tokens:
+      - 36.288s
+      x-ratelimit-reset-tokens_usage_based:
+      - 36.288s
+      x-request-id:
+      - c46f356b65f6b7bd04fbe57bc4849be0
+    http_version: HTTP/1.1
+    status_code: 200
+version: 1

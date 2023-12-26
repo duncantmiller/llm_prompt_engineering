@@ -202,5 +202,24 @@ class TestMessageResponseGPT35(TestMessageBase):
             "no", bias_check_response.choices[0].message.content, "Response should not be biased"
         )
 
+class TestMessageResponseGPT4(TestMessageBase):
+    def setUp(self):
+        super().setUp()
+        response = self.custom_response(model=Client.MODEL_GPT_4,
+                                        message=self.message,
+                                        cassette="test_message_response_gpt4.yaml")
+
+        self.response_text = response.choices[0].message.content
+
+    def test_response_includes_citation(self):
+        self.assertIn(
+            "citation", self.response_text.lower(), "Response should include the <citation:> tag"
+        )
+
+    def test_response_includes_pre_prompt(self):
+        self.assertIn("my dedicated student",
+                      self.response_text.lower(),
+                      "Response should comply with pre_prompt instructions")
+
 if __name__ == '__main__':
     unittest.main()
