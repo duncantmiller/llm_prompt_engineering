@@ -14,6 +14,7 @@ python-dotenv = "*"
 vcrpy = "*"
 sentence-transformers = "*"
 langchain = "*"
+bs4 = "*"
 
 [dev-packages]
 

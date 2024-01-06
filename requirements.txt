@@ -3,6 +3,8 @@ aiosignal==1.3.1
 annotated-types==0.6.0
 anyio==4.2.0
 attrs==23.2.0
+beautifulsoup4==4.12.2
+bs4==0.0.1
 certifi==2023.11.17
 charset-normalizer==3.3.2
 click==8.1.7
@@ -47,6 +49,7 @@ SciPy==1.12.0rc1
 sentence-transformers==2.2.2
 sentencepiece==0.1.99
 sniffio==1.3.0
+soupsieve==2.5
 SQLAlchemy==2.0.25
 sympy==1.12
 tenacity==8.2.3
