@@ -13,6 +13,7 @@ openai = "*"
 python-dotenv = "*"
 vcrpy = "*"
 sentence-transformers = "*"
+langchain = "*"
 
 [dev-packages]
 
