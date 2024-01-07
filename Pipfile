@@ -13,6 +13,12 @@ openai = "*"
 python-dotenv = "*"
 vcrpy = "*"
 sentence-transformers = "*"
+langchain = "*"
+bs4 = "*"
+docarray = "*"
+tiktoken = "*"
+pydantic = "==1.10.9"
+langchain-core = "*"
 
 [dev-packages]
 
