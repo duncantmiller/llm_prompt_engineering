@@ -39,6 +39,16 @@ Predetermined expected responses from various models are stored in /fixtures/exp
 ##### VCR Cassettes
 The vcrpy package automatically generates .yaml files in /fixtures/vcr_cassettes based on the cassette usage in the tests. After a API call is recorded in the .yaml file it is used for subsequent test runs without the `--live-test` flag. To re-record a cassette, just delete the appropriate .yaml file here.
 
+##### message.py
+The Message class accepts a user prompt when it is initialized `new_message = Message(prompt="foo")`. The Message class supplements the user prompt with additional instructions and handles the logic of using the appropriate API call depending upon which model is being used. Each user message gets its own message object, eventually these would have a user_id to associate each message with a user or perhaps a chat_id for more granularity where the chat belongs to a user.
+
+##### chain.py
+This the start of a sample Langchain implementation for a chatbot using Retrieval Augmented Generation (RAG) and also providing the model with chat history for additional context.
+
+This demo uses a blog post from a url and stores a vector embedding of the content for RAG in memory. This could easily be expanded to text files and pdf documents with the vector embeddings stored in a database. It then uses Langchain's `create_retrieval_chain` to pass this vector embedding as context to the model with each prompt. It also use Langchain's `create_history_aware_retriever` to pass chat history along with each prompt.
+
+I plan to integrate this logic into the Message class and replace the OpenAI API calls with calls made through Langchain's ChatOpenAI class.
+
 ## Test Documentation
 
 The following is a review of all tests and methods used in the test.py file.
