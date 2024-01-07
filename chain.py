@@ -9,8 +9,9 @@ from langchain.chains import create_retrieval_chain
 from langchain.chains import create_history_aware_retriever
 from langchain_core.prompts import MessagesPlaceholder
 from langchain_core.messages import HumanMessage, AIMessage
+from client import Client
 
-llm = ChatOpenAI()
+llm = ChatOpenAI(model_name=Client.MODEL_GPT_35)
 
 loader = WebBaseLoader(
     "https://botdevs.ai/articles/prompt-engineering-testing-strategies-with-python"
