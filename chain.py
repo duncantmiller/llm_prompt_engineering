@@ -8,6 +8,7 @@ from langchain.chains.combine_documents import create_stuff_documents_chain
 from langchain.chains import create_retrieval_chain
 from langchain.chains import create_history_aware_retriever
 from langchain_core.prompts import MessagesPlaceholder
+from langchain_core.messages import HumanMessage, AIMessage
 
 llm = ChatOpenAI()
 
@@ -30,18 +31,19 @@ prompt = ChatPromptTemplate.from_messages([
 retriever_chain = create_history_aware_retriever(llm, retriever, prompt)
 
 prompt = ChatPromptTemplate.from_messages([
-    ("system", "Answer the following question based only on the context:"
-               "\n\n<context>{context}</context>"),
+    ("system", "Answer the following question based only on the context below. If you don't know "
+               "the answer say 'I don't know', refrain from guessing or making up an answer. "
+               "Here is the context:\n\n<context>{context}</context>"),
     MessagesPlaceholder(variable_name="chat_history"),
     ("user", "{input}"),
 ])
 
 document_chain = create_stuff_documents_chain(llm, prompt)
 retrieval_chain = create_retrieval_chain(retriever_chain, document_chain)
-chat_history = []
+chat_history = [HumanMessage(content="what are some best practices for testing prompts?")]
 response = retrieval_chain.invoke({
     "chat_history": chat_history,
-    "input": "what are some best practices for testing prompts?"
+    "input": "tell me more"
 })
 
 print(response["answer"])
