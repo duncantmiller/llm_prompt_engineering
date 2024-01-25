@@ -1,12 +1,12 @@
 # Prompt Engineering Testing Strategies
 
-This is an example project showing prompt engineering testing strategies, using the OpenAI API. For more information, you can read a [blog article](https://botdevs.ai/articles/prompt-engineering-testing-strategies-for-ai-developers) I wrote about this project.
+This is an example project showing prompt engineering testing strategies, using the OpenAI API. For more information, you can read a [blog article](https://openshiro.com/articles/prompt-engineering-testing-strategies-with-python) I wrote about this project.
 
 This code demonstrates how I ensure the high quality of the prompts I create. The [test.py](https://github.com/duncantmiller/llm_prompt_engineering/blob/main/test.py) file shows a series of tests I wrote for the project using test-driven development. These tests helped me to repeatedly test a system where a user prompt is augmented by additional prompts, including a [pre_prompt](https://github.com/duncantmiller/llm_prompt_engineering/blob/15c2ffe4c476f0a1ae563ffb8498320069c14c1b/message.py#L64) and a [cite_sources_prompt](https://github.com/duncantmiller/llm_prompt_engineering/blob/15c2ffe4c476f0a1ae563ffb8498320069c14c1b/message.py#L53) which provide additional instruction to the LLM beyond the user prompt.
 
 This automated test suite makes it easier for me to hone prompts or switch models (text-davinci-003, gpt-3.5-turbo, gpt-4-1106-preview) and ensure that the prompts provide a consistent response. It also enables me to monitor for ethical and bias mitigation and model drift over time.
 
-This is a simplified version of the logic used in [OpenShiro](https://openshiro.com) prompts and is intended for educational purposes. The full product involves many more parameters which the prompts are tested against including additional model versions, additional APIs like Azure, Google, HuggingFace, Anthropic and Cohere, and a library of pre-formatted prompts from which the users can select.
+This is a simplified version of the logic used in [OpenShiro](https://openshiro.com) prompts and is intended for educational purposes. The full product involves many more parameters which the prompts are tested against including additional model versions, additional APIs like Azure, Google, HuggingFace, Anthropic and Cohere.
 
 ## Usage
 Clone the repository with `git clone git@github.com:duncantmiller/llm_prompt_engineering.git` then change to the project directory with `cd llm_prompt_engineering`.
